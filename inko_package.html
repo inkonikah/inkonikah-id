@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>INKO NIKAH · 패키지 안내</title>
+  <style>
+    :root{
+      --pri:#222; --ink:#111; --muted:#5a5a5a;
+      --border:#ffffff80; --glass:rgba(255,255,255,.44); --glass-br:rgba(255,255,255,.48);
+      --shadow:0 14px 40px rgba(0,0,0,.10); --max:1100px; --r:18px;
+      --bg:
+        radial-gradient(80% 100% at 0% 0%, rgba(255,192,203,.48) 0%, rgba(255,192,203,0) 60%),
+        radial-gradient(85% 100% at 100% 15%, rgba(173,216,230,.44) 0%, rgba(173,216,230,0) 60%),
+        radial-gradient(95% 110% at 50% 100%, rgba(152,251,152,.44) 0%, rgba(152,251,152,0) 60%),
+        linear-gradient(180deg, #f5f7fb 0%, #fbfaf7 100%);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif;color:var(--ink);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .canvas{min-height:100vh;background:var(--bg)}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+    /* ===== Header (copied style from contact_v4) ===== */
+    header{position:sticky;top:0;z-index:40;backdrop-filter:blur(18px) saturate(185%);
+      -webkit-backdrop-filter:blur(18px) saturate(185%);background:rgba(255,255,255,.46);border-bottom:1px solid var(--border)}
+    .nav{max-width:var(--max);margin:0 auto;padding:12px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+    .brand{font-weight:900;letter-spacing:.2px}
+    nav.menu{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
+    .controls{display:flex;gap:10px;justify-content:flex-end;align-items:center}
+
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:999px;
+      background:rgba(255,255,255,.40);
+      border:1px solid var(--glass-br);
+      box-shadow:
+        inset 0 2px 4px rgba(255,255,255,.85),
+        inset 0 -3px 6px rgba(0,0,0,.14),
+        0 8px 20px rgba(0,0,0,.08);
+      font-weight:700; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; will-change:transform}
+    .pill:hover{transform:translateY(-2px);
+      background:rgba(255,255,255,.62);
+      box-shadow:
+        inset 0 2px 5px rgba(255,255,255,.95),
+        inset 0 -4px 8px rgba(0,0,0,.16),
+        0 14px 28px rgba(0,0,0,.12)}
+    .pill:active{transform:translateY(0)}
+
+    .pill.cta{
+      background: linear-gradient(180deg,
+        rgba(255, 239, 170, 0.70) 0%,
+        rgba(255, 211, 94, 0.65) 40%,
+        rgba(232, 184, 74, 0.60) 70%,
+        rgba(201, 151, 45, 0.55) 100%
+      );
+      color:#3a2a00;
+      border:1px solid rgba(201,151,45,0.6);
+      box-shadow: inset 0 1px 2px rgba(255,255,255,.6),
+                  0 3px 8px rgba(201,151,45,.25);
+      padding:6px 16px;
+      min-width:120px;
+      font-size:0.9rem;
+      justify-content:center
+    }
+    .pill.cta:hover{filter:saturate(1.05) brightness(1.03); transform:translateY(-2px);}
+
+    .dropdown{position:relative}
+    .dropdown>a::after{content:"▾";margin-left:6px;opacity:.8}
+    .dropdown-content{
+      position:absolute;top:115%;left:0;display:none !important;visibility:hidden;opacity:0;pointer-events:none;
+      min-width:220px;padding:10px;border-radius:14px;
+      backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);
+      background:rgba(255,255,255,.66);border:1px solid var(--glass-br);box-shadow:0 12px 28px rgba(0,0,0,.12);
+      transform:translateY(6px);transition:opacity .15s ease, transform .15s ease}
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content{
+      display:block !important;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0)}
+    .dropdown-content a{display:block;padding:10px 12px;border-radius:10px}
+    .dropdown-content a:hover{background:rgba(255,255,255,.8);transform:translateY(-2px)}
+
+    .lang{appearance:none;border:1px solid var(--glass-br);border-radius:999px;padding:10px 38px 10px 14px;font-weight:800;cursor:pointer;
+      background:rgba(255,255,255,.95) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23222" d="M6 8 0 0h12z"/></svg>') no-repeat right 10px center;min-width:116px;
+      transition:transform .18s ease, box-shadow .18s ease}
+    .lang:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(0,0,0,.08)}
+
+    /* ===== Page ===== */
+    .pagehead{padding:44px 18px 8px;text-align:center}
+    .pagetitle{font-size:clamp(22px,3.2vw,28px);font-weight:900;margin:0}
+    .pagesub{margin:6px 0 0;color:#6a6a6a;font-weight:700}
+
+    .cards{max-width:var(--max);margin:18px auto 40px;padding:0 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    @media (max-width:980px){.cards{grid-template-columns:1fr}}
+    .card{position:relative;border-radius:22px;padding:26px;border:1px solid var(--glass-br);
+      background:rgba(255,255,255,.62);box-shadow:0 18px 38px rgba(0,0,0,.10);backdrop-filter:blur(20px) saturate(180%);
+      -webkit-backdrop-filter:blur(20px) saturate(180%);}
+    .icon{width:48px;height:48px;border-radius:14px;background:linear-gradient(180deg,#fff3c6,#ffe1ef);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:24px}
+    .card h3{margin:8px 0 6px;text-align:center;font-size:20px}
+    .chips{display:flex;justify-content:center;gap:8px;margin:6px 0 12px}
+    .chip{padding:6px 12px;border-radius:999px;font-weight:800;border:1px solid var(--glass-br);background:rgba(255,255,255,.75)}
+    .chip.gold{background:linear-gradient(90deg,#fff0b8,#ffe39b);color:#3a2a00;border:1px solid rgba(201,151,45,.55)}
+    .desc{text-align:center;color:#666;font-weight:700;min-height:44px}
+    ul{list-style:none;margin:14px 0 0;padding:0}
+    li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,.08)}
+    li:last-child{border-bottom:none}
+    .check{color:#10b36d;margin-top:2px}
+
+    footer{margin:18px 0 14px}
+    .footer-wrap{text-align:center;max-width:var(--max);margin:0 auto;padding:20px 18px 24px;color:#000;font-size:14px}
+    .footer-wrap .copy{margin-top:4px;font-size:12px;color:#333}
+  </style>
+<style>
+/* --- Hover stability fix (minimal) --- */
+.dropdown { position: relative; }
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content,
+.dropdown:hover .menu-drop,
+.dropdown:focus-within .menu-drop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+}
+/* tiny hover bridge to kill the gap between trigger and panel */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 6px; /* 아주 살짝만 */
+}
+/* eliminate vertical gap if any */
+.dropdown-content, .menu-drop {
+  margin-top: -2px;
+}
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <!-- ===== Header from inko_contact_v4.html ===== -->
+  <header>
+    <div class="nav">
+      <div class="brand">INKO NIKAH</div>
+
+      <nav class="menu" aria-label="primary">
+        <a class="pill" href="._index.html" >홈</a>
+        <a class="pill" href="inko_about.html" >회사소개</a>
+
+        <div class="dropdown">
+          <a class="pill" href="javascript:void(0)" data-i18n="nav.services">서비스</a>
+          <div class="dropdown-content">
+            <a href="._inko_process.html" >프로세스</a>
+            <a href="inko_package.html" >패키지</a>
+            <a href="._inko_compliance.html" >보안 &amp; 컴플라이언스</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a class="pill" href="._inko_female_guide.html" >이용안내</a>
+          <div class="dropdown-content">
+            <a href="._inko_female_guide.html" >여성 회원 이용 안내</a>
+            <a href="._inko_female_guide.html" >남성 회원 이용 안내</a>
+          </div>
+        </div>
+
+        <a class="pill" href="._inko_faq.html" >FAQ</a>
+        <a class="pill" href="._inko_contact.html" >문의</a>
+      </nav>
+
+      <div class="controls">
+        <select id="lang" class="lang" onchange="setLang(this.value)" aria-label="Language">
+          <option value="ko">🇰🇷 KO</option>
+          <option value="en">🇺🇸 EN</option>
+          <option value="id">🇮🇩 ID</option>
+        </select>
+        <a class="pill cta" href="https://forms.gle/V7WHQcC4FGKpYmju6" target="_blank" rel="noopener" data-i18n="nav.signup">회원가입</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Page head ===== -->
+  <section class="pagehead container">
+    <h1 class="pagetitle" data-i18n="pkg.title">패키지 안내</h1>
+    <p class="pagesub" data-i18n="pkg.sub">고객님의 상황에 맞는 맞춤형 패키지를 선택하세요</p>
+  </section>
+
+  <!-- ===== Package cards ===== -->
+  <section class="cards">
+    <!-- Standard -->
+    <article class="card">
+      <div class="icon">⭐</div>
+      <h3 data-i18n="p1.title">스탠다드 (기본)</h3>
+      <div class="chips">
+        <span class="chip gold" data-i18n="p1.pilot">파일럿 진행</span>
+        <span class="chip" data-i18n="price.tba">가격: 추후 공지</span>
+      </div>
+      <p class="desc" data-i18n="p1.desc">기본부터 결혼, 비자, 신혼여행까지 책임지는 핵심 패키지.</p>
+      <ul>
+        <li><span class="check">✔</span><span data-i18n="p1.l1">기본 프로필 등록 & 상담 가이드</span></li>
+        <li><span class="check">✔</span><span data-i18n="p1.l2">프로필 교환 및 매칭</span></li>
+        <li><span class="check">✔</span><span data-i18n="p1.l3">화상 미팅 & 대면 미팅 (무제한)</span></li>
+        <li><span class="check">✔</span><span data-i18n="p1.l4">결혼식 & 결혼식장 진행 지원</span></li>
+        <li><span class="check">✔</span><span data-i18n="p1.l5">웨딩 사진 촬영 & 결혼 앨범 제작</span></li>
+        <li><span class="check">✔</span><span data-i18n="p1.l6">허니문 여행 진행 지원</span></li>
+        <li><span class="check">✔</span><span data-i18n="p1.l7">한국어 교육 & 기숙사 제공</span></li>
+        <li><span class="check">✔</span><span data-i18n="p1.l8">F‑6 비자 진행 및 관련 서류 지원</span></li>
+      </ul>
+    </article>
+
+    <!-- Standard Plus -->
+    <article class="card">
+      <div class="icon">👑</div>
+      <h3 data-i18n="p2.title">스탠다드 플러스</h3>
+      <div class="chips">
+        <span class="chip" data-i18n="price.tba">가격: 추후 공지</span>
+      </div>
+      <p class="desc" data-i18n="p2.desc">가족과 추억 중심의 업그레이드 경험.</p>
+      <ul>
+        <li><span class="check">✔</span><span data-i18n="p2.inc">스탠다드 포함</span></li>
+        <li><span class="check">✔</span><span data-i18n="p2.l1">우선 배정 & 세부 조건 기반 매칭</span></li>
+        <li><span class="check">✔</span><span data-i18n="p2.l2">맞춤형 1:1 심화 상담</span></li>
+        <li><span class="check">✔</span><span data-i18n="p2.l3">국제 문화 예절/교류 세션</span></li>
+        <li><span class="check">✔</span><span data-i18n="p2.l4">결혼식장 업그레이드 & 맞춤 연출</span></li>
+        <li><span class="check">✔</span><span data-i18n="p2.l5">허니문 업그레이드 (특별 리조트/장소)</span></li>
+        <li><span class="check">✔</span><span data-i18n="p2.l6">양가 가족 교류 프로그램</span></li>
+        <li><span class="check">✔</span><span data-i18n="p2.l7">하이라이트 영상 제작</span></li>
+      </ul>
+    </article>
+
+    <!-- Max -->
+    <article class="card">
+      <div class="icon">🏆</div>
+      <h3 data-i18n="p3.title">맥스</h3>
+      <div class="chips">
+        <span class="chip" data-i18n="price.tba">가격: 추후 공지</span>
+      </div>
+      <p class="desc" data-i18n="p3.desc">프리미엄 웨딩·허니문과 장기 사후관리까지 풀케어.</p>
+      <ul>
+        <li><span class="check">✔</span><span data-i18n="p3.inc">스탠다드 플러스 포함</span></li>
+        <li><span class="check">✔</span><span data-i18n="p3.l1">전담 매니저 1:1 풀케어</span></li>
+        <li><span class="check">✔</span><span data-i18n="p3.l2">웨딩 플래닝 풀케어 & 프리미엄 식장 업그레이드</span></li>
+        <li><span class="check">✔</span><span data-i18n="p3.l3">프리미엄 웨딩 화보 촬영 (스튜디오/야외)</span></li>
+        <li><span class="check">✔</span><span data-i18n="p3.l4">한국 생활 적응 프로그램 (정착 가이드, 문화 교육)</span></li>
+        <li><span class="check">✔</span><span data-i18n="p3.l5">출국/입국 전후 전 과정 동행</span></li>
+        <li><span class="check">✔</span><span data-i18n="p3.l6">프리미엄 허니문 (해외/특급 리조트)</span></li>
+        <li><span class="check">✔</span><span data-i18n="p3.l7">부부 성장 프로그램 (커플 코칭, 워크숍)</span></li>
+        <li><span class="check">✔</span><span data-i18n="p3.l8">사후 관리 최대 1년</span></li>
+      </ul>
+    </article>
+  </section>
+
+  <footer>
+    <div class="footer-wrap">
+      <div class="company" data-i18n="footer.company">PT INKO NIKAH INDONESIA</div>
+      <div data-i18n="footer.nib">사업자등록번호 (NIB): 3107250098036</div>
+      <div data-i18n="footer.ahu">법무부 등록번호 (AHU): AHU-038917.AH.01.30.</div>
+      <div data-i18n="footer.address">주소: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345</div>
+      <div class="copy" data-i18n="footer.copy">© 2025 PT INKO NIKAH INDONESIA. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+const translations = {
+  ko:{"nav.home":"홈","nav.about":"회사소개","nav.services":"서비스","nav.process":"프로세스","nav.package":"패키지","nav.compliance":"보안 & 컴플라이언스","nav.guide":"이용안내","nav.female":"여성 회원 이용 안내","nav.male":"남성 회원 이용 안내","nav.faq":"FAQ","nav.contact":"문의","nav.signup":"회원가입",
+      "pkg.title":"패키지 안내","pkg.sub":"고객님의 상황에 맞는 맞춤형 패키지를 선택하세요","price.tba":"가격: 추후 공지",
+      "p1.title":"스탠다드 (기본)","p1.pilot":"파일럿 진행","p1.desc":"기본부터 결혼, 비자, 신혼여행까지 책임지는 핵심 패키지.","p1.l1":"기본 프로필 등록 & 상담 가이드","p1.l2":"프로필 교환 및 매칭","p1.l3":"화상 미팅 & 대면 미팅 (무제한)","p1.l4":"결혼식 & 결혼식장 진행 지원","p1.l5":"웨딩 사진 촬영 & 결혼 앨범 제작","p1.l6":"허니문 여행 진행 지원","p1.l7":"한국어 교육 & 기숙사 제공","p1.l8":"F‑6 비자 진행 및 관련 서류 지원",
+      "p2.title":"스탠다드 플러스","p2.desc":"가족과 추억 중심의 업그레이드 경험.","p2.inc":"스탠다드 포함","p2.l1":"우선 배정 & 세부 조건 기반 매칭","p2.l2":"맞춤형 1:1 심화 상담","p2.l3":"국제 문화 예절/교류 세션","p2.l4":"결혼식장 업그레이드 & 맞춤 연출","p2.l5":"허니문 업그레이드 (특별 리조트/장소)","p2.l6":"양가 가족 교류 프로그램","p2.l7":"하이라이트 영상 제작",
+      "p3.title":"맥스","p3.desc":"프리미엄 웨딩·허니문과 장기 사후관리까지 풀케어.","p3.inc":"스탠다드 플러스 포함","p3.l1":"전담 매니저 1:1 풀케어","p3.l2":"웨딩 플래닝 풀케어 & 프리미엄 식장 업그레이드","p3.l3":"프리미엄 웨딩 화보 촬영 (스튜디오/야외)","p3.l4":"한국 생활 적응 프로그램 (정착 가이드, 문화 교육)","p3.l5":"출국/입국 전후 전 과정 동행","p3.l6":"프리미엄 허니문 (해외/특급 리조트)","p3.l7":"부부 성장 프로그램 (커플 코칭, 워크숍)","p3.l8":"사후 관리 최대 1년",
+      "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"사업자등록번호 (NIB): 3107250098036","footer.ahu":"법무부 등록번호 (AHU): AHU-038917.AH.01.30.","footer.address":"주소: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. All rights reserved."},
+  en:{"nav.home":"Home","nav.about":"About","nav.services":"Services","nav.process":"Process","nav.package":"Package","nav.compliance":"Security & Compliance","nav.guide":"Guide","nav.female":"Guide for Women","nav.male":"Guide for Men","nav.faq":"FAQ","nav.contact":"Contact","nav.signup":"Sign Up",
+      "pkg.title":"Packages","pkg.sub":"Choose the plan that fits your situation","price.tba":"Price: TBA",
+      "p1.title":"Standard (Basic)","p1.pilot":"Pilot","p1.desc":"Essential package covering wedding, visa and honeymoon.","p1.l1":"Profile setup & consultation guide","p1.l2":"Profile exchange & matchmaking","p1.l3":"Unlimited video & in‑person meetings","p1.l4":"Wedding & venue support","p1.l5":"Wedding photoshoot & album production","p1.l6":"Honeymoon planning support","p1.l7":"Korean lessons & dormitory","p1.l8":"F‑6 visa guidance & paperwork support",
+      "p2.title":"Standard Plus","p2.desc":"Upgraded experience focused on family and memories.","p2.inc":"Includes Standard","p2.l1":"Priority allocation & criteria‑based matching","p2.l2":"Personalised 1:1 deep‑dive consultation","p2.l3":"Intercultural etiquette/exchange session","p2.l4":"Wedding venue upgrade & custom production","p2.l5":"Honeymoon upgrade (special resorts/locations)","p2.l6":"Family bonding program","p2.l7":"Highlight video production",
+      "p3.title":"Max","p3.desc":"Premium wedding/honeymoon with extended aftercare.","p3.inc":"Includes Standard Plus","p3.l1":"Dedicated manager (1:1)","p3.l2":"Full wedding planning & premium venue upgrade","p3.l3":"Premium wedding photobook (studio/outdoor)","p3.l4":"Korean settlement & culture program","p3.l5":"Escort throughout departures/arrivals","p3.l6":"Premium honeymoon (overseas / luxury resort)","p3.l7":"Couple growth program","p3.l8":"Aftercare up to 1 year",
+      "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"Business Identification Number (NIB): 3107250098036","footer.ahu":"Ministry of Law Registration Number (AHU): AHU-038917.AH.01.30.","footer.address":"Address: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. All rights reserved."},
+  id:{"nav.home":"Beranda","nav.about":"Tentang Kami","nav.services":"Layanan","nav.process":"Proses","nav.package":"Paket","nav.compliance":"Keamanan & Kepatuhan","nav.guide":"Panduan","nav.female":"Panduan Anggota Perempuan","nav.male":"Panduan Anggota Pria","nav.faq":"FAQ","nav.contact":"Kontak","nav.signup":"Daftar",
+      "pkg.title":"Paket","pkg.sub":"Pilih paket yang sesuai kebutuhan Anda","price.tba":"Harga: Akan diumumkan",
+      "p1.title":"Standard (Dasar)","p1.pilot":"Pilot","p1.desc":"Paket esensial mencakup pernikahan, visa, dan bulan madu.","p1.l1":"Pembuatan profil & panduan konsultasi","p1.l2":"Pertukaran profil & pencocokan","p1.l3":"Pertemuan video & tatap muka tanpa batas","p1.l4":"Dukungan pernikahan & tempat acara","p1.l5":"Pemotretan pernikahan & pembuatan album","p1.l6":"Dukungan perencanaan bulan madu","p1.l7":"Kelas bahasa Korea & asrama","p1.l8":"Panduan visa F‑6 & dokumen terkait",
+      "p2.title":"Standard Plus","p2.desc":"Pengalaman yang ditingkatkan berfokus pada keluarga & kenangan.","p2.inc":"Termasuk Standard","p2.l1":"Prioritas dan pencocokan berbasis kriteria","p2.l2":"Konsultasi mendalam 1:1","p2.l3":"Sesi etika/pertukaran budaya","p2.l4":"Upgrade tempat pernikahan & produksi khusus","p2.l5":"Upgrade bulan madu (resor/lokasi spesial)","p2.l6":"Program kebersamaan keluarga","p2.l7":"Produksi video highlight",
+      "p3.title":"Max","p3.desc":"Pernikahan/bulan madu premium dengan perawatan lanjutan.","p3.inc":"Termasuk Standard Plus","p3.l1":"Manajer khusus (1:1)","p3.l2":"Perencanaan pernikahan penuh & upgrade venue premium","p3.l3":"Pemotretan album premium (studio/outdoor)","p3.l4":"Program adaptasi hidup di Korea","p3.l5":"Pendampingan berangkat/tiba","p3.l6":"Bulan madu premium (luar negeri/resor mewah)","p3.l7":"Program pengembangan pasangan","p3.l8":"Perawatan hingga 1 tahun",
+      "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"Nomor Induk Berusaha (NIB): 3107250098036","footer.ahu":"Nomor Registrasi Kementerian Hukum (AHU): AHU-038917.AH.01.30.","footer.address":"Alamat: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. Semua hak dilindungi."}
+};
+
+function setLang(lang){
+  localStorage.setItem('lang',lang);
+  document.documentElement.lang=lang;
+  applyTranslations(lang);
+}
+function applyTranslations(lang){
+  const dict=translations[lang]||translations.ko;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key=el.getAttribute("data-i18n");
+    if(dict[key]!=null) el.textContent = dict[key];
+  });
+}
+document.addEventListener("DOMContentLoaded",()=>{
+  const saved=localStorage.getItem('lang')||'ko';
+  document.getElementById('lang').value=saved;
+  setLang(saved);
+});
+</script>
+
+</body>
+</html>

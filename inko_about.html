@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>INKO NIKAH · 회사소개</title>
+  <style>
+    :root{
+      --ink:#111; --muted:#5a5a5a; --glass-br:rgba(255,255,255,.5);
+      --max:1100px;
+      --bg:
+        radial-gradient(80% 100% at 0% 0%, rgba(255,192,203,.48) 0%, rgba(255,192,203,0) 60%),
+        radial-gradient(85% 100% at 100% 15%, rgba(173,216,230,.44) 0%, rgba(173,216,230,0) 60%),
+        radial-gradient(95% 110% at 50% 100%, rgba(152,251,152,.44) 0%, rgba(152,251,152,0) 60%),
+        linear-gradient(180deg, #f5f7fb 0%, #fbfaf7 100%);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif;color:var(--ink);line-height:1.65;background:var(--bg)}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+    a{text-decoration:none;color:inherit}
+    header{position:sticky;top:0;z-index:40;backdrop-filter:blur(18px) saturate(185%);
+      -webkit-backdrop-filter:blur(18px) saturate(185%);background:rgba(255,255,255,.46);border-bottom:1px solid var(--glass-br)}
+    .nav{max-width:var(--max);margin:0 auto;padding:12px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+    .brand{font-weight:900}
+    nav.menu{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
+    .controls{display:flex;gap:10px;justify-content:flex-end;align-items:center}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.40);border:1px solid var(--glass-br);box-shadow:inset 0 2px 4px rgba(255,255,255,.85), inset 0 -3px 6px rgba(0,0,0,.14), 0 8px 20px rgba(0,0,0,.08);font-weight:700;transition:transform .18s ease, box-shadow .18s ease, background .18s ease}
+    .pill:hover{transform:translateY(-2px);background:rgba(255,255,255,.62);box-shadow:inset 0 2px 5px rgba(255,255,255,.95), inset 0 -4px 8px rgba(0,0,0,.16), 0 14px 28px rgba(0,0,0,.12)}
+    .pill.cta{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,239,170,0.70) 0%,rgba(255,211,94,0.65) 40%,rgba(232,184,74,0.60) 70%,rgba(201,151,45,0.55) 100%);color:#3a2a00;border:1px solid rgba(201,151,45,.6);box-shadow:inset 0 1px 2px rgba(255,255,255,.6),0 3px 8px rgba(201,151,45,.25);padding:6px 16px;min-width:120px;font-size:.9rem}
+    .lang{appearance:none;border:1px solid var(--glass-br);border-radius:999px;padding:10px 38px 10px 14px;font-weight:800;cursor:pointer;background:rgba(255,255,255,.95) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23222" d="M6 8 0 0h12z"/></svg>') no-repeat right 10px center;min-width:116px;transition:transform .18s ease, box-shadow .18s ease}
+    .lang:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.08)}
+    /* dropdown */
+    .dropdown{position:relative}
+    .dropdown>a::after{content:"▾";margin-left:6px;opacity:.8}
+    .dropdown-content{
+      position:absolute;top:115%;left:0;display:none !important;visibility:hidden;opacity:0;pointer-events:none;
+      min-width:220px;padding:10px;border-radius:14px;
+      backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);
+      background:rgba(255,255,255,.66);border:1px solid var(--glass-br);box-shadow:0 12px 28px rgba(0,0,0,.12);
+      transform:translateY(6px);transition:opacity .15s ease, transform .15s ease}
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content{
+      display:block !important;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0)}
+    .dropdown-content a{display:block;padding:10px 12px;border-radius:10px}
+    .dropdown-content a:hover{background:rgba(255,255,255,.8);transform:translateY(-2px)}
+    .section{padding:26px 0}
+    .hero{text-align:center;padding:36px 0 6px}
+    h1{font-size:clamp(18px,2.6vw,20px);margin:0 0 8px;font-weight:900}
+    .subtitle{color:#b28500;font-weight:900}
+    .glass{border:1px solid var(--glass-br);background:rgba(255,255,255,.62);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-radius:18px;box-shadow:0 18px 38px rgba(0,0,0,.10)}
+    .box{padding:20px 20px}
+    .kicker{font-weight:900;margin:0 0 10px}
+    .note{margin-top:10px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.55);border:1px dashed var(--glass-br);color:var(--muted);font-weight:700}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width:820px){.grid{grid-template-columns:1fr}}
+    .values{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width:820px){.values{grid-template-columns:1fr}}
+    .chip{padding:14px 16px;border-radius:14px;border:1px solid var(--glass-br);background:rgba(255,255,255,.62);box-shadow:0 10px 24px rgba(0,0,0,.08);font-weight:800}
+    footer{margin-top:20px}
+  </style>
+<style>
+/* --- Hover stability fix (minimal) --- */
+.dropdown { position: relative; }
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content,
+.dropdown:hover .menu-drop,
+.dropdown:focus-within .menu-drop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+}
+/* tiny hover bridge to kill the gap between trigger and panel */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 6px; /* 아주 살짝만 */
+}
+/* eliminate vertical gap if any */
+.dropdown-content, .menu-drop {
+  margin-top: -2px;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">INKO NIKAH</div>
+    <nav class="menu" aria-label="primary">
+      <a class="pill" href="._index.html" >홈</a>
+      <a class="pill" href="inko_about.html" >회사소개</a>
+
+      <div class="dropdown">
+        <a class="pill" href="javascript:void(0)" data-i18n="nav.services">서비스</a>
+        <div class="dropdown-content">
+          <a href="._inko_process.html" >프로세스</a>
+          <a href="inko_package.html" >패키지</a>
+          <a href="._inko_compliance.html" >보안 &amp; 컴플라이언스</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a class="pill" href="._inko_female_guide.html" >이용안내</a>
+        <div class="dropdown-content">
+          <a href="._inko_female_guide.html" >여성 회원 이용 안내</a>
+          <a href="._inko_female_guide.html" >남성 회원 이용 안내</a>
+        </div>
+      </div>
+
+      <a class="pill" href="._inko_faq.html" >FAQ</a>
+      <a class="pill" href="._inko_contact.html" >문의</a>
+    </nav>
+    <div class="controls">
+      <select id="lang" class="lang" onchange="setLang(this.value)">
+        <option value="ko">🇰🇷 KO</option>
+        <option value="en">🇺🇸 EN</option>
+        <option value="id">🇮🇩 ID</option>
+      </select>
+      <a class="pill cta" href="https://forms.gle/V7WHQcC4FGKpYmju6" target="_blank" rel="noopener" data-i18n="nav.signup">회원가입</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1 data-i18n="about.title">회사소개</h1>
+    <div class="subtitle" data-i18n="about.sub">두 사람의 사랑, 두 가족의 화합, 두 나라의 인연</div>
+  </section>
+
+  <section class="section">
+    <div class="glass box">
+      <h3 class="kicker" data-i18n="about.meaningTitle">잉꼬니까(INKO NIKAH)의 뜻</h3>
+      <div data-i18n="about.meaningBody">
+        INKO NIKAH는 IN-KO(Indonesia–Korea)의 결합으로, 인도네시아와 한국을 잇는 합법적 국제결혼을 의미합니다.
+        또한 발음상 한국어 ‘잉꼬부부’에서 착안한 이름으로, 늘 껴울 지어 지내는 러브버드처럼 평생의 동행과 따뜻한 연대를 상징합니다.
+      </div>
+      <div class="note" data-i18n="about.note">
+        ‘잉꼬’는 작은 앵무새의 별칭으로 항상 짝을 이루는 습성 때문에, 다정한 부부를 뜻하는 ‘잉꼬부부’라는 표현이 생겼습니다.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid">
+      <div class="glass box">
+        <h3 class="kicker" data-i18n="about.visionTitle">비전</h3>
+        <div data-i18n="about.visionBody">
+          한국–인도네시아 간의 합법적이고 안전한 국제결혼을 통해 두 나라의 문화와 두 가족의 행복한 화합을 실현합니다.
+        </div>
+      </div>
+      <div class="glass box">
+        <h3 class="kicker" data-i18n="about.missionTitle">미션</h3>
+        <div data-i18n="about.missionBody">
+          투명하고 신뢰할 수 있는 국제결혼 중개 서비스를 제공하여, 진정한 사랑과 평생의 동반자를 찾는 분들을 도와드립니다.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3 class="kicker" style="margin-bottom:10px" data-i18n="about.valuesTitle">핵심 가치</h3>
+    <div class="glass box">
+      <div class="values">
+        <div class="chip" data-i18n="about.v1">투명성: 모든 과정을 투명하게 공개합니다</div>
+        <div class="chip" data-i18n="about.v2">안전성: 철저한 신원확인과 안전한 만남을 보장합니다</div>
+        <div class="chip" data-i18n="about.v3">전문성: 풍부한 경험과 전문 지식을 바탕으로 서비스합니다</div>
+        <div class="chip" data-i18n="about.v4">진정성: 진심의 만남과 진정한 사랑을 추구합니다</div>
+        <div class="chip" data-i18n="about.v5">지속성: 결혼 후에도 지속적인 관리와 지원을 제공합니다</div>
+        <div class="chip" data-i18n="about.v6">문화존중: 두 나라의 문화를 존중하고 어울립니다</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div style="text-align:center;max-width:var(--max);margin:0 auto;padding:20px 18px 24px;color:#000;font-size:14px">
+      <div style="font-weight:800;margin-bottom:4px" data-i18n="footer.company">PT INKO NIKAH INDONESIA</div>
+      <div data-i18n="footer.nib">사업자등록번호 (NIB): 3107250098036</div>
+      <div data-i18n="footer.ahu">법무부 등록번호 (AHU): AHU-038917.AH.01.30.</div>
+      <div data-i18n="footer.address">주소: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345</div>
+      <div style="margin-top:4px;font-size:12px;color:#333" data-i18n="footer.copy">© 2025 PT INKO NIKAH INDONESIA. All rights reserved.</div>
+    </div>
+  </footer>
+</main>
+
+<script>
+const i18n = {
+  ko:{
+    "nav.home":"홈","nav.about":"회사소개","nav.services":"서비스","nav.process":"프로세스","nav.package":"패키지","nav.compliance":"보안 & 컴플라이언스",
+    "nav.guide":"이용안내","nav.female":"여성 회원 이용 안내","nav.male":"남성 회원 이용 안내","nav.faq":"FAQ","nav.contact":"문의","nav.signup":"회원가입",
+    "about.title":"회사소개","about.sub":"두 사람의 사랑, 두 가족의 화합, 두 나라의 인연",
+    "about.meaningTitle":"잉꼬니까(INKO NIKAH)의 뜻",
+    "about.meaningBody":"INKO NIKAH는 IN-KO(Indonesia–Korea)의 결합으로, 인도네시아와 한국을 잇는 합법적 국제결혼을 의미합니다. 또한 발음상 한국어 ‘잉꼬부부’에서 착안한 이름으로, 늘 껴울 지어 지내는 러브버드처럼 평생의 동행과 따뜻한 연대를 상징합니다.",
+    "about.note":"‘잉꼬’는 작은 앵무새의 별칭으로 항상 짝을 이루는 습성 때문에, 다정한 부부를 뜻하는 ‘잉꼬부부’라는 표현이 생겼습니다.",
+    "about.visionTitle":"비전","about.visionBody":"한국–인도네시아 간의 합법적이고 안전한 국제결혼을 통해 두 나라의 문화와 두 가족의 행복한 화합을 실현합니다.",
+    "about.missionTitle":"미션","about.missionBody":"투명하고 신뢰할 수 있는 국제결혼 중개 서비스를 제공하여, 진정한 사랑과 평생의 동반자를 찾는 분들을 도와드립니다.",
+    "about.valuesTitle":"핵심 가치","about.v1":"투명성: 모든 과정을 투명하게 공개합니다","about.v2":"안전성: 철저한 신원확인과 안전한 만남을 보장합니다",
+    "about.v3":"전문성: 풍부한 경험과 전문 지식을 바탕으로 서비스합니다","about.v4":"진정성: 진심의 만남과 진정한 사랑을 추구합니다",
+    "about.v5":"지속성: 결혼 후에도 지속적인 관리와 지원을 제공합니다","about.v6":"문화존중: 두 나라의 문화를 존중하고 어울립니다",
+    "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"사업자등록번호 (NIB): 3107250098036","footer.ahu":"법무부 등록번호 (AHU): AHU-038917.AH.01.30.","footer.address":"주소: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. All rights reserved."
+  },
+  en:{
+    "nav.home":"Home","nav.about":"About","nav.services":"Services","nav.process":"Process","nav.package":"Package","nav.compliance":"Security & Compliance",
+    "nav.guide":"Guide","nav.female":"Guide for Women","nav.male":"Guide for Men","nav.faq":"FAQ","nav.contact":"Contact","nav.signup":"Sign Up",
+    "about.title":"About Us","about.sub":"Two people in love, two families united, two nations connected",
+    "about.meaningTitle":"Meaning of INKO NIKAH",
+    "about.meaningBody":"INKO NIKAH combines IN–KO (Indonesia–Korea) and means a lawful international marriage connecting Indonesia and Korea. The name also echoes 'lovebirds' in Korean, symbolising lifelong companionship and warm togetherness.",
+    "about.note":"‘Lovebirds’ are known to pair for life, hence the expression for affectionate couples.",
+    "about.visionTitle":"Vision","about.visionBody":"Realise a joyful union of two families and cultures through safe, lawful Indonesia–Korea marriages.",
+    "about.missionTitle":"Mission","about.missionBody":"Provide a transparent and trustworthy matchmaking service to help you find true love and a lifelong partner.",
+    "about.valuesTitle":"Our Values",
+    "about.v1":"Transparency: we share every step openly","about.v2":"Safety: strict verification and secure meetings",
+    "about.v3":"Expertise: proven experience and know‑how","about.v4":"Sincerity: genuine people and genuine love",
+    "about.v5":"Continuity: support continues after marriage","about.v6":"Cultural Respect: we honour both cultures",
+    "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"Business Identification Number (NIB): 3107250098036","footer.ahu":"Ministry of Law Registration Number (AHU): AHU-038917.AH.01.30.","footer.address":"Address: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. All rights reserved."
+  },
+  id:{
+    "nav.home":"Beranda","nav.about":"Tentang Kami","nav.services":"Layanan","nav.process":"Proses","nav.package":"Paket","nav.compliance":"Keamanan & Kepatuhan",
+    "nav.guide":"Panduan","nav.female":"Panduan Anggota Perempuan","nav.male":"Panduan Anggota Pria","nav.faq":"FAQ","nav.contact":"Kontak","nav.signup":"Daftar",
+    "about.title":"Tentang Kami","about.sub":"Dua insan, dua keluarga, dua bangsa terhubung",
+    "about.meaningTitle":"Arti INKO NIKAH",
+    "about.meaningBody":"INKO NIKAH menggabungkan IN–KO (Indonesia–Korea) dan berarti pernikahan internasional yang sah menghubungkan Indonesia dan Korea. Namanya juga terinspirasi dari 'lovebirds', melambangkan kebersamaan seumur hidup.",
+    "about.note":"‘Lovebirds’ dikenal selalu berpasangan, sehingga menjadi simbol pasangan yang harmonis.",
+    "about.visionTitle":"Visi","about.visionBody":"Mewujudkan persatuan bahagia dua keluarga dan budaya melalui pernikahan Indonesia–Korea yang aman dan sah.",
+    "about.missionTitle":"Misi","about.missionBody":"Menyediakan layanan perjodohan yang transparan dan tepercaya untuk menemukan cinta sejati dan pasangan hidup.",
+    "about.valuesTitle":"Nilai Inti",
+    "about.v1":"Transparansi: setiap langkah dibuka dengan jelas","about.v2":"Keamanan: verifikasi ketat & pertemuan yang aman",
+    "about.v3":"Keahlian: pengalaman dan pengetahuan yang kuat","about.v4":"Ketulusan: pertemuan yang tulus dan penuh cinta",
+    "about.v5":"Keberlanjutan: dukungan berlanjut setelah menikah","about.v6":"Menghormati Budaya: menghargai kedua budaya",
+    "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"Nomor Induk Berusaha (NIB): 3107250098036","footer.ahu":"Nomor Registrasi Kemenkumham (AHU): AHU-038917.AH.01.30.","footer.address":"Alamat: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. Semua hak dilindungi."
+  }
+};
+
+function setLang(lang){
+  localStorage.setItem('lang',lang);
+  document.documentElement.lang = lang;
+  applyTranslations(lang);
+}
+function applyTranslations(lang){
+  const d = i18n[lang] || i18n.ko;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(d[key] != null) el.textContent = d[key];
+  });
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  const saved = localStorage.getItem('lang') || 'ko';
+  document.getElementById('lang').value = saved;
+  setLang(saved);
+});
+</script>
+</body>
+</html>
