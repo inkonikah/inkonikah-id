@@ -100,7 +100,17 @@
     .footer-wrap{max-width:var(--max);margin:0 auto;padding:20px 18px 24px;text-align:center;color:#000;font-size:14px}
     .footer-wrap .company{font-weight:800;margin-bottom:4px}
     .copy{margin-top:4px;font-size:12px;color:#333}
-  </style>
+  
+.has-submenu > a::after {
+  content: "▶";
+  font-size: 14px;
+  color: #000;
+  margin-left: 8px;
+}
+.has-submenu.open > a::after {
+  content: "▼";
+}
+</style>
 <style>
 /* --- Hover stability fix (minimal) --- */
 .dropdown { position: relative; }
@@ -127,37 +137,158 @@
   margin-top: -2px;
 }
 </style>
+
+<style>
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar.open { left: 0; }
+
+.sidebar a {
+  padding: 12px 20px;
+  display: block;
+  text-decoration: none;
+}
+.sidebar .submenu { display: none; flex-direction: column; }
+.sidebar .has-submenu.open > .submenu { display: flex; }
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 999;
+}
+.overlay.show { display: block; }
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav.menu { display: none; }
+  .hamburger { display: block; }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.querySelector('.overlay');
+  if(hamburger){
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.add('open');
+      overlay.classList.add('show');
+    });
+  }
+  if(overlay){
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+    });
+  }
+  // submenu toggle for mobile
+  document.querySelectorAll('.sidebar .has-submenu > a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      link.parentElement.classList.toggle('open');
+    });
+  });
+  // Language setup
+  let savedLang = localStorage.getItem('lang');
+  if(!savedLang){ savedLang = 'id'; localStorage.setItem('lang','id'); }
+  if(typeof applyLang === 'function'){
+    applyLang(savedLang);
+  }
+  const switcher = document.getElementById('languageSwitcher');
+  if(switcher){
+    switcher.value = savedLang;
+    switcher.addEventListener('change', e => {
+      localStorage.setItem('lang', e.target.value);
+      if(typeof applyLang === 'function'){
+        applyLang(e.target.value);
+      }
+    });
+  }
+});
+</script>
+
 </head>
 <body>
+
+<div class="overlay"></div>
+<div class="sidebar">
+  <a href="index.html" data-i18n="nav.home">홈</a>
+  <a href="/inko_about.html" data-i18n="nav.about">회사소개</a>
+  <div class="has-submenu">
+    <a href="#" data-i18n="nav.services">서비스 ▾</a>
+    <div class="submenu">
+      <a href="/inko_process.html" data-i18n="nav.process">프로세스</a>
+      <a href="/inko_package.html" data-i18n="nav.package">패키지</a>
+      <a href="/inko_compliance.html" data-i18n="nav.compliance">보안 & 컴플라이언스</a>
+    </div>
+  </div>
+  <div class="has-submenu">
+    <a href="#" data-i18n="nav.guide">이용안내 ▾</a>
+    <div class="submenu">
+      <a href="/inko_female_guide.html" data-i18n="nav.female">여성 회원 안내</a>
+      <a href="/inko_male_guide.html" data-i18n="nav.male">남성 회원 안내</a>
+    </div>
+  </div>
+  <a href="/inko_faq.html" data-i18n="nav.faq">FAQ</a>
+  <a href="/inko_contact.html" data-i18n="nav.contact">문의</a>
+</div>
+
 <div class="canvas">
 
   <header>
     <div class="nav">
-      <div class="brand">INKO NIKAH</div>
+      <button class="hamburger">☰</button><div class="brand">INKO NIKAH</div>
 
       <nav class="menu" aria-label="primary">
-        <a class="pill" href="._index.html" >홈</a>
-        <a class="pill" href="inko_about.html" >회사소개</a>
+        <a class="pill" href="#" data-i18n="nav.home">홈</a>
+        <a class="pill" href="#" data-i18n="nav.about">회사소개</a>
 
         <div class="dropdown">
           <a class="pill" href="javascript:void(0)" data-i18n="nav.services">서비스</a>
           <div class="dropdown-content">
-            <a href="._inko_process.html" >프로세스</a>
-            <a href="inko_package.html" >패키지</a>
-            <a href="._inko_compliance.html" >보안 &amp; 컴플라이언스</a>
+            <a href="#" data-i18n="nav.process">프로세스</a>
+            <a href="#" data-i18n="nav.package">패키지</a>
+            <a href="#" data-i18n="nav.compliance">보안 &amp; 컴플라이언스</a>
           </div>
         </div>
 
         <div class="dropdown">
-          <a class="pill" href="._inko_female_guide.html" >이용안내</a>
+          <a class="pill" href="javascript:void(0)" data-i18n="nav.guide">이용안내</a>
           <div class="dropdown-content">
-            <a href="._inko_female_guide.html" >여성 회원 이용 안내</a>
-            <a href="._inko_female_guide.html" >남성 회원 이용 안내</a>
+            <a href="#" data-i18n="nav.female">여성 회원 이용 안내</a>
+            <a href="#" data-i18n="nav.male">남성 회원 이용 안내</a>
           </div>
         </div>
 
-        <a class="pill" href="._inko_faq.html" >FAQ</a>
-        <a class="pill" href="._inko_contact.html" >문의</a>
+        <a class="pill" href="#" data-i18n="nav.faq">FAQ</a>
+        <a class="pill" href="#" data-i18n="nav.contact">문의</a>
       </nav>
 
       <div class="controls">
