@@ -110,6 +110,19 @@
 .has-submenu.open > a::after {
   content: "▼";
 }
+
+/* Responsive grid for values section */
+@media (max-width: 600px) {
+  .values {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 </style>
 <style>
 /* --- Hover stability fix (minimal) --- */
@@ -136,6 +149,19 @@
 .dropdown-content, .menu-drop {
   margin-top: -2px;
 }
+
+/* Responsive grid for values section */
+@media (max-width: 600px) {
+  .values {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 </style>
 
 <style>
@@ -190,6 +216,19 @@
   nav.menu { display: none; }
   .hamburger { display: block; }
 }
+
+/* Responsive grid for values section */
+@media (max-width: 600px) {
+  .values {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -267,28 +306,28 @@ document.addEventListener('DOMContentLoaded', () => {
       <button class="hamburger">☰</button><div class="brand">INKO NIKAH</div>
 
       <nav class="menu" aria-label="primary">
-        <a class="pill" href="#" data-i18n="nav.home">홈</a>
-        <a class="pill" href="#" data-i18n="nav.about">회사소개</a>
+        <a class="pill" href="index.html" data-i18n="nav.home">홈</a>
+        <a class="pill" href="/inko_about.html" data-i18n="nav.about">회사소개</a>
 
         <div class="dropdown">
-          <a class="pill" href="javascript:void(0)" data-i18n="nav.services">서비스</a>
+          <a class="pill" href="/inko_process.html" data-i18n="nav.services">서비스</a>
           <div class="dropdown-content">
-            <a href="#" data-i18n="nav.process">프로세스</a>
-            <a href="#" data-i18n="nav.package">패키지</a>
-            <a href="#" data-i18n="nav.compliance">보안 &amp; 컴플라이언스</a>
+            <a href="/inko_process.html" data-i18n="nav.process">프로세스</a>
+            <a href="/inko_package.html" data-i18n="nav.package">패키지</a>
+            <a href="/inko_compliance.html" data-i18n="nav.compliance">보안 &amp; 컴플라이언스</a>
           </div>
         </div>
 
         <div class="dropdown">
-          <a class="pill" href="javascript:void(0)" data-i18n="nav.guide">이용안내</a>
+          <a class="pill" href="/inko_female_guide.html" data-i18n="nav.guide">이용안내</a>
           <div class="dropdown-content">
-            <a href="#" data-i18n="nav.female">여성 회원 이용 안내</a>
-            <a href="#" data-i18n="nav.male">남성 회원 이용 안내</a>
+            <a href="/inko_female_guide.html" data-i18n="nav.female">여성 회원 이용 안내</a>
+            <a href="/inko_male_guide.html" data-i18n="nav.male">남성 회원 이용 안내</a>
           </div>
         </div>
 
-        <a class="pill" href="#" data-i18n="nav.faq">FAQ</a>
-        <a class="pill" href="#" data-i18n="nav.contact">문의</a>
+        <a class="pill" href="/inko_faq.html" data-i18n="nav.faq">FAQ</a>
+        <a class="pill" href="/inko_contact.html" data-i18n="nav.contact">문의</a>
       </nav>
 
       <div class="controls">
