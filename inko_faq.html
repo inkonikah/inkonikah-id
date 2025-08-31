@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   INKO NIKAH &middot; FAQ
+  </title>
+  <style>
+   :root{
+      --pri:#222; --ink:#111; --muted:#5a5a5a;
+      --border:#ffffff80; --glass:rgba(255,255,255,.44); --glass-br:rgba(255,255,255,.48);
+      --shadow:0 14px 40px rgba(0,0,0,.10); --max:1100px; --r:18px;
+      --bg:
+        radial-gradient(80% 100% at 0% 0%, rgba(255,192,203,.48) 0%, rgba(255,192,203,0) 60%),
+        radial-gradient(85% 100% at 100% 15%, rgba(173,216,230,.44) 0%, rgba(173,216,230,0) 60%),
+        radial-gradient(95% 110% at 50% 100%, rgba(152,251,152,.44) 0%, rgba(152,251,152,0) 60%),
+        linear-gradient(180deg, #f5f7fb 0%, #fbfaf7 100%);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif;color:var(--ink);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .canvas{min-height:100vh;background:var(--bg)}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+    
+    header{position:sticky;top:0;z-index:40;backdrop-filter:blur(18px) saturate(185%);
+      -webkit-backdrop-filter:blur(18px) saturate(185%);background:rgba(255,255,255,.46);border-bottom:1px solid var(--glass-br)}
+    .nav{max-width:var(--max);margin:0 auto;padding:12px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+    .brand{font-weight:900;letter-spacing:.2px}
+    nav.menu{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
+    .controls{display:flex;gap:10px;justify-content:flex-end;align-items:center}
+
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:999px;
+      background:rgba(255,255,255,.40);
+      border:1px solid var(--glass-br);
+      box-shadow:
+        inset 0 2px 4px rgba(255,255,255,.85),
+        inset 0 -3px 6px rgba(0,0,0,.14),
+        0 8px 20px rgba(0,0,0,.08);
+      font-weight:700; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; will-change:transform}
+    .pill:hover{transform:translateY(-2px);
+      background:rgba(255,255,255,.62);
+      box-shadow:
+        inset 0 2px 5px rgba(255,255,255,.95),
+        inset 0 -4px 8px rgba(0,0,0,.16),
+        0 14px 28px rgba(0,0,0,.12)}
+    .pill:active{transform:translateY(0)}
+
+    .pill.cta{
+      background: linear-gradient(180deg,
+        rgba(255, 239, 170, 0.70) 0%,
+        rgba(255, 211, 94, 0.65) 40%,
+        rgba(232, 184, 74, 0.60) 70%,
+        rgba(201, 151, 45, 0.55) 100%
+      );
+      color:#3a2a00;
+      border:1px solid rgba(201,151,45,0.6);
+      box-shadow: inset 0 1px 2px rgba(255,255,255,.6),
+                  0 3px 8px rgba(201,151,45,.25);
+      padding:6px 16px;
+      min-width:120px;
+      font-size:0.9rem;
+      justify-content:center
+    }
+    .pill.cta:hover{filter:saturate(1.05) brightness(1.03); transform:translateY(-2px);}
+
+    .dropdown{position:relative}
+    .dropdown>a::after{content:"▾";margin-left:6px;opacity:.8}
+    .dropdown-content{position:absolute;top:115%;left:0;display:none;min-width:220px;padding:10px;border-radius:14px;
+      backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);
+      background:rgba(255,255,255,.66);border:1px solid var(--glass-br);box-shadow:0 12px 28px rgba(0,0,0,.12)}
+    .dropdown:hover .dropdown-content{display:block}
+    .dropdown-content a{display:block;padding:10px 12px;border-radius:10px}
+    .dropdown-content a:hover{background:rgba(255,255,255,.8);transform:translateY(-2px)}
+
+    .lang{appearance:none;border:1px solid var(--glass-br);border-radius:999px;padding:10px 38px 10px 14px;font-weight:800;cursor:pointer;
+      background:rgba(255,255,255,.95) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23222" d="M6 8 0 0h12z"/></svg>') no-repeat right 10px center;min-width:116px;
+      transition:transform .18s ease, box-shadow .18s ease}
+    .lang:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(0,0,0,.08)}
+
+
+    /* Page title (no logo) */
+    .pagehead{padding:60px 18px 18px;text-align:center}
+    .pagetitle{font-size:clamp(22px,3.2vw,28px);font-weight:900;margin:0}
+
+    /* Section label + cards */
+    .section-label{display:inline-block;margin:22px 0 12px;padding:8px 14px;border-radius:999px;font-weight:800;
+      backdrop-filter:blur(14px) saturate(180%);-webkit-backdrop-filter:blur(14px) saturate(180%);
+      background:rgba(255,255,255,.65);border:1px solid var(--glass-br);box-shadow:0 8px 20px rgba(0,0,0,.06)}
+    .faq{max-width:var(--max);margin:0 auto 38px;padding:0 18px;display:flex;flex-direction:column;gap:12px}
+    details.faqcard{border-radius:16px;overflow:hidden;border:1px solid var(--glass-br);
+      background:rgba(255,255,255,.62);box-shadow:0 10px 28px rgba(0,0,0,.08)}
+    details.faqcard[open]{box-shadow:0 16px 36px rgba(0,0,0,.12)}
+    summary{list-style:none;cursor:pointer;padding:16px 18px;font-weight:800;display:flex;align-items:center;gap:10px}
+    summary::marker{display:none}
+    .qicon{font-size:18px}
+    .answer{padding:0 18px 16px;color:#2b2b2b}
+    .muted{color:var(--muted)}
+
+    hr.sep{border:none;height:1px;background:rgba(0,0,0,.08);max-width:var(--max);margin:24px auto 0}
+    footer{margin-top:0}
+    .footer-wrap{max-width:var(--max);margin:0 auto;padding:20px 18px 24px;text-align:center;color:#000;font-size:14px}
+    .footer-wrap .company{font-weight:800;margin-bottom:4px}
+    .copy{margin-top:4px;font-size:12px;color:#333}
+  </style>
+  <style>
+   /* --- Hover stability fix (minimal) --- */
+.dropdown { position: relative; }
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content,
+.dropdown:hover .menu-drop,
+.dropdown:focus-within .menu-drop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+}
+/* tiny hover bridge to kill the gap between trigger and panel */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 6px; /* 아주 살짝만 */
+}
+/* eliminate vertical gap if any */
+.dropdown-content, .menu-drop {
+  margin-top: -2px;
+}
+  </style>
+  <style>
+   @media (max-width: 768px) {
+      nav.menu { display: none !important; }
+    }
+    .sidebar .submenu {
+      display: none;
+    }
+    .sidebar .has-submenu.open .submenu {
+      display: flex;
+    }
+    .sidebar .has-submenu .arrow {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .sidebar .has-submenu.open .arrow {
+      transform: rotate(0deg);
+    }
+  </style>
+  <style>
+   @media (max-width: 768px) { .hamburger { display: block !important; } }
+  </style>
+ </head>
+ <body>
+  <div class="overlay" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 998;
+    ">
+  </div>
+  <div class="sidebar" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 999;
+    ">
+   <ul style="list-style:none;padding:0;margin:0;font-size:16px;">
+    <li class="" style="margin: 12px 0; cursor:pointer;">
+     <a href="/index.html" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+      <span data-i18n="홈">
+       홈
+      </span>
+     </a>
+    </li>
+    <li class="" style="margin: 12px 0; cursor:pointer;">
+     <a href="/inko_about.html" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+      <span data-i18n="회사소개">
+       회사소개
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu" style="margin: 12px 0; cursor:pointer;">
+     <a href="#" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+      <span data-i18n="서비스">
+       서비스
+      </span>
+      <span class="arrow" style="margin-left:8px;">
+       ▶
+      </span>
+     </a>
+     <div class="submenu" style="display:none;flex-direction:column;padding-left:16px;margin-top:4px;">
+      <a href="/inko_process.html" style="margin:8px 0;text-decoration:none;color:inherit;">
+       <span data-i18n="프로세스">
+        프로세스
+       </span>
+      </a>
+      <a href="/inko_package.html" style="margin:8px 0;text-decoration:none;color:inherit;">
+       <span data-i18n="패키지">
+        패키지
+       </span>
+      </a>
+      <a href="/inko_compliance.html" style="margin:8px 0;text-decoration:none;color:inherit;">
+       <span data-i18n="보안 &amp; 컴플라이언스">
+        보안 &amp; 컴플라이언스
+       </span>
+      </a>
+     </div>
+    </li>
+    <li class="has-submenu" style="margin: 12px 0; cursor:pointer;">
+     <a href="#" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+      <span data-i18n="이용안내">
+       이용안내
+      </span>
+      <span class="arrow" style="margin-left:8px;">
+       ▶
+      </span>
+     </a>
+     <div class="submenu" style="display:none;flex-direction:column;padding-left:16px;margin-top:4px;">
+      <a href="/inko_female_guide.html" style="margin:8px 0;text-decoration:none;color:inherit;">
+       <span data-i18n="여성 회원 이용 안내">
+        여성 회원 이용 안내
+       </span>
+      </a>
+      <a href="/inko_male_guide.html" style="margin:8px 0;text-decoration:none;color:inherit;">
+       <span data-i18n="남성 회원 이용 안내">
+        남성 회원 이용 안내
+       </span>
+      </a>
+     </div>
+    </li>
+    <li class="" style="margin: 12px 0; cursor:pointer;">
+     <a href="/inko_faq.html" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+      <span data-i18n="FAQ">
+       FAQ
+      </span>
+     </a>
+    </li>
+    <li class="" style="margin: 12px 0; cursor:pointer;">
+     <a href="/inko_contact.html" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+      <span data-i18n="문의">
+       문의
+      </span>
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="canvas">
+   <div class="canvas">
+    <header>
+     <div class="nav">
+      <button class="hamburger" style="display:none;background:none;border:none;cursor:pointer;margin-right:8px;padding:0;">
+       <span style="display:block;width:22px;height:2px;background:#000;margin:4px 0;border-radius:1px;">
+       </span>
+       <span style="display:block;width:22px;height:2px;background:#000;margin:4px 0;border-radius:1px;">
+       </span>
+       <span style="display:block;width:22px;height:2px;background:#000;margin:4px 0;border-radius:1px;">
+       </span>
+      </button>
+      <div class="brand">
+       INKO NIKAH
+      </div>
+      <nav aria-label="primary" class="menu">
+       <a class="pill" data-i18n="nav.home" href="/index.html">
+        홈
+       </a>
+       <a class="pill" data-i18n="nav.about" href="/inko_about.html">
+        회사소개
+       </a>
+       <div class="dropdown">
+        <a class="pill" data-i18n="nav.services" href="/inko_process.html">
+         서비스
+        </a>
+        <div class="dropdown-content">
+         <a data-i18n="nav.process" href="/inko_process.html">
+          프로세스
+         </a>
+         <a data-i18n="nav.package" href="/inko_package.html">
+          패키지
+         </a>
+         <a data-i18n="nav.compliance" href="/inko_compliance.html">
+          보안 &amp; 컴플라이언스
+         </a>
+        </div>
+       </div>
+       <div class="dropdown">
+        <a class="pill" data-i18n="nav.guide" href="/inko_female_guide.html">
+         이용안내
+        </a>
+        <div class="dropdown-content">
+         <a data-i18n="nav.female" href="/inko_female_guide.html">
+          여성 회원 이용 안내
+         </a>
+         <a data-i18n="nav.male" href="/inko_male_guide.html">
+          남성 회원 이용 안내
+         </a>
+        </div>
+       </div>
+       <a class="pill" data-i18n="nav.faq" href="/inko_faq.html">
+        FAQ
+       </a>
+       <a class="pill" data-i18n="nav.contact" href="/inko_contact.html">
+        문의
+       </a>
+      </nav>
+      <div class="controls">
+       <select aria-label="Language" class="lang" id="lang" onchange="setLang(this.value)">
+        <option value="ko">
+         🇰🇷 KO
+        </option>
+        <option value="en">
+         🇺🇸 EN
+        </option>
+        <option value="id">
+         🇮🇩 ID
+        </option>
+       </select>
+       <a class="pill cta" data-i18n="nav.signup" href="https://forms.gle/V7WHQcC4FGKpYmju6" rel="noopener" target="_blank">
+        회원가입
+       </a>
+      </div>
+     </div>
+    </header>
+    <section class="pagehead container">
+     <h1 class="pagetitle" data-i18n="faq.title">
+      자주 묻는 질문
+     </h1>
+    </section>
+    <section class="container">
+     <div class="section">
+      <span class="section-label" data-i18n="faq.cat.service">
+       서비스 / 절차
+      </span>
+      <div class="faq">
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.process">
+          국제결혼 절차는 어떻게 진행되나요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.process">
+         서류 준비 &rarr; 매칭 &rarr; 상견례 &rarr; 공문서 및 혼인신고 &rarr; F-6 비자 순으로 진행됩니다.
+        </div>
+       </details>
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.duration">
+          예상 기간은 얼마나 걸리나요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.duration">
+         보통 2~4개월 소요되며, 개인 상황에 따라 달라질 수 있습니다.
+        </div>
+       </details>
+      </div>
+     </div>
+     <div class="section">
+      <span class="section-label" data-i18n="faq.cat.cost">
+       비용 / 패키지
+      </span>
+      <div class="faq">
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.joinfee">
+          회원 가입 비용은 얼마인가요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.joinfee">
+         현재 가입비는 무료입니다. 단계별 프로그램은 상담 시 안내드립니다.
+        </div>
+       </details>
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.beforemarriage">
+          결혼이 성사되지 않으면 환불 가능한가요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.beforemarriage">
+         계약 조건에 따라 일부 환불이 가능할 수 있습니다. 상세 조건은 계약서 기준으로 안내드립니다.
+        </div>
+       </details>
+      </div>
+     </div>
+     <div class="section">
+      <span class="section-label" data-i18n="faq.cat.visa">
+       법적 절차 / 비자
+      </span>
+      <div class="faq">
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.f6">
+          F-6 비자는 어떻게 신청하나요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.f6">
+         혼인신고 완료 후 준비 서류를 바탕으로 K-VOA 또는 재외공관을 통해 신청합니다. 필요 시 INKO NIKAH가 서류 준비를 도와드립니다.
+        </div>
+       </details>
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.income">
+          소득 증명이 없으면 비자가 불가한가요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.income">
+         소득 증명은 유리하지만 필수는 아닙니다. 대체 가능한 서류로 심사받을 수 있습니다.
+        </div>
+       </details>
+      </div>
+     </div>
+     <div class="section">
+      <span class="section-label" data-i18n="faq.cat.women">
+       여성 회원
+      </span>
+      <div class="faq">
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.womenfee">
+          여성 회원은 가입 비용이 있나요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.womenfee">
+         현재 여성 회원의 기본 가입은 무료입니다. (변동될 수 있습니다)
+        </div>
+       </details>
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.womendoc">
+          신원 확인은 어떻게 하나요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.womendoc">
+         상담 시 신원확인 서류(여권&middot;신분증 등)를 통해 확인합니다.
+        </div>
+       </details>
+      </div>
+     </div>
+     <div class="section">
+      <span class="section-label" data-i18n="faq.cat.member">
+       회원 관련
+      </span>
+      <div class="faq">
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.howjoin">
+          회원 등록은 어떻게 하나요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.howjoin">
+         첫 상담 후 온라인 폼에 등록하며, 승인 시 WhatsApp으로 메시지가 발송됩니다.
+        </div>
+       </details>
+      </div>
+     </div>
+     <div class="section">
+      <span class="section-label" data-i18n="faq.cat.safety">
+       안전 / 신뢰성
+      </span>
+      <div class="faq">
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.legal">
+          합법 절차인가요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.legal">
+         네. 한국과 인도네시아의 법규를 모두 준수하며, 정식 등록된 절차로 진행합니다.
+        </div>
+       </details>
+       <details class="faqcard">
+        <summary>
+         <span class="qicon">
+          Q.
+         </span>
+         <span data-i18n="faq.q.privacy">
+          개인정보는 얼마나 보관되나요?
+         </span>
+        </summary>
+        <div class="answer" data-i18n="faq.a.privacy">
+         계약에 따라 최대 1년간 보관되며, 기간 경과 또는 탈퇴 시 즉시 파기됩니다.
+        </div>
+       </details>
+      </div>
+     </div>
+    </section>
+    <hr class="sep"/>
+    <footer>
+     <div class="footer-wrap">
+      <div class="company" data-i18n="footer.company">
+       PT INKO NIKAH INDONESIA
+      </div>
+      <div data-i18n="footer.nib">
+       사업자등록번호 (NIB): 3107250098036
+      </div>
+      <div data-i18n="footer.ahu">
+       법무부 등록번호 (AHU): AHU-038917.AH.01.30.
+      </div>
+      <div data-i18n="footer.address">
+       주소: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345
+      </div>
+      <div class="copy" data-i18n="footer.copy">
+       &copy; 2025 PT INKO NIKAH INDONESIA. All rights reserved.
+      </div>
+     </div>
+    </footer>
+   </div>
+   <script>
+    const translations = {
+  ko:{"nav.home":"홈","nav.about":"회사소개","nav.services":"서비스","nav.process":"프로세스","nav.package":"패키지","nav.compliance":"보안 & 컴플라이언스","nav.guide":"이용안내","nav.female":"여성 회원 이용 안내","nav.male":"남성 회원 이용 안내","nav.faq":"FAQ","nav.contact":"문의","nav.signup":"회원가입",
+      "faq.title":"자주 묻는 질문","faq.cat.service":"서비스 / 절차","faq.cat.cost":"비용 / 패키지","faq.cat.visa":"법적 절차 / 비자","faq.cat.women":"여성 회원","faq.cat.member":"회원 관련","faq.cat.safety":"안전 / 신뢰성",
+      "faq.q.process":"국제결혼 절차는 어떻게 진행되나요?","faq.a.process":"서류 준비 → 매칭 → 상견례 → 공문서 및 혼인신고 → F-6 비자 순으로 진행됩니다.",
+      "faq.q.duration":"예상 기간은 얼마나 걸리나요?","faq.a.duration":"보통 2~4개월 소요되며, 개인 상황에 따라 달라질 수 있습니다.",
+      "faq.q.joinfee":"회원 가입 비용은 얼마인가요?","faq.a.joinfee":"현재 가입비는 무료입니다. 단계별 프로그램은 상담 시 안내드립니다.",
+      "faq.q.beforemarriage":"결혼이 성사되지 않으면 환불 가능한가요?","faq.a.beforemarriage":"계약 조건에 따라 일부 환불이 가능할 수 있습니다. 상세 조건은 계약서 기준으로 안내드립니다.",
+      "faq.q.f6":"F-6 비자는 어떻게 신청하나요?","faq.a.f6":"혼인신고 완료 후 준비 서류를 바탕으로 K-VOA 또는 재외공관을 통해 신청합니다. 필요 시 INKO NIKAH가 서류 준비를 도와드립니다.",
+      "faq.q.income":"소득 증명이 없으면 비자가 불가한가요?","faq.a.income":"소득 증명은 유리하지만 필수는 아닙니다. 대체 가능한 서류로 심사받을 수 있습니다.",
+      "faq.q.womenfee":"여성 회원은 가입 비용이 있나요?","faq.a.womenfee":"현재 여성 회원의 기본 가입은 무료입니다. (변동될 수 있습니다)",
+      "faq.q.womendoc":"신원 확인은 어떻게 하나요?","faq.a.womendoc":"상담 시 신원확인 서류(여권·신분증 등)를 통해 확인합니다.",
+      "faq.q.howjoin":"회원 등록은 어떻게 하나요?","faq.a.howjoin":"첫 상담 후 온라인 폼에 등록하며, 승인 시 WhatsApp으로 메시지가 발송됩니다.",
+      "faq.q.legal":"합법 절차인가요?","faq.a.legal":"네. 한국과 인도네시아의 법규를 모두 준수하며, 정식 등록된 절차로 진행합니다.",
+      "faq.q.privacy":"개인정보는 얼마나 보관되나요?","faq.a.privacy":"계약에 따라 최대 1년간 보관되며, 기간 경과 또는 탈퇴 시 즉시 파기됩니다.",
+      "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"사업자등록번호 (NIB): 3107250098036","footer.ahu":"법무부 등록번호 (AHU): AHU-038917.AH.01.30.","footer.address":"주소: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. All rights reserved."},
+  en:{"nav.home":"Home","nav.about":"About","nav.services":"Services","nav.process":"Process","nav.package":"Package","nav.compliance":"Security & Compliance","nav.guide":"Guide","nav.female":"Guide for Women","nav.male":"Guide for Men","nav.faq":"FAQ","nav.contact":"Contact","nav.signup":"Sign Up",
+      "faq.title":"Frequently Asked Questions","faq.cat.service":"Services / Process","faq.cat.cost":"Cost / Package","faq.cat.visa":"Legal / Visa","faq.cat.women":"Women Members","faq.cat.member":"Membership","faq.cat.safety":"Safety / Reliability",
+      "faq.q.process":"How does the international marriage process work?","faq.a.process":"Document prep → matching → meeting → official paperwork & registration → F‑6 visa.",
+      "faq.q.duration":"How long does it take?","faq.a.duration":"Typically 2–4 months depending on personal circumstances.",
+      "faq.q.joinfee":"Is there a membership fee?","faq.a.joinfee":"Currently the sign‑up fee is free. Detailed program costs are provided during consultation.",
+      "faq.q.beforemarriage":"Refund policy if marriage is not finalized?","faq.a.beforemarriage":"Partial refunds may be available depending on contract terms. See the agreement for details.",
+      "faq.q.f6":"How do I apply for the F‑6 visa?","faq.a.f6":"After marriage registration, apply via K‑VOA or a Korean mission abroad. INKO NIKAH can assist with documents.",
+      "faq.q.income":"No income proof — is the visa impossible?","faq.a.income":"Income proof helps but isn’t mandatory; alternative documentation may be accepted.",
+      "faq.q.womenfee":"Do women members pay a joining fee?","faq.a.womenfee":"Basic joining is currently free (subject to change).",
+      "faq.q.womendoc":"How is identity verified?","faq.a.womendoc":"Via passport/ID verification during consultation.",
+      "faq.q.howjoin":"How do I create an account?","faq.a.howjoin":"Register via our online form after your first consultation. Upon approval, you will receive a message on WhatsApp.",
+      "faq.q.legal":"Is everything legal and official?","faq.a.legal":"Yes. We comply with Korean and Indonesian laws and follow registered procedures.",
+      "faq.q.privacy":"How long is personal data kept?","faq.a.privacy":"Up to one year per contract, then deleted upon expiry or withdrawal.",
+      "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"Business Identification Number (NIB): 3107250098036","footer.ahu":"Ministry of Law Registration Number (AHU): AHU-038917.AH.01.30.","footer.address":"Address: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. All rights reserved."},
+  id:{"nav.home":"Beranda","nav.about":"Tentang Kami","nav.services":"Layanan","nav.process":"Proses","nav.package":"Paket","nav.compliance":"Keamanan & Kepatuhan","nav.guide":"Panduan","nav.female":"Panduan Anggota Perempuan","nav.male":"Panduan Anggota Pria","nav.faq":"FAQ","nav.contact":"Kontak","nav.signup":"Daftar",
+      "faq.title":"Pertanyaan yang Sering Diajukan","faq.cat.service":"Layanan / Proses","faq.cat.cost":"Biaya / Paket","faq.cat.visa":"Legal / Visa","faq.cat.women":"Anggota Perempuan","faq.cat.member":"Keanggotaan","faq.cat.safety":"Keamanan / Keandalan",
+      "faq.q.process":"Bagaimana alur pernikahan internasional?","faq.a.process":"Siapkan dokumen → pencocokan → pertemuan → dokumen & pencatatan nikah → visa F‑6.",
+      "faq.q.duration":"Berapa lama prosesnya?","faq.a.duration":"Biasanya 2–4 bulan, tergantung kondisi masing‑masing.",
+      "faq.q.joinfee":"Apakah ada biaya pendaftaran anggota?","faq.a.joinfee":"Saat ini gratis. Rincian biaya program dijelaskan saat konsultasi.",
+      "faq.q.beforemarriage":"Bagaimana jika pernikahan belum terlaksana — bisa refund?","faq.a.beforemarriage":"Refund sebagian mungkin tersedia sesuai perjanjian. Lihat kontrak untuk detailnya.",
+      "faq.q.f6":"Bagaimana cara mengajukan visa F‑6?","faq.a.f6":"Setelah pencatatan nikah, ajukan melalui K‑VOA atau perwakilan Korea di luar negeri. INKO NIKAH dapat bantu dokumen.",
+      "faq.q.income":"Tanpa bukti penghasilan — apakah visa ditolak?","faq.a.income":"Bukti penghasilan membantu namun tidak wajib; dokumen alternatif dapat dipertimbangkan.",
+      "faq.q.womenfee":"Anggota perempuan bayar biaya masuk?","faq.a.womenfee":"Pendaftaran dasar saat ini gratis (dapat berubah).",
+      "faq.q.womendoc":"Bagaimana verifikasi identitas?","faq.a.womendoc":"Melalui verifikasi paspor/KTP saat konsultasi.",
+      "faq.q.howjoin":"Bagaimana cara membuat akun?","faq.a.howjoin":"Daftar melalui formulir online setelah konsultasi pertama. Setelah disetujui, Anda akan menerima pesan melalui WhatsApp.",
+      "faq.q.legal":"Apakah proses ini legal dan resmi?","faq.a.legal":"Ya. Kami mematuhi hukum Korea dan Indonesia dengan prosedur yang terdaftar.",
+      "faq.q.privacy":"Berapa lama data pribadi disimpan?","faq.a.privacy":"Hingga satu tahun sesuai kontrak, lalu dihapus saat kadaluarsa atau penarikan.",
+      "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"Nomor Induk Berusaha (NIB): 3107250098036","footer.ahu":"Nomor Registrasi Kementerian Hukum (AHU): AHU-038917.AH.01.30.","footer.address":"Alamat: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. Semua hak dilindungi."}
+};
+
+function setLang(lang){
+  localStorage.setItem('lang',lang);
+  document.documentElement.lang=lang;
+  applyTranslations(lang);
+}
+function applyTranslations(lang){
+  const dict=translations[lang]||translations.ko;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key=el.getAttribute("data-i18n");
+    if(dict[key]!=null) el.textContent = dict[key];
+  });
+}
+document.addEventListener("DOMContentLoaded",()=>{
+  const saved=localStorage.getItem('lang')||'ko';
+  document.getElementById('lang').value=saved;
+  setLang(saved);
+});
+   </script>
+  </div>
+  <script>
+   const hamburger = document.querySelector('.hamburger');
+const sidebar = document.querySelector('.sidebar');
+const overlay = document.querySelector('.overlay');
+
+hamburger?.addEventListener('click', () => {
+  sidebar.style.transform = 'translateX(0)';
+  overlay.style.display = 'block';
+});
+
+overlay?.addEventListener('click', () => {
+  sidebar.style.transform = 'translateX(-100%)';
+  overlay.style.display = 'none';
+});
+
+document.querySelectorAll('.sidebar .has-submenu > a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const parent = link.parentElement;
+    const submenu = parent.querySelector('.submenu');
+    const arrow = link.querySelector('.arrow');
+    const isOpen = parent.classList.contains('open');
+
+    if (isOpen) {
+      submenu.style.display = 'none';
+      arrow.textContent = '▶';
+      parent.classList.remove('open');
+    } else {
+      submenu.style.display = 'flex';
+      arrow.textContent = '▼';
+      parent.classList.add('open');
+    }
+  });
+});
+
+function updateSidebarLabels(lang) {
+  const dict = {
+    "ko": {
+      "홈": "홈", "회사소개": "회사소개", "서비스": "서비스",
+      "프로세스": "프로세스", "패키지": "패키지", "보안 & 컴플라이언스": "보안 & 컴플라이언스",
+      "이용안내": "이용안내", "여성 회원 이용 안내": "여성 회원 이용 안내", "남성 회원 이용 안내": "남성 회원 이용 안내",
+      "FAQ": "FAQ", "문의": "문의"
+    },
+    "en": {
+      "홈": "Home", "회사소개": "About", "서비스": "Services",
+      "프로세스": "Process", "패키지": "Package", "보안 & 컴플라이언스": "Security & Compliance",
+      "이용안내": "Guide", "여성 회원 이용 안내": "Female Member Guide", "남성 회원 이용 안내": "Male Member Guide",
+      "FAQ": "FAQ", "문의": "Contact"
+    },
+    "id": {
+      "홈": "Beranda", "회사소개": "Tentang Kami", "서비스": "Layanan",
+      "프로세스": "Proses", "패키지": "Paket", "보안 & 컴플라이언스": "Keamanan & Kepatuhan",
+      "이용안내": "Panduan", "여성 회원 이용 안내": "Panduan Anggota Perempuan", "남성 회원 이용 안내": "Panduan Anggota Pria",
+      "FAQ": "FAQ", "문의": "Kontak"
+    }
+  };
+  document.querySelectorAll('.sidebar a > span[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[lang] && dict[lang][key]) {
+      el.textContent = dict[lang][key];
+    }
+  });
+}
+
+const savedLang = localStorage.getItem('lang') || 'ko';
+updateSidebarLabels(savedLang);
+document.querySelector('.lang')?.addEventListener('change', e => {
+  const lang = e.target.value;
+  localStorage.setItem('lang', lang);
+  updateSidebarLabels(lang);
+});
+  </script>
+ </body>
+</html>
