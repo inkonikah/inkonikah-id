@@ -120,7 +120,7 @@
 }
 /* tiny hover bridge to kill the gap between trigger and panel */
 .dropdown::after {
-  content: "";
+  content: "",
   position: absolute;
   left: 0;
   right: 0;
@@ -344,6 +344,15 @@
      <p class="pagesub" data-i18n="pkg.sub">
       고객님의 상황에 맞는 맞춤형 패키지를 선택하세요
      </p>
+<div class="notice-banner" data-i18n="notice.banner" style="
+  margin-top:18px;padding:18px 20px;border-radius:18px;
+  background:linear-gradient(135deg,#ffefa8,#ffd9a0);
+  font-weight:900;font-size:18px;color:#3a2000;
+  text-align:center;line-height:1.5;
+">
+  여성회원은 모든 비용이 무료이며, 아래 패키지는 남성회원에게만 해당됩니다.
+</div>
+
     </section>
     <!-- ===== Package cards ===== -->
     <section class="cards">
@@ -631,19 +640,22 @@
    <script>
     const translations = {
   ko:{"nav.home":"홈","nav.about":"회사소개","nav.services":"서비스","nav.process":"프로세스","nav.package":"패키지","nav.compliance":"보안 & 컴플라이언스","nav.guide":"이용안내","nav.female":"여성 회원 이용 안내","nav.male":"남성 회원 이용 안내","nav.faq":"FAQ","nav.contact":"문의","nav.signup":"회원가입",
-      "pkg.title":"패키지 안내","pkg.sub":"고객님의 상황에 맞는 맞춤형 패키지를 선택하세요","price.tba":"가격: 추후 공지",
+      "pkg.title":"패키지 안내","pkg.sub":"고객님의 상황에 맞는 맞춤형 패키지를 선택하세요",
+      "notice.banner":"여성회원은 모든 비용이 무료이며, 아래 패키지는 남성회원에게만 해당됩니다.","price.tba":"가격: 추후 공지",
       "p1.title":"스탠다드 (기본)","p1.pilot":"파일럿 진행","p1.desc":"기본부터 결혼, 비자, 신혼여행까지 책임지는 핵심 패키지.","p1.l1":"기본 프로필 등록 & 상담 가이드","p1.l2":"프로필 교환 및 매칭","p1.l3":"화상 미팅 & 대면 미팅 (무제한)","p1.l4":"결혼식 & 결혼식장 진행 지원","p1.l5":"웨딩 사진 촬영 & 결혼 앨범 제작","p1.l6":"허니문 여행 진행 지원","p1.l7":"한국어 교육 & 기숙사 제공","p1.l8":"F‑6 비자 진행 및 관련 서류 지원",
       "p2.title":"스탠다드 플러스","p2.desc":"가족과 추억 중심의 업그레이드 경험.","p2.inc":"스탠다드 포함","p2.l1":"우선 배정 & 세부 조건 기반 매칭","p2.l2":"맞춤형 1:1 심화 상담","p2.l3":"국제 문화 예절/교류 세션","p2.l4":"결혼식장 업그레이드 & 맞춤 연출","p2.l5":"허니문 업그레이드 (특별 리조트/장소)","p2.l6":"양가 가족 교류 프로그램","p2.l7":"하이라이트 영상 제작",
       "p3.title":"맥스","p3.desc":"프리미엄 웨딩·허니문과 장기 사후관리까지 풀케어.","p3.inc":"스탠다드 플러스 포함","p3.l1":"전담 매니저 1:1 풀케어","p3.l2":"웨딩 플래닝 풀케어 & 프리미엄 식장 업그레이드","p3.l3":"프리미엄 웨딩 화보 촬영 (스튜디오/야외)","p3.l4":"한국 생활 적응 프로그램 (정착 가이드, 문화 교육)","p3.l5":"출국/입국 전후 전 과정 동행","p3.l6":"프리미엄 허니문 (해외/특급 리조트)","p3.l7":"부부 성장 프로그램 (커플 코칭, 워크숍)","p3.l8":"사후 관리 최대 1년",
       "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"사업자등록번호 (NIB): 3107250098036","footer.ahu":"법무부 등록번호 (AHU): AHU-038917.AH.01.30.","footer.address":"주소: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. All rights reserved."},
   en:{"nav.home":"Home","nav.about":"About","nav.services":"Services","nav.process":"Process","nav.package":"Package","nav.compliance":"Security & Compliance","nav.guide":"Guide","nav.female":"Guide for Women","nav.male":"Guide for Men","nav.faq":"FAQ","nav.contact":"Contact","nav.signup":"Sign Up",
-      "pkg.title":"Packages","pkg.sub":"Choose the plan that fits your situation","price.tba":"Price: TBA",
+      "pkg.title":"Packages","pkg.sub":"Choose the plan that fits your situation",
+      "notice.banner":"All services are free for female members, while the packages below apply only to male members.","price.tba":"Price: TBA",
       "p1.title":"Standard (Basic)","p1.pilot":"Pilot","p1.desc":"Essential package covering wedding, visa and honeymoon.","p1.l1":"Profile setup & consultation guide","p1.l2":"Profile exchange & matchmaking","p1.l3":"Unlimited video & in‑person meetings","p1.l4":"Wedding & venue support","p1.l5":"Wedding photoshoot & album production","p1.l6":"Honeymoon planning support","p1.l7":"Korean lessons & dormitory","p1.l8":"F‑6 visa guidance & paperwork support",
       "p2.title":"Standard Plus","p2.desc":"Upgraded experience focused on family and memories.","p2.inc":"Includes Standard","p2.l1":"Priority allocation & criteria‑based matching","p2.l2":"Personalised 1:1 deep‑dive consultation","p2.l3":"Intercultural etiquette/exchange session","p2.l4":"Wedding venue upgrade & custom production","p2.l5":"Honeymoon upgrade (special resorts/locations)","p2.l6":"Family bonding program","p2.l7":"Highlight video production",
       "p3.title":"Max","p3.desc":"Premium wedding/honeymoon with extended aftercare.","p3.inc":"Includes Standard Plus","p3.l1":"Dedicated manager (1:1)","p3.l2":"Full wedding planning & premium venue upgrade","p3.l3":"Premium wedding photobook (studio/outdoor)","p3.l4":"Korean settlement & culture program","p3.l5":"Escort throughout departures/arrivals","p3.l6":"Premium honeymoon (overseas / luxury resort)","p3.l7":"Couple growth program","p3.l8":"Aftercare up to 1 year",
       "footer.company":"PT INKO NIKAH INDONESIA","footer.nib":"Business Identification Number (NIB): 3107250098036","footer.ahu":"Ministry of Law Registration Number (AHU): AHU-038917.AH.01.30.","footer.address":"Address: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. All rights reserved."},
   id:{"nav.home":"Beranda","nav.about":"Tentang Kami","nav.services":"Layanan","nav.process":"Proses","nav.package":"Paket","nav.compliance":"Keamanan & Kepatuhan","nav.guide":"Panduan","nav.female":"Panduan Anggota Perempuan","nav.male":"Panduan Anggota Pria","nav.faq":"FAQ","nav.contact":"Kontak","nav.signup":"Daftar",
-      "pkg.title":"Paket","pkg.sub":"Pilih paket yang sesuai kebutuhan Anda","price.tba":"Harga: Akan diumumkan",
+      "pkg.title":"Paket","pkg.sub":"Pilih paket yang sesuai kebutuhan Anda",
+      "notice.banner":"Semua layanan gratis untuk anggota perempuan, sedangkan paket di bawah ini hanya berlaku untuk anggota pria.","price.tba":"Harga: Akan diumumkan",
       "p1.title":"Standard (Dasar)","p1.pilot":"Pilot","p1.desc":"Paket esensial mencakup pernikahan, visa, dan bulan madu.","p1.l1":"Pembuatan profil & panduan konsultasi","p1.l2":"Pertukaran profil & pencocokan","p1.l3":"Pertemuan video & tatap muka tanpa batas","p1.l4":"Dukungan pernikahan & tempat acara","p1.l5":"Pemotretan pernikahan & pembuatan album","p1.l6":"Dukungan perencanaan bulan madu","p1.l7":"Kelas bahasa Korea & asrama","p1.l8":"Panduan visa F‑6 & dokumen terkait",
       "p2.title":"Standard Plus","p2.desc":"Pengalaman yang ditingkatkan berfokus pada keluarga & kenangan.","p2.inc":"Termasuk Standard","p2.l1":"Prioritas dan pencocokan berbasis kriteria","p2.l2":"Konsultasi mendalam 1:1","p2.l3":"Sesi etika/pertukaran budaya","p2.l4":"Upgrade tempat pernikahan & produksi khusus","p2.l5":"Upgrade bulan madu (resor/lokasi spesial)","p2.l6":"Program kebersamaan keluarga","p2.l7":"Produksi video highlight",
       "p3.title":"Max","p3.desc":"Pernikahan/bulan madu premium dengan perawatan lanjutan.","p3.inc":"Termasuk Standard Plus","p3.l1":"Manajer khusus (1:1)","p3.l2":"Perencanaan pernikahan penuh & upgrade venue premium","p3.l3":"Pemotretan album premium (studio/outdoor)","p3.l4":"Program adaptasi hidup di Korea","p3.l5":"Pendampingan berangkat/tiba","p3.l6":"Bulan madu premium (luar negeri/resor mewah)","p3.l7":"Program pengembangan pasangan","p3.l8":"Perawatan hingga 1 tahun",
