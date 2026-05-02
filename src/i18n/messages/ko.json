@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "siteName": "inko nikah",
+    "tagline": "Find Your Lovebird"
+  },
+  "nav": {
+    "home": "홈",
+    "about": "브랜드",
+    "process": "프로세스",
+    "package": "멤버십",
+    "compliance": "신뢰",
+    "guide": "이용안내",
+    "femaleGuide": "회원 안내",
+    "maleGuide": "회원 안내",
+    "faq": "FAQ",
+    "contact": "문의",
+    "signup": "회원가입",
+    "applyFree": "회원가입은 무료입니다"
+  },
+  "home": {
+    "kicker": "inko nikah · Lovebird",
+    "title": "진짜 사랑이\n시작되는 곳.",
+    "subtitle": "inko nikah는 가벼운 만남이 아니라, 평생을 함께할 한 사람을 찾는 사람들을 위한 글로벌 프리미엄 매칭 브랜드입니다.",
+    "ctaPrimary": "지금 시작하기",
+    "ctaSecondary": "프로세스 보기",
+    "trust": {
+      "label": "거래가 아닌 관계를 위해",
+      "items": [
+        { "value": "100%", "label": "검증된 실제 회원" },
+        { "value": "1:1", "label": "전담 매칭 매니저" },
+        { "value": "Forever", "label": "평생을 함께할 한 사람" }
+      ]
+    },
+    "meaningTitle": "당신의 lovebird를 만나세요",
+    "meaningBody": "‘잉꼬’는 평생 한 짝과 함께하는 작은 새입니다. inko nikah는 그 이름을 따 만들어졌습니다. 지키고 싶은 단 한 사람을 만나는 일 — 그게 우리가 하는 일입니다.",
+    "featuresTitle": "Why inko nikah",
+    "features": [
+      {
+        "icon": "✦",
+        "title": "알고리즘이 아닌 사람이",
+        "body": "전담 매니저가 모든 프로필을 직접 읽고, 당신과 어울리는 사람만 소개합니다. 무한 스와이프는 없습니다."
+      },
+      {
+        "icon": "✦",
+        "title": "모든 단계의 검증",
+        "body": "신원·서류·진정성까지 확인된 회원만 만납니다. 가짜 프로필도, 시간 낭비도 없습니다."
+      },
+      {
+        "icon": "✦",
+        "title": "만남 이후까지",
+        "body": "소개로 끝나지 않습니다. 교제부터 결혼, 그 이후의 시간까지 함께 합니다."
+      }
+    ],
+    "valuesTitle": "우리가 지키는 것",
+    "valuesSubtitle": "여섯 개의 약속",
+    "values": [
+      { "icon": "✦", "title": "진정성", "body": "진심인 사람들만 만납니다." },
+      { "icon": "✦", "title": "프라이버시", "body": "당신의 이야기는 비공개입니다." },
+      { "icon": "✦", "title": "정성", "body": "모든 소개는 사람의 손을 거칩니다." },
+      { "icon": "✦", "title": "여유", "body": "관계를 서두르지 않습니다." },
+      { "icon": "✦", "title": "신뢰", "body": "검증 위에 만남이 있습니다." },
+      { "icon": "✦", "title": "지속", "body": "첫 만남 이후에도 함께합니다." }
+    ],
+    "ctaSection": {
+      "title": "한 번의 매칭이 아닌,\n평생의 한 사람.",
+      "body": "멤버십에 지원해 보세요. 24시간 이내, 직접 회신드립니다.",
+      "button": "inko nikah 시작하기"
+    }
+  },
+  "about": {
+    "kicker": "About",
+    "title": "진짜 사람.\n진짜 관계.",
+    "subtitle": "마켓플레이스가 아닙니다. 사랑을 위한 브랜드입니다.",
+    "meaningTitle": "inko nikah의 의미",
+    "meaningBody": "‘잉꼬’는 야생에서도 한 짝을 정해 평생을 함께하는 작은 앵무새입니다. 우리는 그 이름을 따 브랜드를 지었습니다 — 평생의 동반, 충실함, 그리고 조용한 헌신. inko nikah는 앱이 아닙니다. 오래가는 사랑을 위해 만들어진 브랜드입니다.",
+    "meaningNote": "우리는 매칭의 수로 성공을 측정하지 않습니다. 5년, 10년, 20년 후에도 함께 있는 관계로 측정합니다.",
+    "visionTitle": "Vision",
+    "visionBody": "진지한 만남의 글로벌 표준이 되는 것 — 가벼운 만남에 지친 사람들이 마지막으로 선택하는 이름이 되는 것.",
+    "missionTitle": "Mission",
+    "missionBody": "검증된 한 사람을 진심으로 소개하고, 그 관계가 자라는 시간까지 함께하는 것.",
+    "valuesTitle": "우리가 믿는 것",
+    "values": [
+      "관계는 매칭되는 게 아니라 만들어진다.",
+      "검증은 신뢰의 시작이다.",
+      "빠름보다 천천히가 낫다.",
+      "이름은 곧 약속이다.",
+      "프라이버시는 협상의 대상이 아니다.",
+      "소개로 우리의 책임이 끝나지 않는다."
+    ]
+  },
+  "process": {
+    "kicker": "How It Works",
+    "title": "이렇게 만납니다.",
+    "subtitle": "첫 대화부터 그 이후의 관계까지. 인생의 속도에 맞춘 여섯 단계.",
+    "notice": "기간은 사람마다 다릅니다. 우리는 관계를 서두르지 않습니다.",
+    "datePicker": {
+      "label": "오늘 시작한다면",
+      "today": "오늘로 설정",
+      "rangeSuffix": "개월차"
+    },
+    "steps": [
+      {
+        "title": "지원 & 매니저 미팅",
+        "body": "당신을 알아갑니다 — 가치관, 인생의 챕터, 진짜로 선택할 사람의 모습. 전담 매니저가 배정됩니다.",
+        "monthsMin": 0,
+        "monthsMax": 1
+      },
+      {
+        "title": "검증",
+        "body": "신원·서류·진정성. 모든 회원은 어떠한 소개 이전에 검증을 거칩니다.",
+        "monthsMin": 1,
+        "monthsMax": 2
+      },
+      {
+        "title": "큐레이션 소개",
+        "body": "끝없는 피드 대신, 매니저가 직접 고른 사람들. 양보다는 질입니다.",
+        "monthsMin": 2,
+        "monthsMax": 4
+      },
+      {
+        "title": "실제 만남",
+        "body": "통역, 일정, 이동 — 모든 실무는 우리가 처리합니다. 당신은 사람만 보세요.",
+        "monthsMin": 4,
+        "monthsMax": 6
+      },
+      {
+        "title": "결심의 순간",
+        "body": "관계가 무르익을 때, 행정·가족·결혼식까지 함께 마무리합니다.",
+        "monthsMin": 6,
+        "monthsMax": 9
+      },
+      {
+        "title": "그 이후의 시간",
+        "body": "분기별 안부, 가족 통역, 살면서 복잡해지는 일들. 우리는 사라지지 않습니다.",
+        "monthsMin": 9,
+        "monthsMax": 12
+      }
+    ]
+  },
+  "package": {
+    "kicker": "Membership",
+    "title": "멤버십.",
+    "subtitle": "지원은 모두 무료입니다. 아래 멤버십은 남성 회원의 매칭 서비스에만 적용됩니다.",
+    "tiers": [
+      {
+        "icon": "✦",
+        "name": "Standard",
+        "tag": "Foundation",
+        "price": "지원 후 안내",
+        "description": "검증된 소개와 핵심 절차. 시작하기에 알맞은 자리.",
+        "features": [
+          "전담 매니저",
+          "큐레이션된 5인 소개",
+          "모든 매치 신원 검증",
+          "1회 실제 미팅 코디",
+          "통역 1회 지원",
+          "관계 가이던스"
+        ]
+      },
+      {
+        "icon": "✦",
+        "name": "Standard Plus",
+        "tag": "Most chosen",
+        "highlight": true,
+        "price": "지원 후 안내",
+        "description": "Standard 전 항목 포함. 더 깊은 정성, 더 충분한 시간.",
+        "features": [
+          "Standard 전 항목 포함",
+          "소개 무제한",
+          "실제 미팅 2회 코디",
+          "통역 무제한",
+          "결혼식·기념일 코디",
+          "3개월 사후 케어"
+        ]
+      },
+      {
+        "icon": "✦",
+        "name": "Premium",
+        "tag": "Concierge",
+        "price": "지원 후 안내",
+        "description": "처음부터 끝까지 가장 깊은 정성. 가장 진지한 멤버를 위한.",
+        "features": [
+          "Standard Plus 전 항목 포함",
+          "VIP 우선 소개",
+          "실제 미팅 무제한",
+          "결혼식 풀 코디",
+          "12개월 사후 케어",
+          "가족 미팅·통역"
+        ]
+      }
+    ]
+  },
+  "compliance": {
+    "kicker": "Trust",
+    "title": "신뢰는 일하는 방식입니다.",
+    "subtitle": "검증된 프로필. 합법적 운영. 기본값 프라이버시.",
+    "items": [
+      {
+        "icon": "✦",
+        "title": "신원 검증",
+        "body": "어떠한 소개 이전에, 모든 회원은 신원·서류·진정성 검증을 완료합니다."
+      },
+      {
+        "icon": "✦",
+        "title": "프라이버시 우선",
+        "body": "당신의 프로필은 어디에도 공개되지 않습니다. 정보는 당신이 동의한 소개 안에서만 공유되며, 법령이 정한 기간만 보관됩니다."
+      },
+      {
+        "icon": "✦",
+        "title": "합법 운영",
+        "body": "inko nikah는 PT INKO NIKAH INDONESIA로 운영되며, NIB 3107250098036, AHU-038917.AH.01.30 으로 정식 등록되어 있습니다."
+      },
+      {
+        "icon": "✦",
+        "title": "진짜 성공 사례",
+        "body": "우리의 신뢰는 지금도 함께 살아가는 관계들 위에 세워졌습니다. 마케팅이 아니라, 비공개 레퍼런스로."
+      },
+      {
+        "icon": "✦",
+        "title": "법령 준수",
+        "body": "한국 결혼중개업법과 운영하는 모든 국가의 개인정보 보호법을 준수합니다."
+      },
+      {
+        "icon": "✦",
+        "title": "책임",
+        "body": "분쟁은 협력 변호사를 통해 투명하게 해결합니다. 우리의 책임은 소개로 끝나지 않습니다."
+      }
+    ]
+  },
+  "guide": {
+    "femaleKicker": "Member Guide",
+    "femaleTitle": "회원 안내",
+    "femaleSubtitle": "멤버십은 큐레이션됩니다. 검증이 그 시작입니다. 아래는 그 흐름입니다.",
+    "maleKicker": "Member Guide",
+    "maleTitle": "회원 안내",
+    "maleSubtitle": "멤버십은 큐레이션됩니다. 검증이 그 시작입니다. 아래는 그 흐름입니다.",
+    "femaleSteps": [
+      { "title": "지원", "body": "지원서를 제출합니다. 첫 검토는 사람이 직접 합니다." },
+      { "title": "검증", "body": "신원·서류·진정성 검증을 완료해야 멤버십이 부여됩니다." },
+      { "title": "프로필 디자인", "body": "비공개 프로필을 함께 만듭니다. 외부에는 어디에도 공개되지 않습니다." },
+      { "title": "큐레이션 소개", "body": "매니저가 직접 고른 진짜 사람. 양보다는 질입니다." },
+      { "title": "실제 만남", "body": "통역·일정·이동 — 모두 우리가 처리합니다." },
+      { "title": "관계", "body": "관계가 무르익을 때, 결심과 그 이후의 시간까지 함께합니다." }
+    ],
+    "maleSteps": [
+      { "title": "지원", "body": "지원서를 제출하고, 매니저와 함께 멤버십 단계를 정합니다." },
+      { "title": "검증", "body": "신원·서류·개인 이력. 모든 회원의 기본 절차입니다." },
+      { "title": "큐레이션 소개", "body": "당신과 어울리는 검증된 후보들 — 스와이프하는 사람이 아니라." },
+      { "title": "실제 만남", "body": "통역·일정·이동 처리. 당신은 사람만 보세요." },
+      { "title": "결심", "body": "결혼 행정·가족·결혼식까지 끝까지 지원합니다." },
+      { "title": "관계", "body": "그 이후의 시간 — 사후 케어로 사라지지 않습니다." }
+    ]
+  },
+  "faq": {
+    "kicker": "FAQ",
+    "title": "자주 묻는 질문",
+    "subtitle": "찾으시는 답이 없으면 그냥 메일 주세요. 사람이 답합니다.",
+    "categories": {
+      "service": "서비스",
+      "cost": "멤버십",
+      "etc": "기타"
+    },
+    "items": [
+      {
+        "category": "service",
+        "q": "inko nikah는 누구를 위한 곳인가요?",
+        "a": "진지한 사람들을 위한 곳입니다. 회원은 주로 20대 후반부터 40대까지, 자기 삶이 단단한, 그래서 가벼운 만남을 졸업하고 싶은 분들입니다."
+      },
+      {
+        "category": "service",
+        "q": "데이팅 앱과 무엇이 다른가요?",
+        "a": "피드도, 알고리즘도 없습니다. 사람 매니저가 직접 프로필을 읽고 당신에게 어울리는 사람만 소개합니다. 스와이프 문화는 없습니다."
+      },
+      {
+        "category": "service",
+        "q": "회원은 어디에서 오나요?",
+        "a": "글로벌입니다 — 한국, 일본, 미국, 캐나다, 호주 외. 멤버십은 지역이 아니라 큐레이션입니다."
+      },
+      {
+        "category": "service",
+        "q": "보통 얼마나 걸리나요?",
+        "a": "서두를 이유가 없습니다. 대부분 6–9개월 사이에 만나게 되지만, 우리는 그 일정을 강요하지 않습니다. 중요한 건 그 이후의 관계입니다."
+      },
+      {
+        "category": "cost",
+        "q": "멤버십 비용은 얼마인가요?",
+        "a": "지원 기반입니다. 단계와 상황에 따라 책정되며, 첫 상담에서 안내드립니다. 가장 저렴한 곳은 아닙니다. 그게 우리 방향이 아니라서요."
+      },
+      {
+        "category": "cost",
+        "q": "단계별 차이는?",
+        "a": "Standard / Standard Plus / Premium은 소개 깊이, 미팅 코디, 사후 케어에서 달라집니다. 대부분 Standard Plus를 선택하십니다."
+      },
+      {
+        "category": "cost",
+        "q": "환불은 가능한가요?",
+        "a": "네. 단계별 규정이 있으며, 계약 전 서면으로 자세히 안내드립니다."
+      },
+      {
+        "category": "etc",
+        "q": "결혼 이후에도 지원이 있나요?",
+        "a": "네. 사후 케어는 모든 단계에 포함됩니다 — Standard Plus는 3개월, Premium은 1년, 분기별 안부는 원하시는 만큼."
+      },
+      {
+        "category": "etc",
+        "q": "양가 가족은요?",
+        "a": "가족 미팅과 통역, 기념일 코디는 Premium에 기본 포함되며, 다른 단계에서도 옵션으로 추가할 수 있습니다."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "이야기 나눠요.",
+    "subtitle": "사람이 직접, 24시간 이내 답합니다.",
+    "channels": [
+      {
+        "icon": "✦",
+        "title": "멤버십 지원",
+        "body": "비공개 지원서로 시작합니다. 몇 분이면 됩니다.",
+        "action": "지원하기",
+        "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
+      },
+      {
+        "icon": "✦",
+        "title": "이메일",
+        "body": "inkonikah@inkonikah.com",
+        "action": "메일 보내기",
+        "href": "mailto:inkonikah@inkonikah.com"
+      },
+      {
+        "icon": "instagram",
+        "title": "인스타그램",
+        "body": "@inko.nikah",
+        "action": "방문하기",
+        "href": "https://instagram.com/inko.nikah"
+      },
+      {
+        "icon": "✦",
+        "title": "채팅",
+        "body": "한국 회원·지원자 전용",
+        "action": "채팅 시작",
+        "href": "#"
+      },
+      {
+        "icon": "✦",
+        "title": "오피스",
+        "body": "Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345",
+        "action": "지도에서 보기",
+        "href": "https://maps.google.com/?q=Edutown+Pagedangan"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Real people. Real relationships.",
+    "company": "PT INKO NIKAH INDONESIA",
+    "nib": "사업자등록번호 (NIB): 3107250098036",
+    "ahu": "법무부 등록번호 (AHU): AHU-038917.AH.01.30",
+    "address": "Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345",
+    "copy": "© 2025 inko nikah. All rights reserved."
+  }
+}

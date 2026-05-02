@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "siteName": "inko nikah",
+    "tagline": "Find Your Lovebird"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "process": "How It Works",
+    "package": "Membership",
+    "compliance": "Trust",
+    "guide": "Guide",
+    "femaleGuide": "Member Guide",
+    "maleGuide": "Member Guide",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "signup": "Sign Up",
+    "applyFree": "Free to sign up"
+  },
+  "home": {
+    "kicker": "inko nikah · Lovebird",
+    "title": "Where real love\nbegins.",
+    "subtitle": "inko nikah is a global premium matchmaking platform — built for people who are ready for something real, not another swipe.",
+    "ctaPrimary": "Start Your Journey",
+    "ctaSecondary": "How It Works",
+    "trust": {
+      "label": "Built for relationships, not transactions",
+      "items": [
+        { "value": "100%", "label": "Verified profiles, real people" },
+        { "value": "1:1", "label": "Personalized human matchmakers" },
+        { "value": "Forever", "label": "Built for lifelong partnership" }
+      ]
+    },
+    "meaningTitle": "Find your lovebird",
+    "meaningBody": "‘Inkko’ is a small bird known to choose one partner — and stay with them for life. That's the kind of love we believe in. inko nikah exists to help you find one person worth keeping.",
+    "featuresTitle": "Why inko nikah",
+    "features": [
+      {
+        "icon": "✦",
+        "title": "Curated, not algorithmic",
+        "body": "A real human team reads every profile and introduces only people who fit who you are — not who you swipe like."
+      },
+      {
+        "icon": "✦",
+        "title": "Verified, every step",
+        "body": "Every member is identity-verified and intent-screened. No catfish. No noise. Just real people, ready for real."
+      },
+      {
+        "icon": "✦",
+        "title": "Built for what comes after",
+        "body": "We don't disappear after the introduction. We're with you through the whole arc — courtship, commitment, and everything that comes next."
+      }
+    ],
+    "valuesTitle": "What we stand for",
+    "valuesSubtitle": "Six promises",
+    "values": [
+      { "icon": "✦", "title": "Sincerity", "body": "Real people, real intent." },
+      { "icon": "✦", "title": "Discretion", "body": "Your story stays private." },
+      { "icon": "✦", "title": "Care", "body": "Every introduction is hand-picked." },
+      { "icon": "✦", "title": "Time", "body": "We never rush a relationship." },
+      { "icon": "✦", "title": "Trust", "body": "Built on verification, not chance." },
+      { "icon": "✦", "title": "Continuity", "body": "We stay long after the first match." }
+    ],
+    "ctaSection": {
+      "title": "Not just a match —\na partner for life.",
+      "body": "Apply for membership. We'll respond within 24 hours, personally.",
+      "button": "Join inko nikah"
+    }
+  },
+  "about": {
+    "kicker": "About",
+    "title": "Real people.\nReal relationships.",
+    "subtitle": "We're not a marketplace. We're a love brand.",
+    "meaningTitle": "What inko nikah means",
+    "meaningBody": "‘Inkko’ is a small parakeet — the one that, in the wild, chooses a single mate and stays with them for life. We took that name because it captures exactly what we are about: lifelong partnership, loyalty, and quiet devotion. inko nikah isn't an app. It's a brand built around the kind of love that lasts.",
+    "meaningNote": "We don't measure success in matches. We measure it in the relationships that are still standing five, ten, twenty years later.",
+    "visionTitle": "Vision",
+    "visionBody": "To become the most trusted name in serious, global matchmaking — the brand people choose when they're done playing.",
+    "missionTitle": "Mission",
+    "missionBody": "We exist to introduce sincere, verified people to one partner worth keeping — and to walk with them as that relationship grows.",
+    "valuesTitle": "What we believe",
+    "values": [
+      "Relationships are built, not matched.",
+      "Verification is the foundation of trust.",
+      "Slow is better than fast.",
+      "A name is a promise.",
+      "Privacy is non-negotiable.",
+      "We are accountable beyond the introduction."
+    ]
+  },
+  "process": {
+    "kicker": "How It Works",
+    "title": "How we introduce.",
+    "subtitle": "From the first conversation to the relationship that follows. Six steps, taken at the pace of a real life.",
+    "notice": "Timing varies by person. We never rush a relationship.",
+    "datePicker": {
+      "label": "If you started today",
+      "today": "Set to today",
+      "rangeSuffix": "month(s) in"
+    },
+    "steps": [
+      {
+        "title": "Apply & meet your matchmaker",
+        "body": "We learn who you are — values, life chapter, the kind of partner you'd actually choose. A dedicated matchmaker is assigned.",
+        "monthsMin": 0,
+        "monthsMax": 1
+      },
+      {
+        "title": "Verification",
+        "body": "Identity, intent, and personal history. Every member is verified before any introduction is made.",
+        "monthsMin": 1,
+        "monthsMax": 2
+      },
+      {
+        "title": "Curated introductions",
+        "body": "Hand-picked candidates — not an endless feed. Quality over quantity, always.",
+        "monthsMin": 2,
+        "monthsMax": 4
+      },
+      {
+        "title": "Real meetings",
+        "body": "We coordinate the logistics. You focus on the connection. We handle interpreters, scheduling, and travel where it applies.",
+        "monthsMin": 4,
+        "monthsMax": 6
+      },
+      {
+        "title": "Commitment",
+        "body": "When it's right, we support the steps that come with commitment — paperwork, families, the practical side of building a life together.",
+        "monthsMin": 6,
+        "monthsMax": 9
+      },
+      {
+        "title": "The years that follow",
+        "body": "We stay in the picture. Quarterly check-ins, family translation, support whenever life gets complicated.",
+        "monthsMin": 9,
+        "monthsMax": 12
+      }
+    ]
+  },
+  "package": {
+    "kicker": "Membership",
+    "title": "Membership.",
+    "subtitle": "Application is always free. Membership pricing below applies to male members' matchmaking service.",
+    "tiers": [
+      {
+        "icon": "✦",
+        "name": "Standard",
+        "tag": "Foundation",
+        "price": "By application",
+        "description": "Verified introductions and the full core experience. The right place to begin.",
+        "features": [
+          "Dedicated matchmaker",
+          "Up to 5 curated introductions",
+          "Identity verification on every match",
+          "1 in-person meeting coordinated",
+          "Interpreter support (1 session)",
+          "Relationship guidance"
+        ]
+      },
+      {
+        "icon": "✦",
+        "name": "Standard Plus",
+        "tag": "Most chosen",
+        "highlight": true,
+        "price": "By application",
+        "description": "Everything in Standard, with deeper care and more time invested in finding the right person.",
+        "features": [
+          "Everything in Standard",
+          "Unlimited introductions",
+          "2 in-person meetings coordinated",
+          "Unlimited interpreter support",
+          "Wedding & milestone coordination",
+          "3-month relationship aftercare"
+        ]
+      },
+      {
+        "icon": "✦",
+        "name": "Premium",
+        "tag": "Concierge",
+        "price": "By application",
+        "description": "A fully personal experience, end to end. Reserved for members who want the deepest level of care.",
+        "features": [
+          "Everything in Standard Plus",
+          "VIP-priority introductions",
+          "Unlimited in-person meetings",
+          "Full ceremony & milestone coordination",
+          "12-month relationship aftercare",
+          "Family liaison & translation"
+        ]
+      }
+    ]
+  },
+  "compliance": {
+    "kicker": "Trust",
+    "title": "Trust, built into how we work.",
+    "subtitle": "Verified profiles. Lawful operation. Privacy by default.",
+    "items": [
+      {
+        "icon": "✦",
+        "title": "Identity verification",
+        "body": "Every member completes identity, document and intent verification before any introduction is made."
+      },
+      {
+        "icon": "✦",
+        "title": "Privacy by design",
+        "body": "Your profile is never published. Information is shared only with introductions you accept, and stored only as long as legally required."
+      },
+      {
+        "icon": "✦",
+        "title": "Lawfully registered",
+        "body": "inko nikah operates under PT INKO NIKAH INDONESIA, lawfully registered under NIB 3107250098036 and AHU-038917.AH.01.30."
+      },
+      {
+        "icon": "✦",
+        "title": "Real success stories",
+        "body": "Our credibility is built on relationships that are still standing — referenced privately, with consent, never as marketing."
+      },
+      {
+        "icon": "✦",
+        "title": "Compliance",
+        "body": "We comply with Korea's Marriage Brokerage Business Act and the data-protection laws of every country we operate in."
+      },
+      {
+        "icon": "✦",
+        "title": "Accountability",
+        "body": "Disputes are mediated by partner counsel and resolved transparently. Our duty doesn't end at the introduction."
+      }
+    ]
+  },
+  "guide": {
+    "femaleKicker": "Member Guide",
+    "femaleTitle": "Member guide",
+    "femaleSubtitle": "Membership is curated. Verification is the foundation. Below is what to expect.",
+    "maleKicker": "Member Guide",
+    "maleTitle": "Member guide",
+    "maleSubtitle": "Membership is curated. Verification is the foundation. Below is what to expect.",
+    "femaleSteps": [
+      { "title": "Apply", "body": "Submit your application. The first review is personal." },
+      { "title": "Verification", "body": "Identity, document, and intent verification. Membership is granted on completion." },
+      { "title": "Profile design", "body": "We build your private profile together — never public, only shared with mutual introductions." },
+      { "title": "Curated introductions", "body": "Real people, hand-picked by your matchmaker. Quality over quantity." },
+      { "title": "Real meetings", "body": "Coordinated end to end. Interpreters, scheduling, travel — handled." },
+      { "title": "The relationship", "body": "When it's right, we walk with you through commitment and the years that follow." }
+    ],
+    "maleSteps": [
+      { "title": "Apply", "body": "Submit your application and choose a membership tier in conversation with your matchmaker." },
+      { "title": "Verification", "body": "Identity, document, and personal history. Standard for every member." },
+      { "title": "Curated introductions", "body": "Verified candidates that fit who you are — not who you swipe like." },
+      { "title": "Real meetings", "body": "Logistics handled — interpreting, scheduling, travel. You focus on the connection." },
+      { "title": "Commitment", "body": "Paperwork, family, ceremony — supported end to end when the time comes." },
+      { "title": "The relationship", "body": "Aftercare for the months and years that follow. We don't disappear." }
+    ]
+  },
+  "faq": {
+    "kicker": "FAQ",
+    "title": "Frequently asked questions.",
+    "subtitle": "If you don't find your answer here, we'd rather you just write to us.",
+    "categories": {
+      "service": "Service",
+      "cost": "Membership",
+      "etc": "Other"
+    },
+    "items": [
+      {
+        "category": "service",
+        "q": "Who is inko nikah for?",
+        "a": "inko nikah is for people who are serious. Members tend to be in their late 20s through their 40s, established in their lives, and ready for one real relationship — not another casual try."
+      },
+      {
+        "category": "service",
+        "q": "How is this different from a dating app?",
+        "a": "We don't run a feed and we don't run an algorithm. A real human matchmaker reads your profile and personally chooses each introduction. There is no swipe culture."
+      },
+      {
+        "category": "service",
+        "q": "Where do members come from?",
+        "a": "Globally — Korea, Japan, the U.S., Canada, Australia, and beyond. Membership is curated, not geographic."
+      },
+      {
+        "category": "service",
+        "q": "How long does the process usually take?",
+        "a": "There's no rush. Most members find the right person within six to nine months, but we never push that timeline. The point is the relationship that follows, not the speed of the introduction."
+      },
+      {
+        "category": "cost",
+        "q": "How much does membership cost?",
+        "a": "Membership is by application. Pricing depends on the tier and is shared during the first conversation. We are not the cheapest. We are not trying to be."
+      },
+      {
+        "category": "cost",
+        "q": "What's the difference between the tiers?",
+        "a": "Standard, Standard Plus, and Premium differ in introduction depth, meeting coordination, and aftercare. Most members choose Standard Plus."
+      },
+      {
+        "category": "cost",
+        "q": "Are refunds available?",
+        "a": "Yes, with stage-based rules. We walk through them in writing before any contract is signed."
+      },
+      {
+        "category": "etc",
+        "q": "Is the relationship supported after we commit?",
+        "a": "Yes. Aftercare is part of every tier — three months in Standard Plus, a full year in Premium, plus quarterly check-ins for as long as you'd like."
+      },
+      {
+        "category": "etc",
+        "q": "What about families?",
+        "a": "Family meetings, translation, and milestone coordination are part of the Premium tier and available as add-ons in others."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Talk to us.",
+    "subtitle": "We answer personally, within 24 hours.",
+    "channels": [
+      {
+        "icon": "✦",
+        "title": "Apply for membership",
+        "body": "The first step is a private application. It takes a few minutes.",
+        "action": "Apply",
+        "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
+      },
+      {
+        "icon": "✦",
+        "title": "Email",
+        "body": "inkonikah@inkonikah.com",
+        "action": "Write to us",
+        "href": "mailto:inkonikah@inkonikah.com"
+      },
+      {
+        "icon": "instagram",
+        "title": "Instagram",
+        "body": "@inko.nikah",
+        "action": "Follow us",
+        "href": "https://instagram.com/inko.nikah"
+      },
+      {
+        "icon": "✦",
+        "title": "Chat",
+        "body": "For members and applicants in the Korean market.",
+        "action": "Open chat",
+        "href": "#"
+      },
+      {
+        "icon": "✦",
+        "title": "Office",
+        "body": "Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345",
+        "action": "Open in Maps",
+        "href": "https://maps.google.com/?q=Edutown+Pagedangan"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Real people. Real relationships.",
+    "company": "PT INKO NIKAH INDONESIA",
+    "nib": "Business Identification Number (NIB): 3107250098036",
+    "ahu": "Ministry of Law Registration (AHU): AHU-038917.AH.01.30",
+    "address": "Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345",
+    "copy": "© 2025 inko nikah. All rights reserved."
+  }
+}

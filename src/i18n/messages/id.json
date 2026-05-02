@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "siteName": "inko nikah",
+    "tagline": "Find Your Lovebird"
+  },
+  "nav": {
+    "home": "Beranda",
+    "about": "Brand",
+    "process": "Proses",
+    "package": "Membership",
+    "compliance": "Kepercayaan",
+    "guide": "Panduan",
+    "femaleGuide": "Panduan Anggota",
+    "maleGuide": "Panduan Anggota",
+    "faq": "FAQ",
+    "contact": "Kontak",
+    "signup": "Daftar",
+    "applyFree": "Pendaftaran gratis"
+  },
+  "home": {
+    "kicker": "inko nikah · Lovebird",
+    "title": "Tempat cinta sejati\nbermula.",
+    "subtitle": "inko nikah adalah platform matchmaking premium global — dibangun untuk orang yang siap dengan hubungan yang nyata, bukan swipe lagi.",
+    "ctaPrimary": "Mulai Sekarang",
+    "ctaSecondary": "Lihat Proses",
+    "trust": {
+      "label": "Untuk hubungan, bukan transaksi",
+      "items": [
+        { "value": "100%", "label": "Profil terverifikasi, orang nyata" },
+        { "value": "1:1", "label": "Matchmaker manusia khusus" },
+        { "value": "Forever", "label": "Untuk pasangan seumur hidup" }
+      ]
+    },
+    "meaningTitle": "Temui lovebird Anda",
+    "meaningBody": "‘Inkko’ adalah burung kecil yang memilih satu pasangan dan menemaninya seumur hidup. Itulah cinta yang kami percaya. inko nikah ada untuk membantu Anda menemukan satu orang yang layak untuk dipertahankan.",
+    "featuresTitle": "Mengapa inko nikah",
+    "features": [
+      {
+        "icon": "✦",
+        "title": "Manusia, bukan algoritma",
+        "body": "Tim manusia membaca setiap profil dan memperkenalkan hanya orang yang cocok dengan Anda."
+      },
+      {
+        "icon": "✦",
+        "title": "Terverifikasi di setiap langkah",
+        "body": "Setiap anggota diverifikasi identitas dan niatnya. Tidak ada catfish. Hanya orang nyata."
+      },
+      {
+        "icon": "✦",
+        "title": "Untuk yang setelahnya",
+        "body": "Kami tidak menghilang setelah perkenalan. Kami menemani melalui pacaran, komitmen, dan tahun-tahun setelahnya."
+      }
+    ],
+    "valuesTitle": "Yang kami pegang",
+    "valuesSubtitle": "Enam janji",
+    "values": [
+      { "icon": "✦", "title": "Ketulusan", "body": "Orang nyata, niat nyata." },
+      { "icon": "✦", "title": "Privasi", "body": "Cerita Anda tetap rahasia." },
+      { "icon": "✦", "title": "Perhatian", "body": "Setiap perkenalan dipilih dengan tangan." },
+      { "icon": "✦", "title": "Waktu", "body": "Kami tidak terburu-buru." },
+      { "icon": "✦", "title": "Kepercayaan", "body": "Dibangun di atas verifikasi." },
+      { "icon": "✦", "title": "Berkelanjutan", "body": "Kami tinggal lama setelah match pertama." }
+    ],
+    "ctaSection": {
+      "title": "Bukan sekadar match —\npasangan seumur hidup.",
+      "body": "Daftar untuk membership. Kami akan membalas dalam 24 jam, secara langsung.",
+      "button": "Bergabung dengan inko nikah"
+    }
+  },
+  "about": {
+    "kicker": "Tentang",
+    "title": "Orang nyata.\nHubungan nyata.",
+    "subtitle": "Kami bukan marketplace. Kami brand cinta.",
+    "meaningTitle": "Apa arti inko nikah",
+    "meaningBody": "‘Inkko’ adalah parkit kecil yang di alam liar memilih satu pasangan dan menemaninya seumur hidup. Kami mengambil nama itu karena ia menggambarkan tepat siapa kami: kemitraan seumur hidup, kesetiaan, dan kasih sayang yang tenang. inko nikah bukan aplikasi. Kami brand yang dibangun untuk cinta yang bertahan.",
+    "meaningNote": "Kami tidak mengukur sukses dengan jumlah match. Kami mengukurnya dengan hubungan yang masih berdiri lima, sepuluh, dua puluh tahun kemudian.",
+    "visionTitle": "Visi",
+    "visionBody": "Menjadi nama paling tepercaya dalam matchmaking serius global — yang dipilih ketika orang sudah tidak mau main-main lagi.",
+    "missionTitle": "Misi",
+    "missionBody": "Memperkenalkan orang yang tulus dan terverifikasi kepada satu pasangan yang layak — dan menemani hubungan itu tumbuh.",
+    "valuesTitle": "Yang kami percayai",
+    "values": [
+      "Hubungan dibangun, bukan dicocokkan.",
+      "Verifikasi adalah dasar kepercayaan.",
+      "Lambat lebih baik daripada cepat.",
+      "Nama adalah janji.",
+      "Privasi tidak bisa ditawar.",
+      "Kami bertanggung jawab di luar perkenalan."
+    ]
+  },
+  "process": {
+    "kicker": "Proses",
+    "title": "Bagaimana kami memperkenalkan.",
+    "subtitle": "Dari percakapan pertama sampai hubungan setelahnya. Enam langkah, dengan tempo kehidupan nyata.",
+    "notice": "Waktu berbeda untuk setiap orang. Kami tidak terburu-buru.",
+    "datePicker": {
+      "label": "Jika dimulai hari ini",
+      "today": "Atur ke hari ini",
+      "rangeSuffix": "bulan ke"
+    },
+    "steps": [
+      {
+        "title": "Daftar & temui matchmaker",
+        "body": "Kami mengenal Anda — nilai, fase hidup, jenis pasangan yang akan Anda pilih sebenarnya.",
+        "monthsMin": 0,
+        "monthsMax": 1
+      },
+      {
+        "title": "Verifikasi",
+        "body": "Identitas, niat, riwayat pribadi. Setiap anggota diverifikasi sebelum perkenalan apa pun.",
+        "monthsMin": 1,
+        "monthsMax": 2
+      },
+      {
+        "title": "Perkenalan kurasi",
+        "body": "Kandidat dipilih dengan tangan — bukan feed tanpa akhir. Kualitas di atas kuantitas.",
+        "monthsMin": 2,
+        "monthsMax": 4
+      },
+      {
+        "title": "Pertemuan nyata",
+        "body": "Kami koordinasikan logistik. Anda fokus pada koneksi.",
+        "monthsMin": 4,
+        "monthsMax": 6
+      },
+      {
+        "title": "Komitmen",
+        "body": "Saat tepat, kami dukung dokumen, keluarga, dan upacara — sisi praktis membangun kehidupan bersama.",
+        "monthsMin": 6,
+        "monthsMax": 9
+      },
+      {
+        "title": "Tahun-tahun setelahnya",
+        "body": "Kami tetap di gambar. Check-in triwulanan, penerjemahan keluarga, dukungan kapan pun hidup jadi rumit.",
+        "monthsMin": 9,
+        "monthsMax": 12
+      }
+    ]
+  },
+  "package": {
+    "kicker": "Membership",
+    "title": "Membership.",
+    "subtitle": "Pendaftaran selalu gratis. Biaya membership di bawah hanya berlaku untuk layanan matchmaking anggota pria.",
+    "tiers": [
+      {
+        "icon": "✦",
+        "name": "Standard",
+        "tag": "Foundation",
+        "price": "Berdasarkan aplikasi",
+        "description": "Perkenalan terverifikasi dan pengalaman inti penuh. Tempat tepat untuk memulai.",
+        "features": [
+          "Matchmaker khusus",
+          "Hingga 5 perkenalan kurasi",
+          "Verifikasi identitas setiap match",
+          "1 pertemuan tatap muka",
+          "Dukungan penerjemah (1 sesi)",
+          "Bimbingan hubungan"
+        ]
+      },
+      {
+        "icon": "✦",
+        "name": "Standard Plus",
+        "tag": "Paling dipilih",
+        "highlight": true,
+        "price": "Berdasarkan aplikasi",
+        "description": "Semua di Standard, dengan perhatian lebih dalam dan waktu lebih banyak.",
+        "features": [
+          "Semua di Standard",
+          "Perkenalan tanpa batas",
+          "2 pertemuan tatap muka",
+          "Penerjemahan tanpa batas",
+          "Koordinasi pernikahan",
+          "Aftercare 3 bulan"
+        ]
+      },
+      {
+        "icon": "✦",
+        "name": "Premium",
+        "tag": "Concierge",
+        "price": "Berdasarkan aplikasi",
+        "description": "Pengalaman pribadi penuh. Untuk anggota yang menginginkan perhatian terdalam.",
+        "features": [
+          "Semua di Standard Plus",
+          "Perkenalan VIP prioritas",
+          "Pertemuan tatap muka tanpa batas",
+          "Koordinasi upacara penuh",
+          "Aftercare 12 bulan",
+          "Liaison & penerjemahan keluarga"
+        ]
+      }
+    ]
+  },
+  "compliance": {
+    "kicker": "Kepercayaan",
+    "title": "Kepercayaan, terbangun dalam cara kerja kami.",
+    "subtitle": "Profil terverifikasi. Operasi sah. Privasi sebagai default.",
+    "items": [
+      {
+        "icon": "✦",
+        "title": "Verifikasi identitas",
+        "body": "Setiap anggota menyelesaikan verifikasi identitas, dokumen, dan niat sebelum perkenalan."
+      },
+      {
+        "icon": "✦",
+        "title": "Privasi by design",
+        "body": "Profil Anda tidak pernah dipublikasikan. Informasi hanya dibagikan ke perkenalan yang Anda terima."
+      },
+      {
+        "icon": "✦",
+        "title": "Terdaftar resmi",
+        "body": "inko nikah beroperasi di bawah PT INKO NIKAH INDONESIA, terdaftar resmi NIB 3107250098036 dan AHU-038917.AH.01.30."
+      },
+      {
+        "icon": "✦",
+        "title": "Kisah sukses nyata",
+        "body": "Kredibilitas kami dibangun di atas hubungan yang masih berdiri — direferensikan secara pribadi."
+      },
+      {
+        "icon": "✦",
+        "title": "Kepatuhan",
+        "body": "Kami patuh pada UU perjodohan Korea dan hukum perlindungan data setiap negara tempat kami beroperasi."
+      },
+      {
+        "icon": "✦",
+        "title": "Akuntabilitas",
+        "body": "Sengketa ditengahi oleh penasihat mitra. Tugas kami tidak berakhir pada perkenalan."
+      }
+    ]
+  },
+  "guide": {
+    "femaleKicker": "Panduan Anggota",
+    "femaleTitle": "Panduan anggota",
+    "femaleSubtitle": "Membership dikurasi. Verifikasi adalah dasarnya. Berikut alurnya.",
+    "maleKicker": "Panduan Anggota",
+    "maleTitle": "Panduan anggota",
+    "maleSubtitle": "Membership dikurasi. Verifikasi adalah dasarnya. Berikut alurnya.",
+    "femaleSteps": [
+      { "title": "Daftar", "body": "Kirimkan aplikasi Anda. Tinjauan pertama dilakukan oleh manusia." },
+      { "title": "Verifikasi", "body": "Verifikasi identitas, dokumen, dan niat. Membership diberikan setelah selesai." },
+      { "title": "Desain profil", "body": "Kami membangun profil pribadi Anda bersama — tidak pernah publik." },
+      { "title": "Perkenalan kurasi", "body": "Orang nyata, dipilih dengan tangan oleh matchmaker Anda." },
+      { "title": "Pertemuan nyata", "body": "Dikoordinasikan dari awal sampai akhir. Penerjemah, jadwal, perjalanan." },
+      { "title": "Hubungan", "body": "Saat tepat, kami menemani melalui komitmen dan tahun-tahun setelahnya." }
+    ],
+    "maleSteps": [
+      { "title": "Daftar", "body": "Kirim aplikasi dan pilih tier membership bersama matchmaker Anda." },
+      { "title": "Verifikasi", "body": "Identitas, dokumen, riwayat pribadi. Standar untuk setiap anggota." },
+      { "title": "Perkenalan kurasi", "body": "Kandidat terverifikasi yang cocok dengan Anda — bukan yang Anda swipe." },
+      { "title": "Pertemuan nyata", "body": "Logistik diurus — penerjemah, jadwal, perjalanan." },
+      { "title": "Komitmen", "body": "Dokumen, keluarga, upacara — didukung penuh saat waktunya tiba." },
+      { "title": "Hubungan", "body": "Aftercare untuk bulan-bulan dan tahun-tahun setelahnya." }
+    ]
+  },
+  "faq": {
+    "kicker": "FAQ",
+    "title": "Pertanyaan yang sering diajukan.",
+    "subtitle": "Jika tidak menemukan jawaban di sini, lebih baik tulis langsung ke kami.",
+    "categories": {
+      "service": "Layanan",
+      "cost": "Membership",
+      "etc": "Lainnya"
+    },
+    "items": [
+      {
+        "category": "service",
+        "q": "inko nikah untuk siapa?",
+        "a": "Untuk orang yang serius. Anggota umumnya berusia akhir 20-an hingga 40-an, mapan, dan siap untuk satu hubungan nyata."
+      },
+      {
+        "category": "service",
+        "q": "Apa bedanya dengan aplikasi kencan?",
+        "a": "Kami tidak menjalankan feed atau algoritma. Matchmaker manusia membaca profil Anda dan memilih setiap perkenalan secara pribadi."
+      },
+      {
+        "category": "service",
+        "q": "Anggota berasal dari mana?",
+        "a": "Global — Korea, Jepang, AS, Kanada, Australia, dan lainnya. Membership dikurasi, bukan geografis."
+      },
+      {
+        "category": "service",
+        "q": "Berapa lama biasanya prosesnya?",
+        "a": "Tidak terburu-buru. Kebanyakan menemukan orang yang tepat dalam 6–9 bulan, tapi kami tidak memaksa timeline itu."
+      },
+      {
+        "category": "cost",
+        "q": "Berapa biaya membership?",
+        "a": "Berdasarkan aplikasi. Harga tergantung tier dan dijelaskan dalam percakapan pertama."
+      },
+      {
+        "category": "cost",
+        "q": "Apa beda antar tier?",
+        "a": "Standard, Standard Plus, dan Premium berbeda dalam kedalaman perkenalan, koordinasi pertemuan, dan aftercare."
+      },
+      {
+        "category": "cost",
+        "q": "Apakah bisa refund?",
+        "a": "Ya, dengan aturan per tahap. Kami menjelaskan secara tertulis sebelum kontrak."
+      },
+      {
+        "category": "etc",
+        "q": "Apakah hubungan didukung setelah komitmen?",
+        "a": "Ya. Aftercare adalah bagian dari setiap tier — tiga bulan di Standard Plus, satu tahun penuh di Premium."
+      },
+      {
+        "category": "etc",
+        "q": "Bagaimana dengan keluarga?",
+        "a": "Pertemuan keluarga, penerjemahan, dan koordinasi upacara adalah bagian dari Premium."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Kontak",
+    "title": "Bicara dengan kami.",
+    "subtitle": "Kami menjawab secara pribadi, dalam 24 jam.",
+    "channels": [
+      {
+        "icon": "✦",
+        "title": "Daftar membership",
+        "body": "Langkah pertama adalah aplikasi pribadi. Hanya butuh beberapa menit.",
+        "action": "Daftar",
+        "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
+      },
+      {
+        "icon": "✦",
+        "title": "Email",
+        "body": "inkonikah@inkonikah.com",
+        "action": "Tulis ke kami",
+        "href": "mailto:inkonikah@inkonikah.com"
+      },
+      {
+        "icon": "instagram",
+        "title": "Instagram",
+        "body": "@inko.nikah",
+        "action": "Ikuti kami",
+        "href": "https://instagram.com/inko.nikah"
+      },
+      {
+        "icon": "✦",
+        "title": "Chat",
+        "body": "Untuk anggota dan pelamar di pasar Korea.",
+        "action": "Mulai chat",
+        "href": "#"
+      },
+      {
+        "icon": "✦",
+        "title": "Kantor",
+        "body": "Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345",
+        "action": "Buka di Maps",
+        "href": "https://maps.google.com/?q=Edutown+Pagedangan"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Real people. Real relationships.",
+    "company": "PT INKO NIKAH INDONESIA",
+    "nib": "Nomor Induk Berusaha (NIB): 3107250098036",
+    "ahu": "Nomor Registrasi Kemenkumham (AHU): AHU-038917.AH.01.30",
+    "address": "Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345",
+    "copy": "© 2025 inko nikah. Semua hak dilindungi."
+  }
+}

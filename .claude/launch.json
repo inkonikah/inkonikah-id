@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "inko-nikah",
+      "runtimeExecutable": "/Users/louischung/Desktop/홈페이지/.node/bin/npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3030,
+      "env": {
+        "PATH": "/Users/louischung/Desktop/홈페이지/.node/bin:/usr/bin:/bin",
+        "PORT": "3030"
+      }
+    }
+  ]
+}
