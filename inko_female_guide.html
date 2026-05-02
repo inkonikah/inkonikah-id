@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
+   INKO NIKAH · 프로세스
+  </title>
+<style>
+   :root{
+      --max:1100px;
+      --border:rgba(255,255,255,.55);
+      --bg:
+        radial-gradient(80% 100% at 0% 0%, rgba(255,192,203,.50) 0%, rgba(255,192,203,0) 60%),
+        radial-gradient(85% 100% at 100% 15%, rgba(173,216,230,.48) 0%, rgba(173,216,230,0) 60%),
+        radial-gradient(95% 110% at 50% 100%, rgba(152,251,152,.46) 0%, rgba(152,251,152,0) 60%),
+        linear-gradient(180deg, #f7f8fb 0%, #fbfaf7 100%);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif;color:#111;line-height:1.6;background:var(--bg)}
+    a{text-decoration:none;color:inherit}
+
+    /* ===== Header (structure unchanged) ===== */
+    
+    header{position:sticky;top:0;z-index:40;backdrop-filter:blur(18px) saturate(185%);
+      -webkit-backdrop-filter:blur(18px) saturate(185%);background:rgba(255,255,255,.46);border-bottom:1px solid var(--glass-br)}
+    .nav{max-width:var(--max);margin:0 auto;padding:12px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+    .brand{font-weight:900;letter-spacing:.2px}
+    nav.menu{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
+    .controls{display:flex;gap:10px;justify-content:flex-end;align-items:center}
+
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:999px;
+      background:rgba(255,255,255,.40);
+      border:1px solid var(--glass-br);
+      box-shadow:
+        inset 0 2px 4px rgba(255,255,255,.85),
+        inset 0 -3px 6px rgba(0,0,0,.14),
+        0 8px 20px rgba(0,0,0,.08);
+      font-weight:700; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; will-change:transform}
+    .pill:hover{transform:translateY(-2px);
+      background:rgba(255,255,255,.62);
+      box-shadow:
+        inset 0 2px 5px rgba(255,255,255,.95),
+        inset 0 -4px 8px rgba(0,0,0,.16),
+        0 14px 28px rgba(0,0,0,.12)}
+    .pill:active{transform:translateY(0)}
+
+    .pill.cta{
+      background: linear-gradient(180deg,
+        rgba(255, 239, 170, 0.70) 0%,
+        rgba(255, 211, 94, 0.65) 40%,
+        rgba(232, 184, 74, 0.60) 70%,
+        rgba(201, 151, 45, 0.55) 100%
+      );
+      color:#3a2a00;
+      border:1px solid rgba(201,151,45,0.6);
+      box-shadow: inset 0 1px 2px rgba(255,255,255,.6),
+                  0 3px 8px rgba(201,151,45,.25);
+      padding:6px 16px;
+      min-width:120px;
+      font-size:0.9rem;
+      justify-content:center
+    }
+    .pill.cta:hover{filter:saturate(1.05) brightness(1.03); transform:translateY(-2px);}
+
+    .dropdown{position:relative}
+    .dropdown>a::after{content:"▾";margin-left:6px;opacity:.8}
+    .dropdown-content{position:absolute;top:115%;left:0;display:none;min-width:220px;padding:10px;border-radius:14px;
+      backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);
+      background:rgba(255,255,255,.66);border:1px solid var(--glass-br);box-shadow:0 12px 28px rgba(0,0,0,.12)}
+    .dropdown:hover .dropdown-content{display:block}
+    .dropdown-content a{display:block;padding:10px 12px;border-radius:10px}
+    .dropdown-content a:hover{background:rgba(255,255,255,.8);transform:translateY(-2px)}
+
+    .lang{appearance:none;border:1px solid var(--glass-br);border-radius:999px;padding:10px 38px 10px 14px;font-weight:800;cursor:pointer;
+      background:rgba(255,255,255,.95) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23222" d="M6 8 0 0h12z"/></svg>') no-repeat right 10px center;min-width:116px;
+      transition:transform .18s ease, box-shadow .18s ease}
+    .lang:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(0,0,0,.08)}
+
+
+    /* ===== Page ===== */
+    .container{max-width:var(--max);margin:0 auto;padding:18px}
+    .title{font-size:clamp(24px,3vw,32px);font-weight:900;margin:12px 0 10px}
+    .notice{display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.7);border:1px solid var(--border);backdrop-filter:blur(12px);
+      padding:10px 12px;border-radius:12px;font-weight:700;color:#333;box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 -6px 12px rgba(0,0,0,.06), 0 10px 24px rgba(0,0,0,.06)}
+
+    .bar{display:flex;gap:10px;align-items:center;margin:12px 0}
+    .bar .field{flex:1;display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.7);border:1px solid var(--border);
+      border-radius:12px;padding:10px 12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 -6px 12px rgba(0,0,0,.06), 0 10px 24px rgba(0,0,0,.06)}
+
+    .btn{padding:8px 14px;border-radius:10px;background:rgba(255,255,255,.75);border:1px solid var(--border);font-weight:800;cursor:pointer;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 -5px 10px rgba(0,0,0,.06), 0 8px 18px rgba(0,0,0,.06)}
+    .btn:hover{transform:translateY(-2px)}
+
+    .step{position:relative;background:rgba(255,255,255,.72);border:1px solid var(--border);backdrop-filter:blur(16px);
+      border-radius:20px;padding:18px 16px 16px;margin:14px 0;
+      /* embossed + floating */
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.95),
+        inset 0 -10px 18px rgba(0,0,0,.06),
+        0 16px 36px rgba(0,0,0,.12);
+    }
+    .step .row{display:flex;gap:16px;align-items:flex-start}
+    .num{flex:0 0 64px;height:92px;border-radius:999px;background:linear-gradient(180deg,#f7fbff,#fff3f8);
+      display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;border:1px solid var(--border);
+      box-shadow:inset 0 2px 0 rgba(255,255,255,.95), inset 0 -8px 14px rgba(0,0,0,.06)}
+    .content{flex:1}
+    .step h3{margin:0 0 8px;font-size:20px}
+    .chip{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#eef5ff,#fff1fd);
+      border:1px solid var(--border);font-weight:900;margin-bottom:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.95), inset 0 -6px 10px rgba(0,0,0,.05)}
+    .range{display:flex;gap:12px;color:#333;font-weight:800}
+    .badge{padding:2px 8px;border:1px solid var(--border);border-radius:999px;background:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 -4px 8px rgba(0,0,0,.05)}
+
+    footer{margin:18px 0 14px}
+    .footer-wrap{text-align:center;max-width:var(--max);margin:0 auto;padding:12px 18px 24px;color:#000;font-size:14px}
+    .footer-wrap .copy{margin-top:4px;font-size:12px;color:#333}
+  </style>
+<style>
+   /* --- Hover stability fix (minimal) --- */
+.dropdown { position: relative; }
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content,
+.dropdown:hover .menu-drop,
+.dropdown:focus-within .menu-drop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+}
+/* tiny hover bridge to kill the gap between trigger and panel */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 6px; /* 아주 살짝만 */
+}
+/* eliminate vertical gap if any */
+.dropdown-content, .menu-drop {
+  margin-top: -2px;
+}
+  </style>
+<style>
+   .hero{text-align:center;padding:36px 20px 6px}
+.hero h1{font-size:28px;font-weight:900;margin:0 0 8px}
+.hero p{font-size:16px;color:#4b5563;font-weight:700;margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:18px auto 30px;max-width:1100px;padding:0 18px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.card{border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.86));border:1px solid rgba(0,0,0,.08);
+      box-shadow:0 18px 40px rgba(31,39,63,.12);padding:18px 18px 16px;transition:transform .18s ease, box-shadow .18s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 24px 48px rgba(31,39,63,.16)}
+.card h3{margin:0 0 8px;font-size:18px}
+.card ul{margin:0;padding-left:18px}
+.card li{margin:6px 0}
+.footer{max-width:1200px;margin:0 auto;text-align:center;font-size:14px;color:#000;padding:18px 16px}
+.footer .copy{font-size:12px;color:#333;margin-top:6px}
+  </style>
+<style>
+   @media (max-width: 768px) {
+      nav.menu { display: none !important; }
+    }
+    .sidebar .submenu {
+      display: none;
+    }
+    .sidebar .has-submenu.open .submenu {
+      display: flex;
+    }
+    .sidebar .has-submenu .arrow {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .sidebar .has-submenu.open .arrow {
+      transform: rotate(0deg);
+    }
+  </style>
+<style>
+   @media (max-width: 768px) { .hamburger { display: block !important; } }
+  </style>
+<style>
+.card h3::before {
+  content: attr(data-num);
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 50%;
+  font-weight: 900;
+  background: linear-gradient(135deg, #fbc2eb, #a18cd1);
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+</style></head>
+<body>
+<div class="overlay" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 998;
+    ">
+</div>
+<div class="sidebar" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 999;
+    ">
+<ul style="list-style:none;padding:0;margin:0;font-size:16px;">
+<li class="" style="margin: 12px 0; cursor:pointer;">
+<a href="/index.html" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+<span data-i18n="홈">
+       홈
+      </span>
+</a>
+</li>
+<li class="" style="margin: 12px 0; cursor:pointer;">
+<a href="/inko_about.html" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+<span data-i18n="회사소개">
+       회사소개
+      </span>
+</a>
+</li>
+<li class="has-submenu" style="margin: 12px 0; cursor:pointer;">
+<a href="#" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+<span data-i18n="서비스">
+       서비스
+      </span>
+<span class="arrow" style="margin-left:8px;">
+       ▶
+      </span>
+</a>
+<div class="submenu" style="display:none;flex-direction:column;padding-left:16px;margin-top:4px;">
+<a href="/inko_process.html" style="margin:8px 0;text-decoration:none;color:inherit;">
+<span data-i18n="프로세스">
+        프로세스
+       </span>
+</a>
+<a href="/inko_package.html" style="margin:8px 0;text-decoration:none;color:inherit;">
+<span data-i18n="패키지">
+        패키지
+       </span>
+</a>
+<a href="/inko_compliance.html" style="margin:8px 0;text-decoration:none;color:inherit;">
+<span data-i18n="보안 &amp; 컴플라이언스">
+        보안 &amp; 컴플라이언스
+       </span>
+</a>
+</div>
+</li>
+<li class="has-submenu" style="margin: 12px 0; cursor:pointer;">
+<a href="#" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+<span data-i18n="이용안내">
+       이용안내
+      </span>
+<span class="arrow" style="margin-left:8px;">
+       ▶
+      </span>
+</a>
+<div class="submenu" style="display:none;flex-direction:column;padding-left:16px;margin-top:4px;">
+<a href="/inko_female_guide.html" style="margin:8px 0;text-decoration:none;color:inherit;">
+<span data-i18n="여성 회원 이용 안내">
+        여성 회원 이용 안내
+       </span>
+</a>
+<a href="/inko_male_guide.html" style="margin:8px 0;text-decoration:none;color:inherit;">
+<span data-i18n="남성 회원 이용 안내">
+        남성 회원 이용 안내
+       </span>
+</a>
+</div>
+</li>
+<li class="" style="margin: 12px 0; cursor:pointer;">
+<a href="/inko_faq.html" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+<span data-i18n="FAQ">
+       FAQ
+      </span>
+</a>
+</li>
+<li class="" style="margin: 12px 0; cursor:pointer;">
+<a href="/inko_contact.html" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
+<span data-i18n="문의">
+       문의
+      </span>
+</a>
+</li>
+</ul>
+</div>
+<div class="canvas">
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
+      INKO NIKAH · 프로세스
+     </title>
+<style>
+      :root{
+      --max:1100px;
+      --border:rgba(255,255,255,.55);
+      --bg:
+        radial-gradient(80% 100% at 0% 0%, rgba(255,192,203,.50) 0%, rgba(255,192,203,0) 60%),
+        radial-gradient(85% 100% at 100% 15%, rgba(173,216,230,.48) 0%, rgba(173,216,230,0) 60%),
+        radial-gradient(95% 110% at 50% 100%, rgba(152,251,152,.46) 0%, rgba(152,251,152,0) 60%),
+        linear-gradient(180deg, #f7f8fb 0%, #fbfaf7 100%);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif;color:#111;line-height:1.6;background:var(--bg)}
+    a{text-decoration:none;color:inherit}
+
+    /* ===== Header (structure unchanged) ===== */
+    
+    header{position:sticky;top:0;z-index:40;backdrop-filter:blur(18px) saturate(185%);
+      -webkit-backdrop-filter:blur(18px) saturate(185%);background:rgba(255,255,255,.46);border-bottom:1px solid var(--glass-br)}
+    .nav{max-width:var(--max);margin:0 auto;padding:12px 18px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+    .brand{font-weight:900;letter-spacing:.2px}
+    nav.menu{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
+    .controls{display:flex;gap:10px;justify-content:flex-end;align-items:center}
+
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:999px;
+      background:rgba(255,255,255,.40);
+      border:1px solid var(--glass-br);
+      box-shadow:
+        inset 0 2px 4px rgba(255,255,255,.85),
+        inset 0 -3px 6px rgba(0,0,0,.14),
+        0 8px 20px rgba(0,0,0,.08);
+      font-weight:700; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; will-change:transform}
+    .pill:hover{transform:translateY(-2px);
+      background:rgba(255,255,255,.62);
+      box-shadow:
+        inset 0 2px 5px rgba(255,255,255,.95),
+        inset 0 -4px 8px rgba(0,0,0,.16),
+        0 14px 28px rgba(0,0,0,.12)}
+    .pill:active{transform:translateY(0)}
+
+    .pill.cta{
+      background: linear-gradient(180deg,
+        rgba(255, 239, 170, 0.70) 0%,
+        rgba(255, 211, 94, 0.65) 40%,
+        rgba(232, 184, 74, 0.60) 70%,
+        rgba(201, 151, 45, 0.55) 100%
+      );
+      color:#3a2a00;
+      border:1px solid rgba(201,151,45,0.6);
+      box-shadow: inset 0 1px 2px rgba(255,255,255,.6),
+                  0 3px 8px rgba(201,151,45,.25);
+      padding:6px 16px;
+      min-width:120px;
+      font-size:0.9rem;
+      justify-content:center
+    }
+    .pill.cta:hover{filter:saturate(1.05) brightness(1.03); transform:translateY(-2px);}
+
+    .dropdown{position:relative}
+    .dropdown>a::after{content:"▾";margin-left:6px;opacity:.8}
+    .dropdown-content{position:absolute;top:115%;left:0;display:none;min-width:220px;padding:10px;border-radius:14px;
+      backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);
+      background:rgba(255,255,255,.66);border:1px solid var(--glass-br);box-shadow:0 12px 28px rgba(0,0,0,.12)}
+    .dropdown:hover .dropdown-content{display:block}
+    .dropdown-content a{display:block;padding:10px 12px;border-radius:10px}
+    .dropdown-content a:hover{background:rgba(255,255,255,.8);transform:translateY(-2px)}
+
+    .lang{appearance:none;border:1px solid var(--glass-br);border-radius:999px;padding:10px 38px 10px 14px;font-weight:800;cursor:pointer;
+      background:rgba(255,255,255,.95) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23222" d="M6 8 0 0h12z"/></svg>') no-repeat right 10px center;min-width:116px;
+      transition:transform .18s ease, box-shadow .18s ease}
+    .lang:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(0,0,0,.08)}
+
+
+    /* ===== Page ===== */
+    .container{max-width:var(--max);margin:0 auto;padding:18px}
+    .title{font-size:clamp(24px,3vw,32px);font-weight:900;margin:12px 0 10px}
+    .notice{display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.7);border:1px solid var(--border);backdrop-filter:blur(12px);
+      padding:10px 12px;border-radius:12px;font-weight:700;color:#333;box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 -6px 12px rgba(0,0,0,.06), 0 10px 24px rgba(0,0,0,.06)}
+
+    .bar{display:flex;gap:10px;align-items:center;margin:12px 0}
+    .bar .field{flex:1;display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.7);border:1px solid var(--border);
+      border-radius:12px;padding:10px 12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 -6px 12px rgba(0,0,0,.06), 0 10px 24px rgba(0,0,0,.06)}
+
+    .btn{padding:8px 14px;border-radius:10px;background:rgba(255,255,255,.75);border:1px solid var(--border);font-weight:800;cursor:pointer;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 -5px 10px rgba(0,0,0,.06), 0 8px 18px rgba(0,0,0,.06)}
+    .btn:hover{transform:translateY(-2px)}
+
+    .step{position:relative;background:rgba(255,255,255,.72);border:1px solid var(--border);backdrop-filter:blur(16px);
+      border-radius:20px;padding:18px 16px 16px;margin:14px 0;
+      /* embossed + floating */
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.95),
+        inset 0 -10px 18px rgba(0,0,0,.06),
+        0 16px 36px rgba(0,0,0,.12);
+    }
+    .step .row{display:flex;gap:16px;align-items:flex-start}
+    .num{flex:0 0 64px;height:92px;border-radius:999px;background:linear-gradient(180deg,#f7fbff,#fff3f8);
+      display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;border:1px solid var(--border);
+      box-shadow:inset 0 2px 0 rgba(255,255,255,.95), inset 0 -8px 14px rgba(0,0,0,.06)}
+    .content{flex:1}
+    .step h3{margin:0 0 8px;font-size:20px}
+    .chip{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#eef5ff,#fff1fd);
+      border:1px solid var(--border);font-weight:900;margin-bottom:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.95), inset 0 -6px 10px rgba(0,0,0,.05)}
+    .range{display:flex;gap:12px;color:#333;font-weight:800}
+    .badge{padding:2px 8px;border:1px solid var(--border);border-radius:999px;background:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 -4px 8px rgba(0,0,0,.05)}
+
+    footer{margin:18px 0 14px}
+    .footer-wrap{text-align:center;max-width:var(--max);margin:0 auto;padding:12px 18px 24px;color:#000;font-size:14px}
+    .footer-wrap .copy{margin-top:4px;font-size:12px;color:#333}
+     </style>
+<style>
+      /* --- Hover stability fix (minimal) --- */
+.dropdown { position: relative; }
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content,
+.dropdown:hover .menu-drop,
+.dropdown:focus-within .menu-drop {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+}
+/* tiny hover bridge to kill the gap between trigger and panel */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 6px; /* 아주 살짝만 */
+}
+/* eliminate vertical gap if any */
+.dropdown-content, .menu-drop {
+  margin-top: -2px;
+}
+     </style>
+</head>
+<body>
+<header>
+<div class="nav">
+<button class="hamburger" style="display:none;background:none;border:none;cursor:pointer;margin-right:8px;padding:0;">
+<span style="display:block;width:22px;height:2px;background:#000;margin:4px 0;border-radius:1px;">
+</span>
+<span style="display:block;width:22px;height:2px;background:#000;margin:4px 0;border-radius:1px;">
+</span>
+<span style="display:block;width:22px;height:2px;background:#000;margin:4px 0;border-radius:1px;">
+</span>
+</button>
+<div class="brand">
+        INKO NIKAH
+       </div>
+<nav aria-label="primary" class="menu">
+<a class="pill" data-i18n="nav.home" href="/index.html">
+         홈
+        </a>
+<a class="pill" data-i18n="nav.about" href="/inko_about.html">
+         회사소개
+        </a>
+<div class="dropdown">
+<a class="pill" data-i18n="nav.services" href="/inko_process.html">
+          서비스
+         </a>
+<div class="dropdown-content">
+<a data-i18n="nav.process" href="/inko_process.html">
+           프로세스
+          </a>
+<a data-i18n="nav.package" href="/inko_package.html">
+           패키지
+          </a>
+<a data-i18n="nav.compliance" href="/inko_compliance.html">
+           보안 &amp; 컴플라이언스
+          </a>
+</div>
+</div>
+<div class="dropdown">
+<a class="pill" data-i18n="nav.guide" href="/inko_female_guide.html">
+          이용안내
+         </a>
+<div class="dropdown-content">
+<a data-i18n="nav.female" href="/inko_female_guide.html">
+           여성 회원 이용 안내
+          </a>
+<a data-i18n="nav.male" href="/inko_male_guide.html">
+           남성 회원 이용 안내
+          </a>
+</div>
+</div>
+<a class="pill" data-i18n="nav.faq" href="/inko_faq.html">
+         FAQ
+        </a>
+<a class="pill" data-i18n="nav.contact" href="/inko_contact.html">
+         문의
+        </a>
+</nav>
+<div class="controls">
+<select aria-label="Language" class="lang" id="lang">
+<option value="ko">
+          🇰🇷 KO
+         </option>
+<option value="en">
+          🇺🇸 EN
+         </option>
+<option value="id">
+          🇮🇩 ID
+         </option>
+</select>
+<a class="pill cta" data-i18n="nav.signup" href="https://forms.gle/V7WHQcC4FGKpYmju6" rel="noopener" target="_blank">
+         회원가입
+        </a>
+</div>
+</div>
+</header>
+<main class="container">
+<section class="hero">
+<h1 data-i18n="f.title">
+        여성 회원 이용 안내
+       </h1>
+<p data-i18n="f.subtitle">
+        안심·신뢰·절차에 기반한 맞춤형 서비스 안내입니다.
+       </p>
+</section>
+<section class="grid">
+<article class="card">
+<h3 data-i18n="f.s1t" data-num="1">① 가입 절차</h3>
+<ul>
+<li data-i18n="f.s1l1">
+          회원 신청 및 프로필 작성
+         </li>
+<li data-i18n="f.s1l2">
+          상담 &amp; 조건 확인
+         </li>
+<li data-i18n="f.s1l3">
+          매칭 준비
+         </li>
+</ul>
+</article>
+<article class="card">
+<h3 data-i18n="f.s2t" data-num="2">② 제공 서비스</h3>
+<ul>
+<li data-i18n="f.s2l1">
+          맞춤형 매칭 (신원 검증된 회원)
+         </li>
+<li data-i18n="f.s2l2">
+          화상 미팅 &amp; 상견례 지원 (통역/문화 가이드)
+         </li>
+<li data-i18n="f.s2l3">
+          결혼 절차 &amp; 서류 진행 안내
+         </li>
+</ul>
+</article>
+<article class="card">
+<h3 data-i18n="f.s3t" data-num="3">③ 회원 혜택</h3>
+<ul>
+<li data-i18n="f.s3l1">
+          한국어 교육 &amp; 기숙사 제공
+         </li>
+<li data-i18n="f.s3l2">
+          웨딩 사진 촬영 &amp; 앨범 제작
+         </li>
+<li data-i18n="f.s3l3">
+          허니문 여행 지원
+         </li>
+</ul>
+</article>
+<article class="card">
+<h3 data-i18n="f.s4t" data-num="4">④ 안전 &amp; 신뢰</h3>
+<ul>
+<li data-i18n="f.s4l1">
+          한국/인도네시아 정식 등록 (NIB/AHU) 준수
+         </li>
+<li data-i18n="f.s4l2">
+          개인정보 보호 및 불법 브로커 차단
+         </li>
+<li data-i18n="f.s4l3">
+          투명한 절차·비용 구조
+         </li>
+</ul>
+</article>
+<article class="card">
+<h3 data-i18n="f.s5t" data-num="5">⑤ 유의사항</h3>
+<ul>
+<li data-i18n="f.s5l1">
+          허위 정보 기재 금지
+         </li>
+<li data-i18n="f.s5l2">
+          상호 존중과 예절
+         </li>
+<li data-i18n="f.s5l3">
+          모든 절차는 자발적 참여 기반
+         </li>
+</ul>
+</article>
+</section>
+<footer>
+<div class="footer">
+<div>
+<strong>
+          PT INKO NIKAH INDONESIA
+         </strong>
+</div>
+<div data-i18n="footer.nib">
+         사업자등록번호 (NIB): 3107250098036
+        </div>
+<div data-i18n="footer.ahu">
+         법무부 등록번호 (AHU): AHU-038917.AH.01.30.
+        </div>
+<div data-i18n="footer.address">
+         주소: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345
+        </div>
+<div class="copy" data-i18n="footer.copy">
+         © 2025 PT INKO NIKAH INDONESIA. All rights reserved.
+        </div>
+</div>
+</footer>
+</main>
+<script>
+      const T={
+  ko:{
+    "nav.signup":"회원가입",
+    "f.title":"여성 회원 이용 안내","f.subtitle":"안심·신뢰·절차에 기반한 맞춤형 서비스 안내입니다.",
+    "f.s1t":"가입 절차","f.s1l1":"회원 신청 및 프로필 작성","f.s1l2":"상담 & 조건 확인","f.s1l3":"매칭 준비",
+    "f.s2t":"제공 서비스","f.s2l1":"맞춤형 매칭 (신원 검증된 회원)","f.s2l2":"화상 미팅 & 상견례 지원 (통역/문화 가이드)","f.s2l3":"결혼 절차 & 서류 진행 안내",
+    "f.s3t":"회원 혜택","f.s3l1":"한국어 교육 & 기숙사 제공","f.s3l2":"웨딩 사진 촬영 & 앨범 제작","f.s3l3":"허니문 여행 지원",
+    "f.s4t":"안전 & 신뢰","f.s4l1":"한국/인도네시아 정식 등록 (NIB/AHU) 준수","f.s4l2":"개인정보 보호 및 불법 브로커 차단","f.s4l3":"투명한 절차·비용 구조",
+    "f.s5t":"유의사항","f.s5l1":"허위 정보 기재 금지","f.s5l2":"상호 존중과 예절","f.s5l3":"모든 절차는 자발적 참여 기반",
+    "footer.nib":"사업자등록번호 (NIB): 3107250098036","footer.ahu":"법무부 등록번호 (AHU): AHU-038917.AH.01.30.","footer.address":"주소: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. All rights reserved."
+  },
+  en:{
+    "nav.signup":"Sign Up",
+    "f.title":"Guide for Female Members","f.subtitle":"A safe, trusted, and procedural service tailored for you.",
+    "f.s1t":"Registration Steps","f.s1l1":"Apply and create your profile","f.s1l2":"Consultation & condition check","f.s1l3":"Matching preparation",
+    "f.s2t":"Services Provided","f.s2l1":"Tailored matching (verified members)","f.s2l2":"Video meetings & formal meeting support (interpretation/culture guide)","f.s2l3":"Wedding procedure & paperwork guidance",
+    "f.s3t":"Member Benefits","f.s3l1":"Korean lessons & dormitory","f.s3l2":"Wedding photoshoot & album production","f.s3l3":"Honeymoon support",
+    "f.s4t":"Safety & Trust","f.s4l1":"KR/ID legal registration (NIB/AHU) compliance","f.s4l2":"Personal data protection & anti‑broker policy","f.s4l3":"Transparent process and costs",
+    "f.s5t":"Notes","f.s5l1":"No false information","f.s5l2":"Mutual respect and etiquette","f.s5l3":"All steps are voluntary participation",
+    "footer.nib":"Business Identification Number (NIB): 3107250098036","footer.ahu":"Ministry of Law Registration Number (AHU): AHU-038917.AH.01.30.","footer.address":"Address: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. All rights reserved."
+  },
+  id:{
+    "nav.signup":"Daftar",
+    "f.title":"Panduan Anggota Perempuan","f.subtitle":"Layanan yang aman, tepercaya, dan terstruktur untuk Anda.",
+    "f.s1t":"Langkah Pendaftaran","f.s1l1":"Ajukan dan buat profil","f.s1l2":"Konsultasi & pengecekan kondisi","f.s1l3":"Persiapan pencocokan",
+    "f.s2t":"Layanan yang Disediakan","f.s2l1":"Pencocokan khusus (anggota terverifikasi)","f.s2l2":"Pertemuan video & dukungan pertemuan resmi (penerjemah/panduan budaya)","f.s2l3":"Panduan prosedur pernikahan & dokumen",
+    "f.s3t":"Manfaat Anggota","f.s3l1":"Kelas Bahasa Korea & asrama","f.s3l2":"Pemotretan pernikahan & pembuatan album","f.s3l3":"Dukungan bulan madu",
+    "f.s4t":"Keamanan & Kepercayaan","f.s4l1":"Kepatuhan registrasi legal KR/ID (NIB/AHU)","f.s4l2":"Perlindungan data pribadi & kebijakan anti-broker","f.s4l3":"Proses dan biaya transparan",
+    "f.s5t":"Catatan","f.s5l1":"Dilarang memberikan informasi palsu","f.s5l2":"Saling menghormati dan etika","f.s5l3":"Semua tahapan berbasis partisipasi sukarela",
+    "footer.nib":"Nomor Induk Berusaha (NIB): 3107250098036","footer.ahu":"Nomor Registrasi Kementerian Hukum (AHU): AHU-038917.AH.01.30.","footer.address":"Alamat: Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345","footer.copy":"© 2025 PT INKO NIKAH INDONESIA. Semua hak dilindungi."
+  }
+};
+function applyI18n(lang){
+  const d=T[lang]||T.ko;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n'); if(d[k]!=null){el.textContent=d[k];}
+  });
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  const sel=document.getElementById('lang');
+  const saved=localStorage.getItem('lang')||(sel?sel.value:'ko');
+  applyI18n(saved);
+  if(sel){
+    sel.value=saved;
+    sel.addEventListener('change',e=>{
+      const lang=e.target.value; localStorage.setItem('lang',lang); applyI18n(lang);
+      const flagMap={ko:'🇰🇷',en:'🇺🇸',id:'🇮🇩'}; const flag=document.getElementById('flag'); if(flag) flag.textContent=flagMap[lang]||'🏳️';
+    });
+  }
+});
+     </script>
+</body>
+</html>
+</div>
+<script>
+   const hamburger = document.querySelector('.hamburger');
+const sidebar = document.querySelector('.sidebar');
+const overlay = document.querySelector('.overlay');
+
+hamburger?.addEventListener('click', () => {
+  sidebar.style.transform = 'translateX(0)';
+  overlay.style.display = 'block';
+});
+
+overlay?.addEventListener('click', () => {
+  sidebar.style.transform = 'translateX(-100%)';
+  overlay.style.display = 'none';
+});
+
+document.querySelectorAll('.sidebar .has-submenu > a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const parent = link.parentElement;
+    const submenu = parent.querySelector('.submenu');
+    const arrow = link.querySelector('.arrow');
+    const isOpen = parent.classList.contains('open');
+
+    if (isOpen) {
+      submenu.style.display = 'none';
+      arrow.textContent = '▶';
+      parent.classList.remove('open');
+    } else {
+      submenu.style.display = 'flex';
+      arrow.textContent = '▼';
+      parent.classList.add('open');
+    }
+  });
+});
+
+function updateSidebarLabels(lang) {
+  const dict = {
+    "ko": {
+      "홈": "홈", "회사소개": "회사소개", "서비스": "서비스",
+      "프로세스": "프로세스", "패키지": "패키지", "보안 & 컴플라이언스": "보안 & 컴플라이언스",
+      "이용안내": "이용안내", "여성 회원 이용 안내": "여성 회원 이용 안내", "남성 회원 이용 안내": "남성 회원 이용 안내",
+      "FAQ": "FAQ", "문의": "문의"
+    },
+    "en": {
+      "홈": "Home", "회사소개": "About", "서비스": "Services",
+      "프로세스": "Process", "패키지": "Package", "보안 & 컴플라이언스": "Security & Compliance",
+      "이용안내": "Guide", "여성 회원 이용 안내": "Female Member Guide", "남성 회원 이용 안내": "Male Member Guide",
+      "FAQ": "FAQ", "문의": "Contact"
+    },
+    "id": {
+      "홈": "Beranda", "회사소개": "Tentang Kami", "서비스": "Layanan",
+      "프로세스": "Proses", "패키지": "Paket", "보안 & 컴플라이언스": "Keamanan & Kepatuhan",
+      "이용안내": "Panduan", "여성 회원 이용 안내": "Panduan Anggota Perempuan", "남성 회원 이용 안내": "Panduan Anggota Pria",
+      "FAQ": "FAQ", "문의": "Kontak"
+    }
+  };
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[lang] && dict[lang][key]) {
+      el.textContent = dict[lang][key];
+    }
+  });
+}
+
+const savedLang = localStorage.getItem('lang') || 'ko';
+updateSidebarLabels(savedLang);
+document.querySelector('.lang')?.addEventListener('change', e => {
+  const lang = e.target.value;
+  localStorage.setItem('lang', lang);
+  updateSidebarLabels(lang);
+});
+  </script>
+</body>
+</html>
