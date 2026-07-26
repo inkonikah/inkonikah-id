@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" role="img" aria-label="inko nikah">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#f0c04a"/>
+      <stop offset="55%" stop-color="#c8932a"/>
+      <stop offset="100%" stop-color="#96691a"/>
+    </linearGradient>
+    <mask id="mA" maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="70">
+      <rect x="0" y="0" width="70" height="70" fill="#fff"/>
+      <path d="M37.23 47.93 A15 15 0 0 1 31.25 52.05" fill="none" stroke="#000" stroke-width="8.4"/>
+    </mask>
+    <mask id="mB" maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="70">
+      <rect x="0" y="0" width="70" height="70" fill="#fff"/>
+      <path d="M31.77 28.07 A15 15 0 0 1 37.75 23.95" fill="none" stroke="#000" stroke-width="8.4"/>
+    </mask>
+  </defs>
+  <g transform="translate(0 -3)">
+    <circle cx="26" cy="38" r="15" fill="none" stroke="url(#g)" stroke-width="5" mask="url(#mA)"/>
+    <circle cx="43" cy="38" r="15" fill="none" stroke="url(#g)" stroke-width="5" mask="url(#mB)"/>
+  </g>
+</svg>
