@@ -30,7 +30,6 @@ export function Header() {
   const items: { href: string; label: string }[] = [
     { href: "/about", label: t("about") },
     { href: "/process", label: t("process") },
-    { href: "/package", label: t("package") },
     { href: "/compliance", label: t("compliance") },
     { href: "/faq", label: t("faq") },
     { href: "/contact", label: t("contact") },
