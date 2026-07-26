@@ -36,14 +36,9 @@ export function Timeline() {
     return d.toISOString().slice(0, 10);
   });
 
-  const steps = useMemo<Step[]>(() => {
-    return [0, 1, 2, 3, 4, 5].map((i) => ({
-      title: t(`steps.${i}.title`),
-      body: t(`steps.${i}.body`),
-      monthsMin: Number(t(`steps.${i}.monthsMin`)),
-      monthsMax: Number(t(`steps.${i}.monthsMax`)),
-    }));
-  }, [t]);
+  // monthsMin/Max는 메시지 파일에 숫자로 들어 있다. t()는 문자열 메시지만
+  // 다루므로 숫자에 쓰면 INVALID_MESSAGE로 실패한다. 배열을 통째로 읽는다.
+  const steps = useMemo<Step[]>(() => t.raw("steps") as Step[], [t]);
 
   const startDate = useMemo(() => new Date(start), [start]);
   const valid = !isNaN(startDate.getTime());
