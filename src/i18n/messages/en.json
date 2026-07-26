@@ -202,6 +202,7 @@
     "title": "Frequently asked questions.",
     "subtitle": "If you don't find your answer here, we'd rather you just write to us.",
     "categories": {
+      "all": "All",
       "service": "Service",
       "cost": "Membership",
       "etc": "Other"
@@ -226,11 +227,6 @@
         "category": "service",
         "q": "How long does the process usually take?",
         "a": "There's no rush. Most members find the right person within six to nine months, but we never push that timeline. The point is the relationship that follows, not the speed of the introduction."
-      },
-      {
-        "category": "cost",
-        "q": "How much does membership cost?",
-        "a": "Membership is by application. Pricing depends on the tier and is shared during the first conversation. We are not the cheapest. We are not trying to be."
       },
       {
         "category": "cost",

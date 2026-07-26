@@ -202,6 +202,7 @@
     "title": "Pertanyaan yang sering diajukan.",
     "subtitle": "Jika tidak menemukan jawaban di sini, lebih baik tulis langsung ke kami.",
     "categories": {
+      "all": "Semua",
       "service": "Layanan",
       "cost": "Membership",
       "etc": "Lainnya"
@@ -226,11 +227,6 @@
         "category": "service",
         "q": "Berapa lama biasanya prosesnya?",
         "a": "Tidak terburu-buru. Kebanyakan menemukan orang yang tepat dalam 6–9 bulan, tapi kami tidak memaksa timeline itu."
-      },
-      {
-        "category": "cost",
-        "q": "Berapa biaya membership?",
-        "a": "Berdasarkan aplikasi. Harga tergantung tier dan dijelaskan dalam percakapan pertama."
       },
       {
         "category": "cost",
