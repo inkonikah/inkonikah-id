@@ -257,8 +257,9 @@
     "channels": [
       {
         "icon": "apply",
-        "title": "メンバーシップお申込み",
+        "title": "メンバーシップお申込み（女性限定）",
         "body": "最初は非公開のお申込みから。数分で完了します。",
+        "note": "男性会員の募集は後日オープン予定です。",
         "action": "申し込む",
         "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
       },
@@ -278,8 +279,8 @@
       },
       {
         "icon": "whatsapp",
-        "title": "チャット",
-        "body": "+62 821-1010-6600",
+        "title": "WhatsApp",
+        "body": "",
         "action": "チャット開始",
         "href": "https://wa.me/6282110106600"
       },

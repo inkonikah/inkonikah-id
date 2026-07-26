@@ -257,8 +257,9 @@
     "channels": [
       {
         "icon": "apply",
-        "title": "Apply for membership",
+        "title": "Apply for membership (women only)",
         "body": "The first step is a private application. It takes a few minutes.",
+        "note": "Membership for men opens at a later stage.",
         "action": "Apply",
         "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
       },
@@ -278,8 +279,8 @@
       },
       {
         "icon": "whatsapp",
-        "title": "Chat",
-        "body": "+62 821-1010-6600",
+        "title": "WhatsApp",
+        "body": "",
         "action": "Open chat",
         "href": "https://wa.me/6282110106600"
       },

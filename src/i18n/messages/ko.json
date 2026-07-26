@@ -257,8 +257,9 @@
     "channels": [
       {
         "icon": "apply",
-        "title": "멤버십 지원",
+        "title": "멤버십 지원 (여성 전용)",
         "body": "비공개 지원서로 시작합니다. 몇 분이면 됩니다.",
+        "note": "남성 회원 모집은 추후 오픈 예정입니다.",
         "action": "지원하기",
         "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
       },
@@ -278,8 +279,8 @@
       },
       {
         "icon": "whatsapp",
-        "title": "채팅",
-        "body": "+62 821-1010-6600",
+        "title": "왓츠앱",
+        "body": "",
         "action": "채팅 시작",
         "href": "https://wa.me/6282110106600"
       },

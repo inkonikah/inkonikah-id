@@ -257,8 +257,9 @@
     "channels": [
       {
         "icon": "apply",
-        "title": "Daftar membership",
+        "title": "Daftar membership (khusus wanita)",
         "body": "Langkah pertama adalah aplikasi pribadi. Hanya butuh beberapa menit.",
+        "note": "Pendaftaran untuk pria akan dibuka menyusul.",
         "action": "Daftar",
         "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
       },
@@ -278,8 +279,8 @@
       },
       {
         "icon": "whatsapp",
-        "title": "Chat",
-        "body": "+62 821-1010-6600",
+        "title": "WhatsApp",
+        "body": "",
         "action": "Mulai chat",
         "href": "https://wa.me/6282110106600"
       },
