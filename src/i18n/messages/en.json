@@ -7,7 +7,6 @@
     "home": "Home",
     "about": "About",
     "process": "How It Works",
-    "package": "Membership",
     "compliance": "Trust",
     "guide": "Guide",
     "femaleGuide": "Member Guide",
@@ -134,59 +133,6 @@
         "body": "We stay in the picture. Quarterly check-ins, family translation, support whenever life gets complicated.",
         "monthsMin": 9,
         "monthsMax": 12
-      }
-    ]
-  },
-  "package": {
-    "kicker": "Membership",
-    "title": "Membership.",
-    "subtitle": "Application is always free. Membership pricing below applies to male members' matchmaking service.",
-    "tiers": [
-      {
-        "icon": "✦",
-        "name": "Standard",
-        "tag": "Foundation",
-        "price": "By application",
-        "description": "Verified introductions and the full core experience. The right place to begin.",
-        "features": [
-          "Dedicated matchmaker",
-          "Up to 5 curated introductions",
-          "Identity verification on every match",
-          "1 in-person meeting coordinated",
-          "Interpreter support (1 session)",
-          "Relationship guidance"
-        ]
-      },
-      {
-        "icon": "✦",
-        "name": "Standard Plus",
-        "tag": "Most chosen",
-        "highlight": true,
-        "price": "By application",
-        "description": "Everything in Standard, with deeper care and more time invested in finding the right person.",
-        "features": [
-          "Everything in Standard",
-          "Unlimited introductions",
-          "2 in-person meetings coordinated",
-          "Unlimited interpreter support",
-          "Wedding & milestone coordination",
-          "3-month relationship aftercare"
-        ]
-      },
-      {
-        "icon": "✦",
-        "name": "Premium",
-        "tag": "Concierge",
-        "price": "By application",
-        "description": "A fully personal experience, end to end. Reserved for members who want the deepest level of care.",
-        "features": [
-          "Everything in Standard Plus",
-          "VIP-priority introductions",
-          "Unlimited in-person meetings",
-          "Full ceremony & milestone coordination",
-          "12-month relationship aftercare",
-          "Family liaison & translation"
-        ]
       }
     ]
   },

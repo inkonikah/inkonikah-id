@@ -7,7 +7,6 @@
     "home": "Beranda",
     "about": "Brand",
     "process": "Proses",
-    "package": "Membership",
     "compliance": "Kepercayaan",
     "guide": "Panduan",
     "femaleGuide": "Panduan Anggota",
@@ -134,59 +133,6 @@
         "body": "Kami tetap di gambar. Check-in triwulanan, penerjemahan keluarga, dukungan kapan pun hidup jadi rumit.",
         "monthsMin": 9,
         "monthsMax": 12
-      }
-    ]
-  },
-  "package": {
-    "kicker": "Membership",
-    "title": "Membership.",
-    "subtitle": "Pendaftaran selalu gratis. Biaya membership di bawah hanya berlaku untuk layanan matchmaking anggota pria.",
-    "tiers": [
-      {
-        "icon": "✦",
-        "name": "Standard",
-        "tag": "Foundation",
-        "price": "Berdasarkan aplikasi",
-        "description": "Perkenalan terverifikasi dan pengalaman inti penuh. Tempat tepat untuk memulai.",
-        "features": [
-          "Matchmaker khusus",
-          "Hingga 5 perkenalan kurasi",
-          "Verifikasi identitas setiap match",
-          "1 pertemuan tatap muka",
-          "Dukungan penerjemah (1 sesi)",
-          "Bimbingan hubungan"
-        ]
-      },
-      {
-        "icon": "✦",
-        "name": "Standard Plus",
-        "tag": "Paling dipilih",
-        "highlight": true,
-        "price": "Berdasarkan aplikasi",
-        "description": "Semua di Standard, dengan perhatian lebih dalam dan waktu lebih banyak.",
-        "features": [
-          "Semua di Standard",
-          "Perkenalan tanpa batas",
-          "2 pertemuan tatap muka",
-          "Penerjemahan tanpa batas",
-          "Koordinasi pernikahan",
-          "Aftercare 3 bulan"
-        ]
-      },
-      {
-        "icon": "✦",
-        "name": "Premium",
-        "tag": "Concierge",
-        "price": "Berdasarkan aplikasi",
-        "description": "Pengalaman pribadi penuh. Untuk anggota yang menginginkan perhatian terdalam.",
-        "features": [
-          "Semua di Standard Plus",
-          "Perkenalan VIP prioritas",
-          "Pertemuan tatap muka tanpa batas",
-          "Koordinasi upacara penuh",
-          "Aftercare 12 bulan",
-          "Liaison & penerjemahan keluarga"
-        ]
       }
     ]
   },

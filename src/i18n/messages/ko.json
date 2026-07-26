@@ -7,7 +7,6 @@
     "home": "홈",
     "about": "브랜드",
     "process": "프로세스",
-    "package": "멤버십",
     "compliance": "신뢰",
     "guide": "이용안내",
     "femaleGuide": "회원 안내",
@@ -134,59 +133,6 @@
         "body": "분기별 안부, 가족 통역, 살면서 복잡해지는 일들. 우리는 사라지지 않습니다.",
         "monthsMin": 9,
         "monthsMax": 12
-      }
-    ]
-  },
-  "package": {
-    "kicker": "Membership",
-    "title": "멤버십.",
-    "subtitle": "지원은 모두 무료입니다. 아래 멤버십은 남성 회원의 매칭 서비스에만 적용됩니다.",
-    "tiers": [
-      {
-        "icon": "✦",
-        "name": "Standard",
-        "tag": "Foundation",
-        "price": "지원 후 안내",
-        "description": "검증된 소개와 핵심 절차. 시작하기에 알맞은 자리.",
-        "features": [
-          "전담 매니저",
-          "큐레이션된 5인 소개",
-          "모든 매치 신원 검증",
-          "1회 실제 미팅 코디",
-          "통역 1회 지원",
-          "관계 가이던스"
-        ]
-      },
-      {
-        "icon": "✦",
-        "name": "Standard Plus",
-        "tag": "Most chosen",
-        "highlight": true,
-        "price": "지원 후 안내",
-        "description": "Standard 전 항목 포함. 더 깊은 정성, 더 충분한 시간.",
-        "features": [
-          "Standard 전 항목 포함",
-          "소개 무제한",
-          "실제 미팅 2회 코디",
-          "통역 무제한",
-          "결혼식·기념일 코디",
-          "3개월 사후 케어"
-        ]
-      },
-      {
-        "icon": "✦",
-        "name": "Premium",
-        "tag": "Concierge",
-        "price": "지원 후 안내",
-        "description": "처음부터 끝까지 가장 깊은 정성. 가장 진지한 멤버를 위한.",
-        "features": [
-          "Standard Plus 전 항목 포함",
-          "VIP 우선 소개",
-          "실제 미팅 무제한",
-          "결혼식 풀 코디",
-          "12개월 사후 케어",
-          "가족 미팅·통역"
-        ]
       }
     ]
   },
