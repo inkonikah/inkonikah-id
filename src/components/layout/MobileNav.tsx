@@ -28,7 +28,6 @@ export function MobileNav({ open, onClose }: Props) {
     { href: "/", label: t("home") },
     { href: "/about", label: t("about") },
     { href: "/process", label: t("process") },
-    { href: "/package", label: t("package") },
     { href: "/compliance", label: t("compliance") },
     { href: "/faq", label: t("faq") },
     { href: "/contact", label: t("contact") },
