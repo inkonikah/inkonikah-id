@@ -13,18 +13,27 @@ export default async function ContactPage({
   return <ContactContent />;
 }
 
+type Channel = {
+  icon: string;
+  title: string;
+  body?: string;
+  /** 카드 하단의 작은 안내문 (선택) */
+  note?: string;
+  action: string;
+  href: string;
+};
+
 function ContactContent() {
   const t = useTranslations("contact");
-  // Length is data-driven; fall back gracefully if a locale has fewer channels.
-  const channels = (t.raw("channels") as { icon: string }[]) || [];
+  // 선택 필드(note)가 있는 로케일/채널이 섞여 있으므로 객체를 그대로 읽는다.
+  const channels = (t.raw("channels") as Channel[]) || [];
   return (
     <>
       <PageHero kicker={t("kicker")} title={t("title")} subtitle={t("subtitle")} />
       <Section size="md">
         <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
-          {channels.map((_, i) => {
-            const href = t(`channels.${i}.href`);
-            const icon = t(`channels.${i}.icon`);
+          {channels.map((channel, i) => {
+            const { href, icon } = channel;
             const isExternal = /^https?:|^mailto:|^tel:/.test(href);
             return (
               <a
@@ -47,14 +56,19 @@ function ContactContent() {
                       <ChannelIcon name={icon} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="display text-lg mb-1.5">
-                        {t(`channels.${i}.title`)}
-                      </h3>
-                      <p className="text-sm text-[var(--color-muted)] leading-relaxed break-words">
-                        {t(`channels.${i}.body`)}
-                      </p>
+                      <h3 className="display text-lg mb-1.5">{channel.title}</h3>
+                      {channel.body && (
+                        <p className="text-sm text-[var(--color-muted)] leading-relaxed break-words">
+                          {channel.body}
+                        </p>
+                      )}
+                      {channel.note && (
+                        <p className="mt-1.5 text-xs text-[var(--color-faint)] leading-relaxed break-words">
+                          {channel.note}
+                        </p>
+                      )}
                       <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-[var(--color-gold-600)]">
-                        {t(`channels.${i}.action`)}
+                        {channel.action}
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                           <path
                             d="M1 6H11M11 6L6 1M11 6L6 11"
