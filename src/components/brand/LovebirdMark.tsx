@@ -151,15 +151,20 @@ export function BrandLockup({
   size?: "sm" | "md" | "lg";
   className?: string;
 }) {
+  // pair 마크는 가로 104 : 세로 70 비율이므로 높이 기준으로 폭을 잡는다.
   const sizes = {
-    sm: { mark: 24, text: "text-[15px]" },
-    md: { mark: 30, text: "text-[16px] md:text-[19px]" },
-    lg: { mark: 42, text: "text-[22px] md:text-[28px]" },
+    sm: { mark: 22, text: "text-[15px]" },
+    md: { mark: 28, text: "text-[16px] md:text-[19px]" },
+    lg: { mark: 40, text: "text-[22px] md:text-[28px]" },
   };
   const s = sizes[size];
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <LovebirdMark pose="single" width={s.mark} height={s.mark} />
+      <LovebirdMark
+        pose="pair"
+        height={s.mark}
+        width={Math.round((s.mark * 104) / 70)}
+      />
       <span
         className={`display tracking-tight lowercase ${s.text}`}
         style={{ letterSpacing: "-0.015em" }}
