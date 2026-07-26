@@ -30,11 +30,6 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/package" className="hover:text-[var(--color-gold-600)] transition-colors">
-                    {t("nav.package")}
-                  </Link>
-                </li>
-                <li>
                   <Link href="/compliance" className="hover:text-[var(--color-gold-600)] transition-colors">
                     {t("nav.compliance")}
                   </Link>
