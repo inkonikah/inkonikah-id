@@ -30,7 +30,7 @@ export function FAQAccordion() {
           data-active={filter === "all" || undefined}
           onClick={() => setFilter("all")}
         >
-          All
+          {t("categories.all")}
         </button>
         {categories.map((cat) => (
           <button
