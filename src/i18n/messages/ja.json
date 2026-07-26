@@ -256,14 +256,14 @@
     "subtitle": "24時間以内に、人が直接お返事します。",
     "channels": [
       {
-        "icon": "✦",
+        "icon": "apply",
         "title": "メンバーシップお申込み",
         "body": "最初は非公開のお申込みから。数分で完了します。",
         "action": "申し込む",
         "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
       },
       {
-        "icon": "✦",
+        "icon": "email",
         "title": "メール",
         "body": "inkonikah@inkonikah.com",
         "action": "メールする",
@@ -277,14 +277,14 @@
         "href": "https://instagram.com/inko.nikah"
       },
       {
-        "icon": "✦",
+        "icon": "whatsapp",
         "title": "チャット",
-        "body": "韓国市場のメンバー・申込者用",
+        "body": "+62 821-1010-6600",
         "action": "チャット開始",
-        "href": "#"
+        "href": "https://wa.me/6282110106600"
       },
       {
-        "icon": "✦",
+        "icon": "office",
         "title": "オフィス",
         "body": "Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345",
         "action": "マップで開く",

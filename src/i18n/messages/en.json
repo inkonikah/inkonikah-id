@@ -256,14 +256,14 @@
     "subtitle": "We answer personally, within 24 hours.",
     "channels": [
       {
-        "icon": "✦",
+        "icon": "apply",
         "title": "Apply for membership",
         "body": "The first step is a private application. It takes a few minutes.",
         "action": "Apply",
         "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
       },
       {
-        "icon": "✦",
+        "icon": "email",
         "title": "Email",
         "body": "inkonikah@inkonikah.com",
         "action": "Write to us",
@@ -277,14 +277,14 @@
         "href": "https://instagram.com/inko.nikah"
       },
       {
-        "icon": "✦",
+        "icon": "whatsapp",
         "title": "Chat",
-        "body": "For members and applicants in the Korean market.",
+        "body": "+62 821-1010-6600",
         "action": "Open chat",
-        "href": "#"
+        "href": "https://wa.me/6282110106600"
       },
       {
-        "icon": "✦",
+        "icon": "office",
         "title": "Office",
         "body": "Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345",
         "action": "Open in Maps",

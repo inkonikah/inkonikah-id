@@ -256,14 +256,14 @@
     "subtitle": "Kami menjawab secara pribadi, dalam 24 jam.",
     "channels": [
       {
-        "icon": "✦",
+        "icon": "apply",
         "title": "Daftar membership",
         "body": "Langkah pertama adalah aplikasi pribadi. Hanya butuh beberapa menit.",
         "action": "Daftar",
         "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
       },
       {
-        "icon": "✦",
+        "icon": "email",
         "title": "Email",
         "body": "inkonikah@inkonikah.com",
         "action": "Tulis ke kami",
@@ -277,14 +277,14 @@
         "href": "https://instagram.com/inko.nikah"
       },
       {
-        "icon": "✦",
+        "icon": "whatsapp",
         "title": "Chat",
-        "body": "Untuk anggota dan pelamar di pasar Korea.",
+        "body": "+62 821-1010-6600",
         "action": "Mulai chat",
-        "href": "#"
+        "href": "https://wa.me/6282110106600"
       },
       {
-        "icon": "✦",
+        "icon": "office",
         "title": "Kantor",
         "body": "Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345",
         "action": "Buka di Maps",

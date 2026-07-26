@@ -256,14 +256,14 @@
     "subtitle": "사람이 직접, 24시간 이내 답합니다.",
     "channels": [
       {
-        "icon": "✦",
+        "icon": "apply",
         "title": "멤버십 지원",
         "body": "비공개 지원서로 시작합니다. 몇 분이면 됩니다.",
         "action": "지원하기",
         "href": "https://forms.gle/V7WHQcC4FGKpYmju6"
       },
       {
-        "icon": "✦",
+        "icon": "email",
         "title": "이메일",
         "body": "inkonikah@inkonikah.com",
         "action": "메일 보내기",
@@ -277,14 +277,14 @@
         "href": "https://instagram.com/inko.nikah"
       },
       {
-        "icon": "✦",
+        "icon": "whatsapp",
         "title": "채팅",
-        "body": "한국 회원·지원자 전용",
+        "body": "+62 821-1010-6600",
         "action": "채팅 시작",
-        "href": "#"
+        "href": "https://wa.me/6282110106600"
       },
       {
-        "icon": "✦",
+        "icon": "office",
         "title": "오피스",
         "body": "Jl. Edutown, Pagedangan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15345",
         "action": "지도에서 보기",
