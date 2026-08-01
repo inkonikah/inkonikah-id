@@ -124,7 +124,7 @@
     "kicker": "How It Works",
     "title": "How we introduce.",
     "subtitle": "From the first profile to arriving in Korea — six steps, six to eight months on average.",
-    "notice": "Timing varies by person. We never rush a relationship.",
+    "notice": "Getting to know each other takes up to three months — it can go faster, and the pace is yours to set. After her parents' blessing, the wedding date is fixed within an agreement period of up to three months.",
     "datePicker": {
       "label": "If you started today",
       "today": "Set to today"
@@ -156,20 +156,20 @@
         "range": "3-day visit",
         "daysMin": 60,
         "daysMax": 63,
-        "body": "The male member spends three days in Indonesia, meets her parents, receives their blessing, and sets the wedding date."
+        "body": "The male member spends three days in Indonesia and meets her parents to receive their blessing. Once given, an agreement period of up to three months begins."
       },
       {
         "title": "The wedding",
-        "range": "Months 3–4",
-        "daysMin": 105,
-        "daysMax": 112,
-        "body": "He flies home to Korea, then returns for the ceremony — usually about six weeks after the visit. Registration through ceremony: we handle documents, interpretation, and scheduling."
+        "range": "Months 3–6",
+        "daysMin": 75,
+        "daysMax": 153,
+        "body": "The ceremony takes place on the date the two of you set within the agreement period. He flies home to Korea and returns for the ceremony; registration, paperwork, interpretation, and scheduling are on us."
       },
       {
         "title": "Korean exam · F-6 visa",
         "range": "About 3 months",
-        "daysMin": 112,
-        "daysMax": 240,
+        "daysMin": 153,
+        "daysMax": 270,
         "body": "Preparing the spouse visa (F-6). We prepare the Korean language exam and paperwork with you, through arrival in Korea."
       }
     ]

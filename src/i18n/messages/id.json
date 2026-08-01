@@ -124,7 +124,7 @@
     "kicker": "Proses",
     "title": "Bagaimana kami memperkenalkan.",
     "subtitle": "Dari pertukaran profil sampai tiba di Korea — enam langkah, rata-rata enam sampai delapan bulan.",
-    "notice": "Waktu berbeda untuk setiap orang. Kami tidak terburu-buru.",
+    "notice": "Masa saling mengenal maksimal tiga bulan — bisa lebih cepat, dan temponya kalian berdua yang menentukan. Setelah restu orang tua, tanggal pernikahan ditetapkan dalam masa kesepakatan maksimal tiga bulan.",
     "datePicker": {
       "label": "Jika dimulai hari ini",
       "today": "Atur ke hari ini"
@@ -156,20 +156,20 @@
         "range": "Kunjungan 3 hari",
         "daysMin": 60,
         "daysMax": 63,
-        "body": "Anggota pria tinggal tiga hari di Indonesia, menemui orang tua, meminta restu, dan menentukan tanggal pernikahan."
+        "body": "Anggota pria tinggal tiga hari di Indonesia dan menemui orang tua untuk meminta restu. Setelah restu diberikan, dimulai masa kesepakatan maksimal tiga bulan."
       },
       {
         "title": "Pernikahan",
-        "range": "Bulan ke-3–4",
-        "daysMin": 105,
-        "daysMax": 112,
-        "body": "Ia pulang ke Korea, lalu datang lagi untuk upacara — biasanya sekitar satu setengah bulan setelah kunjungan. Dari pencatatan sampai upacara: dokumen, penerjemahan, dan jadwal kami tangani."
+        "range": "Bulan ke-3–6",
+        "daysMin": 75,
+        "daysMax": 153,
+        "body": "Upacara digelar pada tanggal yang kalian tentukan dalam masa kesepakatan. Ia pulang ke Korea lalu datang lagi untuk upacara; dokumen, penerjemah, dan jadwal kami yang mengurus."
       },
       {
         "title": "Ujian bahasa Korea · visa F-6",
         "range": "Sekitar 3 bulan",
-        "daysMin": 112,
-        "daysMax": 240,
+        "daysMin": 153,
+        "daysMax": 270,
         "body": "Menyiapkan visa pasangan (F-6). Kami menyiapkan ujian bahasa Korea dan dokumen bersama Anda, sampai tiba di Korea."
       }
     ]
