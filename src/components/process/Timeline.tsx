@@ -8,16 +8,16 @@ import { GlassCard } from "@/components/glass/GlassCard";
 type Step = {
   title: string;
   body: string;
-  monthsMin: number;
-  monthsMax: number;
+  /** 시작일로부터 며칠째인지 — 10일짜리 단계가 있어 월 단위로는 표현이 안 된다 */
+  daysMin: number;
+  daysMax: number;
+  /** 배지에 그대로 찍히는 문구 (로케일별로 직접 씀: "10일", "3개월차" 등) */
+  range: string;
 };
 
-function addMonths(date: Date, months: number): Date {
+function addDays(date: Date, days: number): Date {
   const d = new Date(date);
-  const day = d.getDate();
-  d.setMonth(d.getMonth() + months);
-  // handle month-end overflow
-  if (d.getDate() < day) d.setDate(0);
+  d.setDate(d.getDate() + days);
   return d;
 }
 
@@ -80,8 +80,8 @@ export function Timeline() {
 
         <ol className="space-y-5">
           {steps.map((step, i) => {
-            const minDate = valid ? addMonths(startDate, step.monthsMin) : null;
-            const maxDate = valid ? addMonths(startDate, step.monthsMax) : null;
+            const minDate = valid ? addDays(startDate, step.daysMin) : null;
+            const maxDate = valid ? addDays(startDate, step.daysMax) : null;
             return (
               <motion.li
                 key={i}
@@ -96,7 +96,7 @@ export function Timeline() {
                   <div className="flex items-start justify-between gap-4 flex-wrap">
                     <h3 className="display text-lg md:text-xl">{step.title}</h3>
                     <div className="text-xs font-bold text-[var(--color-gold-600)] bg-[var(--color-gold-50)] px-3 py-1 rounded-full whitespace-nowrap">
-                      {step.monthsMin}–{step.monthsMax} {t("datePicker.rangeSuffix")}
+                      {step.range}
                     </div>
                   </div>
                   <p className="text-[var(--color-muted)] mt-2 text-sm md:text-[15px] leading-relaxed">
