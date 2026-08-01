@@ -25,9 +25,18 @@
     "trust": {
       "label": "Untuk hubungan, bukan transaksi",
       "items": [
-        { "value": "100%", "label": "Profil terverifikasi, orang nyata" },
-        { "value": "1:1", "label": "Matchmaker manusia khusus" },
-        { "value": "Forever", "label": "Untuk pasangan seumur hidup" }
+        {
+          "value": "100%",
+          "label": "Profil terverifikasi, orang nyata"
+        },
+        {
+          "value": "1:1",
+          "label": "Matchmaker manusia khusus"
+        },
+        {
+          "value": "Forever",
+          "label": "Untuk pasangan seumur hidup"
+        }
       ]
     },
     "meaningTitle": "Temui lovebird Anda",
@@ -53,12 +62,36 @@
     "valuesTitle": "Yang kami pegang",
     "valuesSubtitle": "Enam janji",
     "values": [
-      { "icon": "✦", "title": "Ketulusan", "body": "Orang nyata, niat nyata." },
-      { "icon": "✦", "title": "Privasi", "body": "Cerita Anda tetap rahasia." },
-      { "icon": "✦", "title": "Perhatian", "body": "Setiap perkenalan dipilih dengan tangan." },
-      { "icon": "✦", "title": "Waktu", "body": "Kami tidak terburu-buru." },
-      { "icon": "✦", "title": "Kepercayaan", "body": "Dibangun di atas verifikasi." },
-      { "icon": "✦", "title": "Berkelanjutan", "body": "Kami tinggal lama setelah match pertama." }
+      {
+        "icon": "✦",
+        "title": "Ketulusan",
+        "body": "Orang nyata, niat nyata."
+      },
+      {
+        "icon": "✦",
+        "title": "Privasi",
+        "body": "Cerita Anda tetap rahasia."
+      },
+      {
+        "icon": "✦",
+        "title": "Perhatian",
+        "body": "Setiap perkenalan dipilih dengan tangan."
+      },
+      {
+        "icon": "✦",
+        "title": "Waktu",
+        "body": "Kami tidak terburu-buru."
+      },
+      {
+        "icon": "✦",
+        "title": "Kepercayaan",
+        "body": "Dibangun di atas verifikasi."
+      },
+      {
+        "icon": "✦",
+        "title": "Berkelanjutan",
+        "body": "Kami tinggal lama setelah match pertama."
+      }
     ],
     "ctaSection": {
       "title": "Bukan sekadar match —\npasangan seumur hidup.",
@@ -90,49 +123,54 @@
   "process": {
     "kicker": "Proses",
     "title": "Bagaimana kami memperkenalkan.",
-    "subtitle": "Dari percakapan pertama sampai hubungan setelahnya. Enam langkah, dengan tempo kehidupan nyata.",
+    "subtitle": "Dari pertukaran profil sampai tiba di Korea — enam langkah, rata-rata enam sampai delapan bulan.",
     "notice": "Waktu berbeda untuk setiap orang. Kami tidak terburu-buru.",
     "datePicker": {
       "label": "Jika dimulai hari ini",
-      "today": "Atur ke hari ini",
-      "rangeSuffix": "bulan ke"
+      "today": "Atur ke hari ini"
     },
     "steps": [
       {
-        "title": "Daftar & temui matchmaker",
-        "body": "Kami mengenal Anda — nilai, fase hidup, jenis pasangan yang akan Anda pilih sebenarnya.",
-        "monthsMin": 0,
-        "monthsMax": 1
+        "title": "Pertukaran profil",
+        "range": "1 bulan",
+        "daysMin": 0,
+        "daysMax": 30,
+        "body": "Hanya profil anggota terverifikasi yang dipertukarkan. Matchmaker menyelaraskan nilai dan situasi kedua pihak."
       },
       {
-        "title": "Verifikasi",
-        "body": "Identitas, niat, riwayat pribadi. Setiap anggota diverifikasi sebelum perkenalan apa pun.",
-        "monthsMin": 1,
-        "monthsMax": 2
+        "title": "Pertemuan pertama",
+        "range": "Bulan ke-1",
+        "daysMin": 30,
+        "daysMax": 40,
+        "body": "Bertatap muka pertama kali, lewat video atau langsung. Kami mendampingi sebagai penerjemah, jadi tidak perlu khawatir."
       },
       {
-        "title": "Perkenalan kurasi",
-        "body": "Kandidat dipilih dengan tangan — bukan feed tanpa akhir. Kualitas di atas kuantitas.",
-        "monthsMin": 2,
-        "monthsMax": 4
+        "title": "Sepuluh hari berbincang",
+        "range": "10 hari",
+        "daysMin": 40,
+        "daysMax": 50,
+        "body": "Jika keduanya merasa cocok, kalian berbincang setiap hari selama sepuluh hari untuk memastikannya."
       },
       {
-        "title": "Pertemuan nyata",
-        "body": "Kami koordinasikan logistik. Anda fokus pada koneksi.",
-        "monthsMin": 4,
-        "monthsMax": 6
+        "title": "Kunjungan ke Indonesia · bertemu keluarga",
+        "range": "Kunjungan 3 hari",
+        "daysMin": 60,
+        "daysMax": 63,
+        "body": "Anggota pria tinggal tiga hari di Indonesia, menemui orang tua, meminta restu, dan menentukan tanggal pernikahan."
       },
       {
-        "title": "Komitmen",
-        "body": "Saat tepat, kami dukung dokumen, keluarga, dan upacara — sisi praktis membangun kehidupan bersama.",
-        "monthsMin": 6,
-        "monthsMax": 9
+        "title": "Pernikahan",
+        "range": "Bulan ke-3–4",
+        "daysMin": 105,
+        "daysMax": 112,
+        "body": "Ia pulang ke Korea, lalu datang lagi untuk upacara — biasanya sekitar satu setengah bulan setelah kunjungan. Dari pencatatan sampai upacara: dokumen, penerjemahan, dan jadwal kami tangani."
       },
       {
-        "title": "Tahun-tahun setelahnya",
-        "body": "Kami tetap di gambar. Check-in triwulanan, penerjemahan keluarga, dukungan kapan pun hidup jadi rumit.",
-        "monthsMin": 9,
-        "monthsMax": 12
+        "title": "Ujian bahasa Korea · visa F-6",
+        "range": "Sekitar 3 bulan",
+        "daysMin": 112,
+        "daysMax": 240,
+        "body": "Menyiapkan visa pasangan (F-6). Kami menyiapkan ujian bahasa Korea dan dokumen bersama Anda, sampai tiba di Korea."
       }
     ]
   },
@@ -181,20 +219,56 @@
     "maleTitle": "Panduan anggota",
     "maleSubtitle": "Membership dikurasi. Verifikasi adalah dasarnya. Berikut alurnya.",
     "femaleSteps": [
-      { "title": "Daftar", "body": "Kirimkan aplikasi Anda. Tinjauan pertama dilakukan oleh manusia." },
-      { "title": "Verifikasi", "body": "Verifikasi identitas, dokumen, dan niat. Membership diberikan setelah selesai." },
-      { "title": "Desain profil", "body": "Kami membangun profil pribadi Anda bersama — tidak pernah publik." },
-      { "title": "Perkenalan kurasi", "body": "Orang nyata, dipilih dengan tangan oleh matchmaker Anda." },
-      { "title": "Pertemuan nyata", "body": "Dikoordinasikan dari awal sampai akhir. Penerjemah, jadwal, perjalanan." },
-      { "title": "Hubungan", "body": "Saat tepat, kami menemani melalui komitmen dan tahun-tahun setelahnya." }
+      {
+        "title": "Daftar",
+        "body": "Kirimkan aplikasi Anda. Tinjauan pertama dilakukan oleh manusia."
+      },
+      {
+        "title": "Verifikasi",
+        "body": "Verifikasi identitas, dokumen, dan niat. Membership diberikan setelah selesai."
+      },
+      {
+        "title": "Desain profil",
+        "body": "Kami membangun profil pribadi Anda bersama — tidak pernah publik."
+      },
+      {
+        "title": "Perkenalan kurasi",
+        "body": "Orang nyata, dipilih dengan tangan oleh matchmaker Anda."
+      },
+      {
+        "title": "Pertemuan nyata",
+        "body": "Dikoordinasikan dari awal sampai akhir. Penerjemah, jadwal, perjalanan."
+      },
+      {
+        "title": "Hubungan",
+        "body": "Saat tepat, kami menemani melalui komitmen dan tahun-tahun setelahnya."
+      }
     ],
     "maleSteps": [
-      { "title": "Daftar", "body": "Kirim aplikasi dan pilih tier membership bersama matchmaker Anda." },
-      { "title": "Verifikasi", "body": "Identitas, dokumen, riwayat pribadi. Standar untuk setiap anggota." },
-      { "title": "Perkenalan kurasi", "body": "Kandidat terverifikasi yang cocok dengan Anda — bukan yang Anda swipe." },
-      { "title": "Pertemuan nyata", "body": "Logistik diurus — penerjemah, jadwal, perjalanan." },
-      { "title": "Komitmen", "body": "Dokumen, keluarga, upacara — didukung penuh saat waktunya tiba." },
-      { "title": "Hubungan", "body": "Aftercare untuk bulan-bulan dan tahun-tahun setelahnya." }
+      {
+        "title": "Daftar",
+        "body": "Kirim aplikasi dan pilih tier membership bersama matchmaker Anda."
+      },
+      {
+        "title": "Verifikasi",
+        "body": "Identitas, dokumen, riwayat pribadi. Standar untuk setiap anggota."
+      },
+      {
+        "title": "Perkenalan kurasi",
+        "body": "Kandidat terverifikasi yang cocok dengan Anda — bukan yang Anda swipe."
+      },
+      {
+        "title": "Pertemuan nyata",
+        "body": "Logistik diurus — penerjemah, jadwal, perjalanan."
+      },
+      {
+        "title": "Komitmen",
+        "body": "Dokumen, keluarga, upacara — didukung penuh saat waktunya tiba."
+      },
+      {
+        "title": "Hubungan",
+        "body": "Aftercare untuk bulan-bulan dan tahun-tahun setelahnya."
+      }
     ]
   },
   "faq": {
@@ -226,7 +300,7 @@
       {
         "category": "service",
         "q": "Berapa lama biasanya prosesnya?",
-        "a": "Tidak terburu-buru. Kebanyakan menemukan orang yang tepat dalam 6–9 bulan, tapi kami tidak memaksa timeline itu."
+        "a": "Rata-rata enam sampai delapan bulan, dari pertukaran profil sampai tiba di Korea. Setiap orang punya temponya sendiri dan kami tidak memaksakan jadwal."
       },
       {
         "category": "cost",

@@ -25,9 +25,18 @@
     "trust": {
       "label": "Built for relationships, not transactions",
       "items": [
-        { "value": "100%", "label": "Verified profiles, real people" },
-        { "value": "1:1", "label": "Personalized human matchmakers" },
-        { "value": "Forever", "label": "Built for lifelong partnership" }
+        {
+          "value": "100%",
+          "label": "Verified profiles, real people"
+        },
+        {
+          "value": "1:1",
+          "label": "Personalized human matchmakers"
+        },
+        {
+          "value": "Forever",
+          "label": "Built for lifelong partnership"
+        }
       ]
     },
     "meaningTitle": "Find your lovebird",
@@ -53,12 +62,36 @@
     "valuesTitle": "What we stand for",
     "valuesSubtitle": "Six promises",
     "values": [
-      { "icon": "✦", "title": "Sincerity", "body": "Real people, real intent." },
-      { "icon": "✦", "title": "Discretion", "body": "Your story stays private." },
-      { "icon": "✦", "title": "Care", "body": "Every introduction is hand-picked." },
-      { "icon": "✦", "title": "Time", "body": "We never rush a relationship." },
-      { "icon": "✦", "title": "Trust", "body": "Built on verification, not chance." },
-      { "icon": "✦", "title": "Continuity", "body": "We stay long after the first match." }
+      {
+        "icon": "✦",
+        "title": "Sincerity",
+        "body": "Real people, real intent."
+      },
+      {
+        "icon": "✦",
+        "title": "Discretion",
+        "body": "Your story stays private."
+      },
+      {
+        "icon": "✦",
+        "title": "Care",
+        "body": "Every introduction is hand-picked."
+      },
+      {
+        "icon": "✦",
+        "title": "Time",
+        "body": "We never rush a relationship."
+      },
+      {
+        "icon": "✦",
+        "title": "Trust",
+        "body": "Built on verification, not chance."
+      },
+      {
+        "icon": "✦",
+        "title": "Continuity",
+        "body": "We stay long after the first match."
+      }
     ],
     "ctaSection": {
       "title": "Not just a match —\na partner for life.",
@@ -90,49 +123,54 @@
   "process": {
     "kicker": "How It Works",
     "title": "How we introduce.",
-    "subtitle": "From the first conversation to the relationship that follows. Six steps, taken at the pace of a real life.",
+    "subtitle": "From the first profile to arriving in Korea — six steps, six to eight months on average.",
     "notice": "Timing varies by person. We never rush a relationship.",
     "datePicker": {
       "label": "If you started today",
-      "today": "Set to today",
-      "rangeSuffix": "month(s) in"
+      "today": "Set to today"
     },
     "steps": [
       {
-        "title": "Apply & meet your matchmaker",
-        "body": "We learn who you are — values, life chapter, the kind of partner you'd actually choose. A dedicated matchmaker is assigned.",
-        "monthsMin": 0,
-        "monthsMax": 1
+        "title": "Profile exchange",
+        "range": "1 month",
+        "daysMin": 0,
+        "daysMax": 30,
+        "body": "Only verified members' profiles are shared. Your matchmaker matches values and circumstances on both sides."
       },
       {
-        "title": "Verification",
-        "body": "Identity, intent, and personal history. Every member is verified before any introduction is made.",
-        "monthsMin": 1,
-        "monthsMax": 2
+        "title": "First meeting",
+        "range": "Month 1",
+        "daysMin": 30,
+        "daysMax": 40,
+        "body": "The first face-to-face, by video or in person. We are there to interpret — there is nothing to worry about."
       },
       {
-        "title": "Curated introductions",
-        "body": "Hand-picked candidates — not an endless feed. Quality over quantity, always.",
-        "monthsMin": 2,
-        "monthsMax": 4
+        "title": "Ten days of talking",
+        "range": "10 days",
+        "daysMin": 40,
+        "daysMax": 50,
+        "body": "If it feels right on both sides, you talk every day for ten days and confirm it."
       },
       {
-        "title": "Real meetings",
-        "body": "We coordinate the logistics. You focus on the connection. We handle interpreters, scheduling, and travel where it applies.",
-        "monthsMin": 4,
-        "monthsMax": 6
+        "title": "Visiting Indonesia · meeting the family",
+        "range": "3-day visit",
+        "daysMin": 60,
+        "daysMax": 63,
+        "body": "The male member spends three days in Indonesia, meets her parents, receives their blessing, and sets the wedding date."
       },
       {
-        "title": "Commitment",
-        "body": "When it's right, we support the steps that come with commitment — paperwork, families, the practical side of building a life together.",
-        "monthsMin": 6,
-        "monthsMax": 9
+        "title": "The wedding",
+        "range": "Months 3–4",
+        "daysMin": 105,
+        "daysMax": 112,
+        "body": "He flies home to Korea, then returns for the ceremony — usually about six weeks after the visit. Registration through ceremony: we handle documents, interpretation, and scheduling."
       },
       {
-        "title": "The years that follow",
-        "body": "We stay in the picture. Quarterly check-ins, family translation, support whenever life gets complicated.",
-        "monthsMin": 9,
-        "monthsMax": 12
+        "title": "Korean exam · F-6 visa",
+        "range": "About 3 months",
+        "daysMin": 112,
+        "daysMax": 240,
+        "body": "Preparing the spouse visa (F-6). We prepare the Korean language exam and paperwork with you, through arrival in Korea."
       }
     ]
   },
@@ -181,20 +219,56 @@
     "maleTitle": "Member guide",
     "maleSubtitle": "Membership is curated. Verification is the foundation. Below is what to expect.",
     "femaleSteps": [
-      { "title": "Apply", "body": "Submit your application. The first review is personal." },
-      { "title": "Verification", "body": "Identity, document, and intent verification. Membership is granted on completion." },
-      { "title": "Profile design", "body": "We build your private profile together — never public, only shared with mutual introductions." },
-      { "title": "Curated introductions", "body": "Real people, hand-picked by your matchmaker. Quality over quantity." },
-      { "title": "Real meetings", "body": "Coordinated end to end. Interpreters, scheduling, travel — handled." },
-      { "title": "The relationship", "body": "When it's right, we walk with you through commitment and the years that follow." }
+      {
+        "title": "Apply",
+        "body": "Submit your application. The first review is personal."
+      },
+      {
+        "title": "Verification",
+        "body": "Identity, document, and intent verification. Membership is granted on completion."
+      },
+      {
+        "title": "Profile design",
+        "body": "We build your private profile together — never public, only shared with mutual introductions."
+      },
+      {
+        "title": "Curated introductions",
+        "body": "Real people, hand-picked by your matchmaker. Quality over quantity."
+      },
+      {
+        "title": "Real meetings",
+        "body": "Coordinated end to end. Interpreters, scheduling, travel — handled."
+      },
+      {
+        "title": "The relationship",
+        "body": "When it's right, we walk with you through commitment and the years that follow."
+      }
     ],
     "maleSteps": [
-      { "title": "Apply", "body": "Submit your application and choose a membership tier in conversation with your matchmaker." },
-      { "title": "Verification", "body": "Identity, document, and personal history. Standard for every member." },
-      { "title": "Curated introductions", "body": "Verified candidates that fit who you are — not who you swipe like." },
-      { "title": "Real meetings", "body": "Logistics handled — interpreting, scheduling, travel. You focus on the connection." },
-      { "title": "Commitment", "body": "Paperwork, family, ceremony — supported end to end when the time comes." },
-      { "title": "The relationship", "body": "Aftercare for the months and years that follow. We don't disappear." }
+      {
+        "title": "Apply",
+        "body": "Submit your application and choose a membership tier in conversation with your matchmaker."
+      },
+      {
+        "title": "Verification",
+        "body": "Identity, document, and personal history. Standard for every member."
+      },
+      {
+        "title": "Curated introductions",
+        "body": "Verified candidates that fit who you are — not who you swipe like."
+      },
+      {
+        "title": "Real meetings",
+        "body": "Logistics handled — interpreting, scheduling, travel. You focus on the connection."
+      },
+      {
+        "title": "Commitment",
+        "body": "Paperwork, family, ceremony — supported end to end when the time comes."
+      },
+      {
+        "title": "The relationship",
+        "body": "Aftercare for the months and years that follow. We don't disappear."
+      }
     ]
   },
   "faq": {
@@ -226,7 +300,7 @@
       {
         "category": "service",
         "q": "How long does the process usually take?",
-        "a": "There's no rush. Most members find the right person within six to nine months, but we never push that timeline. The point is the relationship that follows, not the speed of the introduction."
+        "a": "On average six to eight months, from the first profile exchange to arriving in Korea. Everyone moves at their own pace, and we never force the schedule."
       },
       {
         "category": "cost",
